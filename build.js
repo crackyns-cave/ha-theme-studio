@@ -37,6 +37,12 @@ async function buildTheme(visualLanguage, colorPalette) {
       // Visual language header
       path.join(visualPath, '00-header.yaml'),
       
+      // Light mode colors (must come right after header with modes: key)
+      path.join(palettePath, '11-light-mode.yaml'),
+      
+      // Dark mode colors
+      path.join(palettePath, '12-dark-mode.yaml'),
+      
       // Core design tokens
       path.join(corePath, '01-design-tokens.yaml'),
       
@@ -65,13 +71,7 @@ async function buildTheme(visualLanguage, colorPalette) {
       path.join(corePath, '09-room-colors.yaml'),
       
       // Card-mod
-      path.join(visualPath, '10-card-mod.yaml'),
-      
-      // Light mode colors
-      path.join(palettePath, '11-light-mode.yaml'),
-      
-      // Dark mode colors
-      path.join(palettePath, '12-dark-mode.yaml')
+      path.join(visualPath, '10-card-mod.yaml')
     ];
 
     // Concatenate all YAML files
