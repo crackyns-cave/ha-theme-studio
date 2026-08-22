@@ -6,6 +6,9 @@ WORKDIR /app/frontend
 # Copy frontend directory only
 COPY frontend ./
 
+# Debug: see what was actually copied
+RUN ls -la && echo "=== Checking for package.json ===" && ls -la package.json || echo "package.json NOT FOUND"
+
 RUN npm install
 RUN npm run build
 
