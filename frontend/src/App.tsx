@@ -4,7 +4,7 @@ import Sidebar from './components/Sidebar'
 import Preview from './components/Preview'
 import Inspector from './components/Inspector'
 import Header from './components/Header'
-import { ThemeConfig } from './types'
+import { ColorPalette, ThemeConfig, VisualLanguage } from './types'
 import api from './utils/api'
 
 const darkTheme = createTheme({
@@ -29,8 +29,8 @@ function App() {
     elevation: 'medium',
   })
 
-  const [visualOptions, setVisualOptions] = useState<any[]>([])
-  const [paletteOptions, setPaletteOptions] = useState<any[]>([])
+  const [visualOptions, setVisualOptions] = useState<VisualLanguage[]>([])
+  const [paletteOptions, setPaletteOptions] = useState<ColorPalette[]>([])
 
   useEffect(() => {
     loadOptions()
@@ -70,8 +70,14 @@ function App() {
             paletteOptions={paletteOptions}
             onConfigChange={updateConfig}
           />
-          <Preview config={config} />
-          <Inspector config={config} />
+          <Preview
+            config={config}
+            palette={paletteOptions.find((palette) => palette.slug === config.palette)}
+          />
+          <Inspector
+            config={config}
+            palette={paletteOptions.find((palette) => palette.slug === config.palette)}
+          />
         </Box>
       </Box>
     </ThemeProvider>

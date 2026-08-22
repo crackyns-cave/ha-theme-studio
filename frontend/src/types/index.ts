@@ -8,16 +8,25 @@ export interface ThemeConfig {
   elevation: 'minimal' | 'medium' | 'high'
 }
 
+export interface PaletteColors {
+  primary: string
+  secondary: string
+  tertiary?: string
+  success: string
+  warning: string
+  error: string
+  background: string
+  surface: string
+  text: string
+}
+
 export interface ColorPalette {
   name: string
   slug: string
-  colors: {
-    primary: string
-    secondary: string
-    tertiary?: string
-    success: string
-    warning: string
-    error: string
+  colors: PaletteColors
+  modes: {
+    light: PaletteColors
+    dark: PaletteColors
   }
 }
 

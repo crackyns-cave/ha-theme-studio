@@ -1,17 +1,19 @@
 import { Box, Paper, Typography, TextField } from '@mui/material'
-import { ThemeConfig } from '../types'
+import { ColorPalette, ThemeConfig } from '../types'
 
 interface InspectorProps {
   config: ThemeConfig
+  palette?: ColorPalette
 }
 
-export default function Inspector({ config }: InspectorProps) {
-  const mockVariables = [
-    { name: '--primary-color', value: '#6750A4' },
-    { name: '--accent-color', value: '#6750A4' },
-    { name: '--background-color', value: '#FEF7FF' },
-    { name: '--card-background', value: '#F3EDF7' },
-    { name: '--text-primary', value: '#1C1B1F' },
+export default function Inspector({ config, palette }: InspectorProps) {
+  const colors = palette?.modes?.[config.mode] ?? palette?.colors
+  const variables = [
+    { name: '--primary-color', value: colors?.primary ?? '#6750A4' },
+    { name: '--accent-color', value: colors?.primary ?? '#6750A4' },
+    { name: '--background-color', value: colors?.background ?? '#FEF7FF' },
+    { name: '--card-background', value: colors?.surface ?? '#F3EDF7' },
+    { name: '--text-primary', value: colors?.text ?? '#1C1B1F' },
     { name: '--border-radius', value: `${config.shape.radius}px` },
   ]
 
@@ -36,7 +38,7 @@ export default function Inspector({ config }: InspectorProps) {
       </Typography>
 
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-        {mockVariables.map((variable) => (
+        {variables.map((variable) => (
           <Box key={variable.name}>
             <Typography variant="caption" color="text.secondary">
               {variable.name}

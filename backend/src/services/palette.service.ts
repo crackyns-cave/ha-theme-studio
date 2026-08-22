@@ -5,14 +5,23 @@ import yaml from 'js-yaml';
 export interface ColorPalette {
   name: string;
   slug: string;
-  colors: {
-    primary: string;
-    secondary: string;
-    tertiary?: string;
-    success: string;
-    warning: string;
-    error: string;
+  colors: PaletteColors;
+  modes: {
+    light: PaletteColors;
+    dark: PaletteColors;
   };
+}
+
+interface PaletteColors {
+  primary: string;
+  secondary: string;
+  tertiary?: string;
+  success: string;
+  warning: string;
+  error: string;
+  background: string;
+  surface: string;
+  text: string;
 }
 
 export class PaletteService {
@@ -30,13 +39,14 @@ export class PaletteService {
 
       for (const entry of entries) {
         if (entry.isDirectory()) {
-          const colors = await this.extractColors(entry.name);
+          const modes = await this.extractColors(entry.name);
           palettes.push({
             name: this.formatName(entry.name),
             slug: entry.name,
-            colors
+            colors: modes.light,
+            modes
           });
-          console.log(`[PaletteService] Loaded palette: ${entry.name} (${colors.primary})`);
+          console.log(`[PaletteService] Loaded palette: ${entry.name} (${modes.light.primary})`);
         }
       }
 
@@ -70,31 +80,41 @@ export class PaletteService {
       .join(' ');
   }
 
-  private async extractColors(slug: string): Promise<ColorPalette['colors']> {
+  private async extractColors(slug: string): Promise<ColorPalette['modes']> {
+    const light = await this.extractModeColors(slug, '11-light-mode.yaml', 'light');
+    const dark = await this.extractModeColors(slug, '12-dark-mode.yaml', 'dark');
+    return { light, dark };
+  }
+
+  private async extractModeColors(slug: string, fileName: string, mode: 'light' | 'dark'): Promise<PaletteColors> {
+    const fallback = mode === 'light'
+      ? { background: '#FEF7FF', surface: '#F3EDF7', text: '#1C1B1F' }
+      : { background: '#1C1B1F', surface: '#2B2930', text: '#E6E1E5' };
+
     try {
-      // Read light mode YAML to extract colors
-      const lightModePath = path.join(this.palettesPath, slug, '11-light-mode.yaml');
-      const yamlContent = await fs.readFile(lightModePath, 'utf-8');
+      const yamlContent = await fs.readFile(path.join(this.palettesPath, slug, fileName), 'utf-8');
       const parsed = yaml.load(yamlContent) as any;
-      
-      const lightColors = parsed?.light || {};
-      
+      const modeColors = parsed?.modes?.[mode] || parsed?.[mode] || {};
+
       return {
-        primary: lightColors['primary-color'] || '#6750A4',
-        secondary: lightColors['secondary-color'] || '#625B71',
-        tertiary: lightColors['tertiary-color'],
-        success: lightColors['success-color'] || '#10b981',
-        warning: lightColors['warning-color'] || '#f59e0b',
-        error: lightColors['error-color'] || '#B3261E'
+        primary: modeColors['primary-color'] || '#6750A4',
+        secondary: modeColors['md-sys-color-secondary'] || modeColors['secondary-color'] || '#625B71',
+        tertiary: modeColors['md-sys-color-tertiary'] || modeColors['tertiary-color'],
+        success: modeColors['success-color'] || '#10b981',
+        warning: modeColors['warning-color'] || '#f59e0b',
+        error: modeColors['error-color'] || '#B3261E',
+        background: modeColors['primary-background-color'] || fallback.background,
+        surface: modeColors['card-background-color'] || fallback.surface,
+        text: modeColors['primary-text-color'] || fallback.text
       };
     } catch (error) {
-      // Fallback colors if parsing fails
       return {
         primary: '#6750A4',
         secondary: '#625B71',
         success: '#10b981',
         warning: '#f59e0b',
-        error: '#B3261E'
+        error: '#B3261E',
+        ...fallback
       };
     }
   }
