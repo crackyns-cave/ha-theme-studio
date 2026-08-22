@@ -25,18 +25,18 @@
     
     /* Raised state - default for most cards */
     ha-card:not(.heading-card):not(.bubble-card) {
-      box-shadow: var(--card-box-shadow) !important;
+      box-shadow: var(--neu-shadow-raised) !important;
     }
     
     /* Hover state - elevated appearance */
     ha-card:not(.heading-card):not(.bubble-card):hover {
-      box-shadow: var(--card-box-shadow-hover) !important;
+      box-shadow: var(--neu-shadow-float) !important;
       transform: translateY(-2px) !important;
     }
     
     /* Active/pressed state */
     ha-card:not(.heading-card):not(.bubble-card):active {
-      box-shadow: var(--card-box-shadow-active) !important;
+      box-shadow: var(--neu-shadow-pressed-sm) !important;
       transform: translateY(0px) !important;
     }
     
@@ -81,7 +81,7 @@
     /* Global app styling */
     app-drawer {
       /* Neumorphic sidebar */
-      box-shadow: var(--sidebar-shadow) !important;
+      box-shadow: var(--neu-shadow-raised-sm) !important;
       background: var(--sidebar-background-color) !important;
       border: none !important;
     }
@@ -89,7 +89,7 @@
     /* App header */
     app-header {
       background: var(--app-header-background-color) !important;
-      box-shadow: var(--app-header-shadow) !important;
+      box-shadow: var(--neu-shadow-subtle) !important;
     }
     
     /* Prevent any glassmorphic effects globally */
@@ -102,7 +102,7 @@
     /* More info dialog styling */
     ha-dialog {
       border-radius: var(--m3-radius-dialog) !important;
-      box-shadow: var(--dialog-box-shadow) !important;
+      box-shadow: var(--neu-shadow-raised-xl) !important;
       background: var(--card-background-color) !important;
       border: none !important;
     }
@@ -145,7 +145,7 @@
     mwc-button {
       border: none !important;
       border-radius: var(--m3-radius-button) !important;
-      box-shadow: var(--button-box-shadow) !important;
+      box-shadow: var(--neu-shadow-raised-sm) !important;
       transition: 
         box-shadow var(--m3-duration-short-4) var(--m3-easing-standard),
         transform var(--m3-duration-short-4) var(--m3-easing-standard) !important;
@@ -154,13 +154,13 @@
     .mdc-button:hover,
     ha-button:hover,
     mwc-button:hover {
-      box-shadow: var(--button-box-shadow-hover) !important;
+      box-shadow: var(--neu-shadow-raised) !important;
       transform: translateY(-1px) !important;
     }
     
     .mdc-button:active,
     ha-button:active,
     mwc-button:active {
-      box-shadow: var(--button-box-shadow-active) !important;
+      box-shadow: var(--neu-shadow-pressed-sm) !important;
       transform: translateY(0px) !important;
     }

@@ -75,7 +75,7 @@ async function buildTheme(visualLanguage, colorPalette) {
     ];
 
     // Concatenate all YAML files
-    let yamlContent = await concatenateYaml(components);
+    let yamlContent = await concatenateYaml(components, visualLanguage);
     
     // Replace the visual language name with full theme name
     // Convert visual-language slug to Title Case
@@ -135,12 +135,19 @@ async function verifyPaths(paths) {
   }
 }
 
-async function concatenateYaml(filePaths) {
+async function concatenateYaml(filePaths, visualLanguage) {
   const parts = [];
   
   for (const filePath of filePaths) {
     try {
-      const content = await fs.readFile(filePath, 'utf-8');
+      let content = await fs.readFile(filePath, 'utf-8');
+      if (visualLanguage === 'neumorphic-material') {
+        if (filePath.endsWith('11-light-mode.yaml')) {
+          content = applyNeumorphicMode(content, 'light');
+        } else if (filePath.endsWith('12-dark-mode.yaml')) {
+          content = applyNeumorphicMode(content, 'dark');
+        }
+      }
       parts.push(content);
     } catch (error) {
       console.warn(`Warning: Could not read ${filePath}, skipping...`);
@@ -148,6 +155,43 @@ async function concatenateYaml(filePaths) {
   }
   
   return parts.join('\n');
+}
+
+function applyNeumorphicMode(content, mode) {
+  const replacements = {
+    'primary-background-color': `*glass-bg-${mode}-resting`,
+    'secondary-background-color': `*glass-bg-${mode}-resting`,
+    'lovelace-background': `*glass-bg-${mode}-resting`,
+    'card-background-color': `*glass-bg-${mode}-resting`,
+    'ha-card-background': `*glass-bg-${mode}-resting`,
+    'sidebar-background-color': `*glass-bg-${mode}-subtle`,
+    'neu-shadow-raised-sm': `*neu-${mode}-shadow-raised-sm`,
+    'neu-shadow-raised': `*neu-${mode}-shadow-raised`,
+    'neu-shadow-raised-lg': `*neu-${mode}-shadow-raised-lg`,
+    'neu-shadow-raised-xl': `*neu-${mode}-shadow-raised-xl`,
+    'neu-shadow-float': `*neu-${mode}-shadow-float`,
+    'neu-shadow-pressed-sm': `*neu-${mode}-shadow-pressed-sm`,
+    'neu-shadow-pressed': `*neu-${mode}-shadow-pressed`,
+    'neu-shadow-pressed-lg': `*neu-${mode}-shadow-pressed-lg`,
+    'neu-shadow-subtle': `*neu-${mode}-shadow-subtle`,
+    'card-box-shadow': `*neu-${mode}-shadow-raised`,
+    'card-box-shadow-hover': `*neu-${mode}-shadow-float`,
+    'card-box-shadow-active': `*neu-${mode}-shadow-pressed-sm`,
+    'button-box-shadow': `*neu-${mode}-shadow-raised-sm`,
+    'button-box-shadow-hover': `*neu-${mode}-shadow-raised`,
+    'button-box-shadow-active': `*neu-${mode}-shadow-pressed-sm`,
+    'dialog-box-shadow': `*neu-${mode}-shadow-raised-xl`,
+    'sidebar-shadow': `*neu-${mode}-shadow-raised-sm`,
+    'app-header-shadow': `*neu-${mode}-shadow-subtle`,
+    'bubble-shadow': `*neu-${mode}-shadow-raised`,
+    'bubble-shadow-active': `*neu-${mode}-shadow-pressed-sm`,
+    'bubble-shadow-hover': `*neu-${mode}-shadow-float`
+  };
+
+  return content.replace(/^(\s+)([a-z0-9-]+):.*$/gm, (line, indentation, key) => {
+    const replacement = replacements[key];
+    return replacement ? `${indentation}${key}: ${replacement}` : line;
+  });
 }
 
 // CLI execution

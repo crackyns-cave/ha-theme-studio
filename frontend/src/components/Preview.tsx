@@ -18,7 +18,14 @@ const fallbackColors = {
 }
 
 export default function Preview({ config, palette }: PreviewProps) {
-  const colors = palette?.modes?.[config.mode] ?? palette?.colors ?? fallbackColors
+  const paletteColors = palette?.modes?.[config.mode] ?? palette?.colors ?? fallbackColors
+  const colors = config.visual === 'neumorphic-material'
+    ? {
+        ...paletteColors,
+        background: config.mode === 'light' ? '#ECEFF4' : '#2E3440',
+        surface: config.mode === 'light' ? '#ECEFF4' : '#2E3440',
+      }
+    : paletteColors
   const shadowStrength = config.elevation === 'minimal' ? 2 : config.elevation === 'medium' ? 6 : 12
   const darkShadow = config.mode === 'dark' ? 'rgba(0, 0, 0, 0.55)' : 'rgba(0, 0, 0, 0.22)'
   const lightShadow = config.mode === 'dark' ? 'rgba(255, 255, 255, 0.05)' : 'rgba(255, 255, 255, 0.8)'

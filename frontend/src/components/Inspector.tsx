@@ -7,7 +7,14 @@ interface InspectorProps {
 }
 
 export default function Inspector({ config, palette }: InspectorProps) {
-  const colors = palette?.modes?.[config.mode] ?? palette?.colors
+  const paletteColors = palette?.modes?.[config.mode] ?? palette?.colors
+  const colors = config.visual === 'neumorphic-material' && paletteColors
+    ? {
+        ...paletteColors,
+        background: config.mode === 'light' ? '#ECEFF4' : '#2E3440',
+        surface: config.mode === 'light' ? '#ECEFF4' : '#2E3440',
+      }
+    : paletteColors
   const variables = [
     { name: '--primary-color', value: colors?.primary ?? '#6750A4' },
     { name: '--accent-color', value: colors?.primary ?? '#6750A4' },
