@@ -5,10 +5,11 @@ build/
 .vscode/
 .idea/
 framework/
+output/
 *.log
 .env
 .DS_Store
 Thumbs.db
 *.tgz
-docker-compose.y*
-compose.y*
+docker-compose.yaml
+!docker-compose.yaml-sample

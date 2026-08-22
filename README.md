@@ -52,6 +52,9 @@ A containerized web application for creating, managing, previewing, and building
 # Clone or download the project
 cd ha-theme-studio
 
+# Copy the compose file template
+cp docker-compose.yaml-sample docker-compose.yaml
+
 # Start the application
 docker compose up -d
 
@@ -64,6 +67,9 @@ The application will:
 2. Start the web UI on port 3000
 3. Start the API on port 3001
 4. Generate themes in `./output/`
+5. Run as non-root user (UID:GID 1000:1000 by default)
+
+**Note**: For custom user/group IDs, see [USER-PERMISSIONS.md](USER-PERMISSIONS.md)
 
 ### Development Mode
 
@@ -481,7 +487,38 @@ services:
 
 ---
 
-## 📝 License
+## � Security
+
+### Non-Root User
+
+The container runs as a **non-root user** (UID:GID 1000:1000 by default) following Docker security best practices.
+
+**Benefits**:
+- ✅ Reduced attack surface
+- ✅ Files created in volumes match your user ID
+- ✅ No permission issues on host filesystem
+- ✅ Follows principle of least privilege
+
+**Customization**:
+
+If you need a different user ID (e.g., matching your host user):
+
+```yaml
+# docker-compose.yaml
+services:
+  theme-studio:
+    build:
+      context: .
+      args:
+        USER_ID: 1001
+        GROUP_ID: 1001
+```
+
+See [USER-PERMISSIONS.md](USER-PERMISSIONS.md) for detailed configuration.
+
+---
+
+## �📝 License
 
 MIT License - Feel free to use and modify for your Home Assistant setup!
 

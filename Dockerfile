@@ -21,6 +21,13 @@ RUN npm run build
 # Production stage
 FROM node:20-alpine
 
+# Create non-root user (default 1000:1000)
+ARG USER_ID=1000
+ARG GROUP_ID=1000
+
+RUN addgroup -g ${GROUP_ID} appuser && \
+    adduser -D -u ${USER_ID} -G appuser appuser
+
 WORKDIR /app
 
 # Install bash and js-yaml globally for build scripts
@@ -47,8 +54,12 @@ COPY default-framework /app/default-framework
 COPY docker-entrypoint.sh /app/
 RUN chmod +x /app/docker-entrypoint.sh
 
-# Create volume mount points
-RUN mkdir -p /framework /output
+# Create volume mount points and set ownership
+RUN mkdir -p /framework /output && \
+    chown -R appuser:appuser /app /framework /output
+
+# Switch to non-root user
+USER appuser
 
 # Environment
 ENV NODE_ENV=production
