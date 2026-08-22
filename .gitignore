@@ -9,3 +9,5 @@ build/
 .DS_Store
 Thumbs.db
 *.tgz
+docker-compose.y*
+compose.y*
