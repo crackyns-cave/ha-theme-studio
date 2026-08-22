@@ -94,6 +94,10 @@ async function buildTheme(visualLanguage, colorPalette) {
       new RegExp(`^${visualTitle}:`, 'm'),
       `${fullThemeName}:`
     );
+    yamlContent = yamlContent.replace(
+      /^  card-mod-theme:.*$/m,
+      `  card-mod-theme: ${fullThemeName}`
+    );
 
     // Write output
     const outputFile = path.join(OUTPUT_PATH, `${themeName}.yaml`);
