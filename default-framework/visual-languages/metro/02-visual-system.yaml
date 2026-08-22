@@ -1,0 +1,17 @@
+  # Metro visual tokens
+  metro-radius: "0px"
+  metro-border-width: "2px"
+  metro-shadow: "none"
+  metro-transition: "background-color 120ms ease, color 120ms ease, border-color 120ms ease"
+
+  # Solid compatibility tokens
+  glass-bg-light-resting: &glass-bg-light-resting "#FFFFFF"
+  glass-bg-light-hover: &glass-bg-light-hover "#F2F2F2"
+  glass-bg-light-active: &glass-bg-light-active "#E5E5E5"
+  glass-bg-light-subtle: &glass-bg-light-subtle "#FAFAFA"
+  glass-bg-light-intense: &glass-bg-light-intense "#E8E8E8"
+  glass-bg-dark-resting: &glass-bg-dark-resting "#202020"
+  glass-bg-dark-hover: &glass-bg-dark-hover "#2D2D2D"
+  glass-bg-dark-active: &glass-bg-dark-active "#383838"
+  glass-bg-dark-subtle: &glass-bg-dark-subtle "#181818"
+  glass-bg-dark-intense: &glass-bg-dark-intense "#303030"

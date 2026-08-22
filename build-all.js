@@ -6,7 +6,9 @@ const VISUAL_LANGUAGES = [
   'material3',
   'neumorphic-material',
   'frosted-glass',
-  'liquid-glass'
+  'liquid-glass',
+  'metro',
+  'nordic'
 ];
 
 const COLOR_PALETTES = [

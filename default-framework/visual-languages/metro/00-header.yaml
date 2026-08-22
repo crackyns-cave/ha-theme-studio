@@ -1,0 +1,10 @@
+# ==========================================================================
+# METRO THEME
+# ==========================================================================
+# Flat, typography-led design inspired by Microsoft Metro/Modern UI.
+# Uses square tiles, solid accent blocks, and color-based interaction states.
+# ==========================================================================
+
+Metro:
+  __version: "1.0.0"
+  __target: "2026.x"

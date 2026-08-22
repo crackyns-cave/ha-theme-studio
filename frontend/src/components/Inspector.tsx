@@ -28,7 +28,8 @@ export default function Inspector({ config, palette }: InspectorProps) {
     <Paper
       elevation={0}
       sx={{
-        width: 320,
+        width: { xs: '100%', md: 320 },
+        flexShrink: 0,
         p: 3,
         bgcolor: 'background.paper',
         borderLeft: 1,

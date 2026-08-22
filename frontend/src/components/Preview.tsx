@@ -30,6 +30,7 @@ export default function Preview({ config, palette }: PreviewProps) {
   const shadowStrength = config.elevation === 'minimal' ? 2 : config.elevation === 'medium' ? 6 : 12
   const darkShadow = config.mode === 'dark' ? 'rgba(0, 0, 0, 0.55)' : 'rgba(0, 0, 0, 0.22)'
   const lightShadow = config.mode === 'dark' ? 'rgba(255, 255, 255, 0.05)' : 'rgba(255, 255, 255, 0.8)'
+  const visualRadius = config.visual === 'metro' ? 0 : config.visual === 'nordic' ? 6 : config.shape.radius
 
   const surfaceStyle = config.visual === 'neumorphic-material'
     ? {
@@ -51,6 +52,20 @@ export default function Preview({ config, palette }: PreviewProps) {
             backdropFilter: 'blur(24px) saturate(140%)',
             boxShadow: `inset 0 1px 0 ${lightShadow}, 0 ${shadowStrength}px ${shadowStrength * 3}px ${darkShadow}`,
           }
+        : config.visual === 'metro'
+          ? {
+              bgcolor: colors.surface,
+              border: `2px solid ${colors.secondary}`,
+              borderRadius: 0,
+              boxShadow: 'none',
+            }
+          : config.visual === 'nordic'
+            ? {
+                bgcolor: colors.surface,
+                border: `1px solid ${colors.secondary}33`,
+                borderRadius: '6px',
+                boxShadow: '0 1px 2px rgba(15, 23, 42, 0.06)',
+              }
         : {
             bgcolor: colors.surface,
             border: 0,
@@ -68,14 +83,16 @@ export default function Preview({ config, palette }: PreviewProps) {
       background: { default: colors.background, paper: colors.surface },
       text: { primary: colors.text },
     },
-    shape: { borderRadius: config.shape.radius },
+    shape: { borderRadius: visualRadius },
   })
 
   return (
     <ThemeProvider theme={previewTheme}>
       <Box
         sx={{
-          flex: 1,
+          flex: { xs: 'none', md: 1 },
+          width: { xs: '100%', md: 'auto' },
+          minWidth: 0,
           p: 3,
           bgcolor: 'background.default',
           backgroundImage: isGlassTheme ? `url('/api/wallpapers/${config.mode}-bg.png')` : 'none',
@@ -165,7 +182,7 @@ export default function Preview({ config, palette }: PreviewProps) {
               sx={{
                 px: 2,
                 py: 1,
-                borderRadius: `${config.shape.radius}px`,
+                borderRadius: `${visualRadius}px`,
               }}
             >
               Button
@@ -174,7 +191,7 @@ export default function Preview({ config, palette }: PreviewProps) {
               sx={{
                 px: 2,
                 py: 1,
-                borderRadius: `${config.shape.radius}px`,
+                borderRadius: `${visualRadius}px`,
                 bgcolor: 'primary.main',
                 color: 'primary.contrastText',
               }}

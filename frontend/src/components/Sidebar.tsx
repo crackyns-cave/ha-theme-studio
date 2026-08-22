@@ -25,7 +25,8 @@ export default function Sidebar({ config, visualOptions, paletteOptions, onConfi
     <Paper
       elevation={0}
       sx={{
-        width: 320,
+        width: { xs: '100%', md: 320 },
+        flexShrink: 0,
         p: 3,
         bgcolor: 'background.paper',
         borderRight: 1,

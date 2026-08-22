@@ -54,7 +54,9 @@ export class VisualService {
       'material3': 'Google Material Design 3 with elevation-based shadows',
       'neumorphic-material': 'Soft, raised surfaces with dual shadow system',
       'frosted-glass': 'Translucent surfaces with backdrop blur effects',
-      'liquid-glass': 'Adaptive translucency with luminous highlights'
+      'liquid-glass': 'Adaptive translucency with luminous highlights',
+      'metro': 'Flat, typography-led tiles with bold color and hard edges',
+      'nordic': 'Quiet Scandinavian surfaces with fine borders and restrained depth'
     };
     return descriptions[slug] || 'Custom visual language';
   }
@@ -64,7 +66,9 @@ export class VisualService {
       'material3': ['Elevation levels 0-5', 'Tonal palettes', 'Surface containers'],
       'neumorphic-material': ['Dual shadows (± convex/concave)', 'Soft raised surfaces', 'Subtle depth'],
       'frosted-glass': ['Backdrop blur', 'Translucent surfaces', 'Color saturation'],
-      'liquid-glass': ['Layered blur', 'Adaptive translucency', 'Gradient shimmer']
+      'liquid-glass': ['Layered blur', 'Adaptive translucency', 'Gradient shimmer'],
+      'metro': ['Square tiles', 'Flat color states', 'Typography-led hierarchy'],
+      'nordic': ['Fine dividers', 'Compact radii', 'Low elevation']
     };
     return features[slug] || [];
   }

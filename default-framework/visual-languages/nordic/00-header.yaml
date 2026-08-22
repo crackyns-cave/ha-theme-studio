@@ -1,0 +1,10 @@
+# ==========================================================================
+# NORDIC THEME
+# ==========================================================================
+# Quiet Scandinavian design with clean surfaces and restrained details.
+# Uses fine dividers, compact radii, low elevation, and generous whitespace.
+# ==========================================================================
+
+Nordic:
+  __version: "1.0.0"
+  __target: "2026.x"

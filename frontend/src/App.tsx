@@ -63,7 +63,15 @@ function App() {
       <CssBaseline />
       <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
         <Header config={config} />
-        <Box sx={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
+        <Box
+          sx={{
+            display: 'flex',
+            flex: 1,
+            flexDirection: { xs: 'column', md: 'row' },
+            overflowX: 'hidden',
+            overflowY: { xs: 'auto', md: 'hidden' },
+          }}
+        >
           <Sidebar
             config={config}
             visualOptions={visualOptions}

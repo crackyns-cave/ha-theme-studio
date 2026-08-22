@@ -1,0 +1,70 @@
+  card-mod-theme: Nordic
+
+  card-mod-card: |
+    ha-card {
+      border: 1px solid var(--ha-color-border-neutral-quiet) !important;
+      border-radius: 6px !important;
+      background: var(--card-background-color) !important;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06) !important;
+      backdrop-filter: none !important;
+      transition: box-shadow 180ms ease, border-color 180ms ease !important;
+    }
+    ha-card:not(.heading-card):hover {
+      border-color: var(--ha-color-border-neutral-normal) !important;
+      box-shadow: 0 3px 10px rgba(15, 23, 42, 0.10) !important;
+    }
+    ha-card.heading-card,
+    ha-card.type-heading {
+      border: 0 !important;
+      box-shadow: none !important;
+      background: transparent !important;
+    }
+    ha-card .card-header {
+      font-size: 18px !important;
+      font-weight: 500 !important;
+      padding: 16px 16px 0 !important;
+    }
+
+  card-mod-view: |
+    hui-view { background: var(--lovelace-background) !important; }
+    hui-masonry-view,
+    hui-sections-view {
+      gap: 16px !important;
+      padding: 20px !important;
+    }
+
+  card-mod-root: |
+    app-drawer {
+      border-right: 1px solid var(--ha-color-border-neutral-quiet) !important;
+      box-shadow: none !important;
+    }
+    app-header {
+      border-bottom: 1px solid var(--ha-color-border-neutral-quiet) !important;
+      box-shadow: none !important;
+    }
+
+  card-mod-more-info: |
+    ha-dialog {
+      border: 1px solid var(--ha-color-border-neutral-quiet) !important;
+      border-radius: 8px !important;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.14) !important;
+      background: var(--card-background-color) !important;
+    }
+
+  card-mod-tile: |
+    .tile {
+      border: 1px solid var(--ha-color-border-neutral-quiet) !important;
+      border-radius: 6px !important;
+      box-shadow: none !important;
+    }
+    .tile:hover { border-color: var(--ha-color-border-neutral-normal) !important; }
+
+  card-mod-button: |
+    .mdc-button,
+    ha-button,
+    mwc-button {
+      border: 1px solid var(--ha-color-border-neutral-normal) !important;
+      border-radius: 4px !important;
+      box-shadow: none !important;
+      text-transform: none !important;
+    }

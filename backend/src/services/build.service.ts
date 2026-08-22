@@ -64,7 +64,7 @@ export class BuildService {
   }
 
   async buildFamily(palette: string): Promise<BuildResult[]> {
-    const visuals = ['material3', 'neumorphic-material', 'frosted-glass', 'liquid-glass'];
+    const visuals = ['material3', 'neumorphic-material', 'frosted-glass', 'liquid-glass', 'metro', 'nordic'];
     const results: BuildResult[] = [];
 
     for (const visual of visuals) {

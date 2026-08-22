@@ -1,0 +1,79 @@
+  card-mod-theme: Metro
+
+  card-mod-card: |
+    ha-card {
+      border: 2px solid var(--ha-color-border-neutral-normal) !important;
+      border-radius: 0 !important;
+      background: var(--card-background-color) !important;
+      box-shadow: none !important;
+      backdrop-filter: none !important;
+      transition: background-color 120ms ease, border-color 120ms ease !important;
+    }
+    ha-card:not(.heading-card):hover {
+      border-color: var(--primary-color) !important;
+      background: var(--secondary-background-color) !important;
+    }
+    ha-card:not(.heading-card):active {
+      background: var(--ha-color-fill-primary-quiet-resting) !important;
+    }
+    ha-card.heading-card,
+    ha-card.type-heading {
+      border: 0 !important;
+      background: transparent !important;
+    }
+    ha-card .card-header {
+      font-size: 24px !important;
+      font-weight: 300 !important;
+      padding: 16px 16px 0 !important;
+    }
+
+  card-mod-view: |
+    hui-view {
+      background: var(--lovelace-background) !important;
+    }
+    hui-masonry-view,
+    hui-sections-view {
+      gap: 8px !important;
+      padding: 16px !important;
+    }
+
+  card-mod-root: |
+    app-drawer,
+    app-header {
+      border-radius: 0 !important;
+      box-shadow: none !important;
+    }
+    app-drawer {
+      border-right: 2px solid var(--ha-color-border-neutral-normal) !important;
+    }
+    app-header {
+      border-bottom: 2px solid var(--primary-color) !important;
+    }
+
+  card-mod-more-info: |
+    ha-dialog {
+      border: 2px solid var(--primary-color) !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      background: var(--card-background-color) !important;
+    }
+
+  card-mod-tile: |
+    .tile {
+      border: 2px solid var(--ha-color-border-neutral-normal) !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+    }
+    .tile:hover { border-color: var(--primary-color) !important; }
+    .tile:active { background: var(--ha-color-fill-primary-quiet-resting) !important; }
+
+  card-mod-button: |
+    .mdc-button,
+    ha-button,
+    mwc-button {
+      border: 2px solid var(--primary-color) !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      text-transform: uppercase !important;
+      transition: background-color 120ms ease, color 120ms ease !important;
+    }
