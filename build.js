@@ -37,17 +37,17 @@ async function buildTheme(visualLanguage, colorPalette) {
       // Visual language header
       path.join(visualPath, '00-header.yaml'),
       
-      // Light mode colors (must come right after header with modes: key)
-      path.join(palettePath, '11-light-mode.yaml'),
-      
-      // Dark mode colors
-      path.join(palettePath, '12-dark-mode.yaml'),
-      
-      // Core design tokens
+      // Core design tokens (must come before modes to define anchors)
       path.join(corePath, '01-design-tokens.yaml'),
       
-      // Visual system
+      // Visual system (must come before modes to define visual anchors)
       path.join(visualPath, '02-visual-system.yaml'),
+      
+      // Light mode colors (references anchors from above)
+      path.join(palettePath, '11-light-mode.yaml'),
+      
+      // Dark mode colors (references anchors from above)
+      path.join(palettePath, '12-dark-mode.yaml'),
       
       // Material Web
       path.join(corePath, '03-material-web.yaml'),
