@@ -1,49 +1,31 @@
-# Dependencies (will be installed in Dockerfile)
+# Only exclude what we don't need in the build
 node_modules
-npm-debug.log
-
-# Build outputs (will be built in Dockerfile)
-dist
-build
-frontend/dist
-backend/dist
-
-# Git and Docker files
 .git
 .gitignore
 .dockerignore
 docker-compose.yaml
-
-# Documentation (not needed in container)
-*.md
-!README.md
-
-# Environment files
 .env
 .env.local
-
-# IDE files
 .vscode
 .idea
-
-# OS files
 .DS_Store
 Thumbs.db
-
-# Logs
 logs
 *.log
-
-# Coverage
 coverage
 *.lcov
-
-# Build artifacts
 *.tgz
 
-# Keep source files and configs
-!frontend/src
-!backend/src
-!frontend/package.json
-!backend/package.json
-!package.json
+# Exclude build outputs (will be generated during build)
+frontend/dist
+backend/dist
+dist
+build
+
+# Exclude documentation we don't need in container
+ARCHITECTURE.md
+PROJECT-SUMMARY.md
+QUICKSTART.md
+FIXES-APPLIED.md
+USER-PERMISSIONS.md
+LICENSE
