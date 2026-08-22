@@ -8,10 +8,13 @@ const buildService = new BuildService();
 router.post('/current', async (req: Request, res: Response) => {
   try {
     const { visual, palette } = req.body;
+    console.log(`[BUILD] Building theme: ${visual}-${palette}`);
     const result = await buildService.buildTheme(visual, palette);
+    console.log(`[BUILD] Result:`, result);
     res.json(result);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to build theme' });
+    console.error('[BUILD ERROR]', error);
+    res.status(500).json({ error: 'Failed to build theme', details: error instanceof Error ? error.message : 'Unknown error' });
   }
 });
 
@@ -29,10 +32,13 @@ router.post('/family', async (req: Request, res: Response) => {
 // Build all themes
 router.post('/all', async (req: Request, res: Response) => {
   try {
+    console.log('[BUILD ALL] Starting to build all themes...');
     const result = await buildService.buildAll();
+    console.log(`[BUILD ALL] Completed. Built ${result.length} themes`);
     res.json(result);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to build all themes' });
+    console.error('[BUILD ALL ERROR]', error);
+    res.status(500).json({ error: 'Failed to build all themes', details: error instanceof Error ? error.message : 'Unknown error' });
   }
 });
 

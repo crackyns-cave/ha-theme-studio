@@ -1,5 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
+import yaml from 'js-yaml';
 
 export interface ColorPalette {
   name: string;
@@ -23,21 +24,26 @@ export class PaletteService {
 
   async getAllPalettes(): Promise<ColorPalette[]> {
     try {
+      console.log(`[PaletteService] Reading palettes from: ${this.palettesPath}`);
       const entries = await fs.readdir(this.palettesPath, { withFileTypes: true });
       const palettes: ColorPalette[] = [];
 
       for (const entry of entries) {
         if (entry.isDirectory()) {
+          const colors = await this.extractColors(entry.name);
           palettes.push({
             name: this.formatName(entry.name),
             slug: entry.name,
-            colors: await this.extractColors(entry.name)
+            colors
           });
+          console.log(`[PaletteService] Loaded palette: ${entry.name} (${colors.primary})`);
         }
       }
 
+      console.log(`[PaletteService] Loaded ${palettes.length} palettes`);
       return palettes;
     } catch (error) {
+      console.error('[PaletteService] Error loading palettes:', error);
       return [];
     }
   }
@@ -65,14 +71,31 @@ export class PaletteService {
   }
 
   private async extractColors(slug: string): Promise<ColorPalette['colors']> {
-    // Extract primary colors from the palette YAML files
-    // This is simplified - in reality would parse YAML
-    return {
-      primary: '#6750A4',
-      secondary: '#625B71',
-      success: '#10b981',
-      warning: '#f59e0b',
-      error: '#B3261E'
-    };
+    try {
+      // Read light mode YAML to extract colors
+      const lightModePath = path.join(this.palettesPath, slug, '11-light-mode.yaml');
+      const yamlContent = await fs.readFile(lightModePath, 'utf-8');
+      const parsed = yaml.load(yamlContent) as any;
+      
+      const lightColors = parsed?.light || {};
+      
+      return {
+        primary: lightColors['primary-color'] || '#6750A4',
+        secondary: lightColors['secondary-color'] || '#625B71',
+        tertiary: lightColors['tertiary-color'],
+        success: lightColors['success-color'] || '#10b981',
+        warning: lightColors['warning-color'] || '#f59e0b',
+        error: lightColors['error-color'] || '#B3261E'
+      };
+    } catch (error) {
+      // Fallback colors if parsing fails
+      return {
+        primary: '#6750A4',
+        secondary: '#625B71',
+        success: '#10b981',
+        warning: '#f59e0b',
+        error: '#B3261E'
+      };
+    }
   }
 }

@@ -28,11 +28,22 @@ export class BuildService {
       const themeName = `${visual}-${palette}`;
       const outputFile = path.join(this.outputPath, `${themeName}.yaml`);
 
+      console.log(`[BuildService] Building theme: ${themeName}`);
+      console.log(`[BuildService] Build script path: ${this.buildScriptPath}`);
+      console.log(`[BuildService] Output path: ${this.outputPath}`);
+
       // Execute build script
-      await execAsync(`node "${this.buildScriptPath}" ${visual} ${palette}`);
+      const command = `node "${this.buildScriptPath}" ${visual} ${palette}`;
+      console.log(`[BuildService] Executing: ${command}`);
+      
+      const { stdout, stderr } = await execAsync(command);
+      if (stdout) console.log('[BuildService] stdout:', stdout);
+      if (stderr) console.error('[BuildService] stderr:', stderr);
 
       // Get file stats
       const stats = await fs.stat(outputFile);
+
+      console.log(`[BuildService] Theme built successfully: ${outputFile} (${stats.size} bytes)`);
 
       return {
         success: true,
@@ -41,6 +52,7 @@ export class BuildService {
         size: stats.size
       };
     } catch (error) {
+      console.error('[BuildService] Build failed:', error);
       return {
         success: false,
         themeName: `${visual}-${palette}`,

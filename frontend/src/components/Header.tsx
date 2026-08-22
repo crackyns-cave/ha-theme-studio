@@ -24,23 +24,27 @@ export default function Header({ config }: HeaderProps) {
 
   const handleBuildCurrent = async () => {
     try {
+      console.log('[Header] Building current theme:', config);
       const response = await api.post('/build/current', {
         visual: config.visual,
         palette: config.palette,
       })
-      console.log('Build result:', response.data)
-      alert('Theme built successfully!')
+      console.log('[Header] Build result:', response.data)
+      alert(`Theme built successfully: ${response.data.themeName}`)
     } catch (error) {
+      console.error('[Header] Build failed:', error)
       alert('Failed to build theme')
     }
   }
 
   const handleBuildAll = async () => {
     try {
+      console.log('[Header] Building all themes...');
       const response = await api.post('/build/all')
-      console.log('Build all result:', response.data)
-      alert('All themes built successfully!')
+      console.log('[Header] Build all result:', response.data)
+      alert(`All themes built successfully! (${response.data.length} themes)`)
     } catch (error) {
+      console.error('[Header] Build all failed:', error)
       alert('Failed to build themes')
     }
     handleClose()

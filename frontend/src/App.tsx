@@ -38,19 +38,24 @@ function App() {
 
   const loadOptions = async () => {
     try {
+      console.log('[App] Loading visual and palette options...');
       const [visuals, palettes] = await Promise.all([
         api.get('/visuals'),
         api.get('/palettes'),
       ])
+      console.log('[App] Loaded visuals:', visuals.data);
+      console.log('[App] Loaded palettes:', palettes.data);
       setVisualOptions(visuals.data)
       setPaletteOptions(palettes.data)
     } catch (error) {
-      console.error('Failed to load options:', error)
+      console.error('[App] Failed to load options:', error)
     }
   }
 
   const updateConfig = (updates: Partial<ThemeConfig>) => {
-    setConfig(prev => ({ ...prev, ...updates }))
+    const newConfig = { ...config, ...updates };
+    console.log('[App] Config updated:', newConfig);
+    setConfig(newConfig);
   }
 
   return (
