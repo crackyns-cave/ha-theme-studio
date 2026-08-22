@@ -37,5 +37,3 @@
 
 Liquid Glass:
   modes:
-    light: *light
-    dark: *dark
