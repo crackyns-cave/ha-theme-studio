@@ -25,8 +25,19 @@ FROM node:20-alpine
 ARG USER_ID=1000
 ARG GROUP_ID=1000
 
-RUN addgroup -g ${GROUP_ID} appuser && \
-    adduser -D -u ${USER_ID} -G appuser appuser
+# Create group and user, handling existing IDs gracefully
+# Use shell variable to store the actual username created
+RUN set -ex; \
+    # Try to create group, or use existing one
+    if ! getent group ${GROUP_ID} >/dev/null 2>&1; then \
+        addgroup -g ${GROUP_ID} appuser; \
+    fi; \
+    # Get the actual group name for this GID
+    GROUP_NAME=$(getent group ${GROUP_ID} | cut -d: -f1); \
+    # Try to create user, or use existing one
+    if ! getent passwd ${USER_ID} >/dev/null 2>&1; then \
+        adduser -D -u ${USER_ID} -G ${GROUP_NAME} appuser; \
+    fi
 
 WORKDIR /app
 
@@ -55,11 +66,14 @@ COPY docker-entrypoint.sh /app/
 RUN chmod +x /app/docker-entrypoint.sh
 
 # Create volume mount points and set ownership
+# Redeclare args for this build stage
+ARG USER_ID=1000
+ARG GROUP_ID=1000
 RUN mkdir -p /framework /output && \
-    chown -R appuser:appuser /app /framework /output
+    chown -R ${USER_ID}:${GROUP_ID} /app /framework /output
 
-# Switch to non-root user
-USER appuser
+# Switch to non-root user (use numeric UID:GID)
+USER ${USER_ID}:${GROUP_ID}
 
 # Environment
 ENV NODE_ENV=production
