@@ -1,12 +1,13 @@
 services:
   theme-studio:
-    build:
-      context: .
-      args:
-        # Optional: Specify custom user/group ID
-        # Default is 1000:1000
-        # USER_ID: 1000
-        # GROUP_ID: 1000
+    image: ghcr.io/crackyns-cave/ha-theme-studio:latest
+    # build:
+    #   context: .
+    #   args:
+    #     # Optional: Specify custom user/group ID
+    #     # Default is 1000:1000
+    #     # USER_ID: 1000
+    #     # GROUP_ID: 1000
     container_name: ha-theme-studio
     # Optional: Override user at runtime (format: "uid:gid")
     # user: "1000:1000"
