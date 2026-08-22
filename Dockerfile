@@ -43,9 +43,12 @@ RUN set -ex; \
 
 WORKDIR /app
 
-# Install bash, su-exec (for privilege dropping), and js-yaml
-RUN apk add --no-cache bash su-exec && \
-    npm install -g js-yaml
+# Install bash and su-exec (for privilege dropping)
+RUN apk add --no-cache bash su-exec
+
+# Copy package.json and install dependencies (including js-yaml)
+COPY package.json /app/
+RUN npm install --production
 
 # Copy backend
 COPY --from=backend-builder /app/backend/dist /app/backend/dist
@@ -58,7 +61,6 @@ COPY --from=frontend-builder /app/frontend/dist /app/frontend/dist
 # Copy build scripts
 COPY build.js /app/
 COPY build-all.js /app/
-COPY package.json /app/
 
 # Copy default framework (to be copied to /framework if empty)
 COPY default-framework /app/default-framework
