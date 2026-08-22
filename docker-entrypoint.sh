@@ -42,4 +42,4 @@ echo "==========================================
 
 # Drop privileges and execute the main command as the app user
 echo "🔓 Dropping to user ${APP_USER_ID}:${APP_GROUP_ID}..."
-exec su-exec ${APP_USER_ID}:${APP_GROUP_ID} "$@"
+exec su-exec ${APP_USER_ID} "$@"
