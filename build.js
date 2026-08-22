@@ -148,6 +148,9 @@ async function concatenateYaml(filePaths, visualLanguage) {
   for (const filePath of filePaths) {
     try {
       let content = await fs.readFile(filePath, 'utf-8');
+      if (filePath.endsWith('11-light-mode.yaml') || filePath.endsWith('12-dark-mode.yaml')) {
+        content = applyHomeAssistantTextSemantics(content);
+      }
       if (visualLanguage === 'neumorphic-material') {
         if (filePath.endsWith('11-light-mode.yaml')) {
           content = applyNeumorphicMode(content, 'light');
@@ -168,6 +171,44 @@ async function concatenateYaml(filePaths, visualLanguage) {
   }
   
   return parts.join('\n');
+}
+
+function applyHomeAssistantTextSemantics(content) {
+  const getColor = key => content.match(new RegExp(`^\\s+${key}:\\s+["']?([^"'\\n]+)`, 'm'))?.[1]?.trim();
+  const primary = getColor('primary-color');
+  const primaryText = getColor('primary-text-color');
+  const secondaryText = getColor('secondary-text-color');
+  const disabledText = getColor('disabled-text-color');
+  const contrastText = getColor('text-primary-color');
+
+  if (!primary || !primaryText || !secondaryText || !disabledText || !contrastText) {
+    throw new Error('Palette mode is missing required text color tokens');
+  }
+
+  const replacements = {
+    'ha-color-text-link': primary,
+    'ha-color-on-primary-quiet': primary,
+    'ha-color-on-primary-normal': primary,
+    'ha-color-on-primary-loud': contrastText,
+    'ha-color-on-neutral-quiet': secondaryText,
+    'ha-color-on-neutral-normal': primaryText,
+    'ha-color-on-neutral-loud': contrastText,
+    'ha-color-on-disabled-quiet': disabledText,
+    'ha-color-on-disabled-normal': disabledText,
+    'ha-color-on-disabled-loud': disabledText
+  };
+
+  for (const [key, value] of Object.entries(replacements)) {
+    const pattern = new RegExp(`^(\\s+)${key}:.*$`, 'm');
+    if (pattern.test(content)) {
+      content = content.replace(pattern, `$1${key}: "${value}"`);
+    } else {
+      const anchor = /^(\s+)ha-color-text-primary:.*$/m;
+      content = content.replace(anchor, `$&\n$1${key}: "${value}"`);
+    }
+  }
+
+  return content;
 }
 
 function isGlassTheme(visualLanguage) {
