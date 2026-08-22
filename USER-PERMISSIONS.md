@@ -2,6 +2,8 @@
 
 HA Theme Studio runs as a non-root user for security. By default, it uses **UID:GID 1000:1000**.
 
+**Volume permissions are handled automatically!** The container starts as root, fixes ownership of `/framework` and `/output`, then drops to the non-root user. No manual `chown` required! 🎉
+
 ## Default Usage
 
 ```bash
@@ -10,6 +12,8 @@ cp docker-compose.yaml-sample docker-compose.yaml
 
 # Build and run (uses default 1000:1000)
 docker compose up -d
+
+# Permissions are automatically configured - just wait for startup!
 ```
 
 ## Custom User/Group ID
@@ -77,19 +81,11 @@ Running as non-root:
 
 ## File Permissions
 
-The container user needs read/write access to:
+The container **automatically** fixes permissions on startup:
 - `/framework` - For reading/writing theme framework files
 - `/output` - For writing generated theme files
 
-If you get permission errors, ensure the mounted directories have the correct ownership:
-
-```bash
-# Set ownership to match container user (default 1000:1000)
-sudo chown -R 1000:1000 framework/ output/
-
-# Or match your custom user
-sudo chown -R 1001:1001 framework/ output/
-```
+The entrypoint script (running as root) ensures these directories have the correct ownership before dropping to the app user.
 
 ## Verification
 
@@ -107,21 +103,23 @@ docker exec ha-theme-studio id
 
 ### "Permission denied" errors
 
-1. Check directory ownership:
+This should no longer happen since permissions are auto-fixed on startup. If you still see issues:
+
+1. Check container logs:
    ```bash
-   ls -la framework/ output/
+   docker compose logs
+   # Look for "Setting up volume directories..." message
    ```
 
-2. Fix permissions:
+2. Restart the container to re-run permission fixes:
    ```bash
-   sudo chown -R 1000:1000 framework/ output/
-   # Or your custom UID:GID
+   docker compose restart
    ```
 
-3. Rebuild container with correct user:
+3. If using custom UID/GID, verify it's set correctly:
    ```bash
-   docker compose build --no-cache
-   docker compose up -d
+   docker exec ha-theme-studio env | grep APP_USER
+   # Should show APP_USER_ID and APP_GROUP_ID
    ```
 
 ### Container won't start
