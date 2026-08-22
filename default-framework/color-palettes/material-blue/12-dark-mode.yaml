@@ -30,22 +30,22 @@
       secondary-background-color: "#1A1A1E"
       lovelace-background: "#0A0A0C"
       
-      # Cards - using glass backgrounds
-      card-background-color: *glass-bg-dark-resting
-      ha-card-background: *glass-bg-dark-resting
+      # Cards
+      card-background-color: "#252B38"
+      ha-card-background: "#252B38"
       
       # Sidebar
-      sidebar-background-color: *glass-bg-dark-intense
+      sidebar-background-color: "#2C2C30"
       sidebar-icon-color: "#B0BEC5"
       sidebar-selected-icon-color: "#42A5F5"
       sidebar-selected-text-color: "#F0F4F8"
       sidebar-text-color: "#B0BEC5"
       
       # Dialogs
-      dialog-background-color: *glass-bg-dark-intense
+      dialog-background-color: "#2C2C30"
       
       # App header
-      app-header-background-color: *glass-bg-dark-intense
+      app-header-background-color: "#2C2C30"
       app-header-text-color: "#F0F4F8"
       
       # ------------------------------------------------------------------------
@@ -111,9 +111,9 @@
       # ------------------------------------------------------------------------
       
       wa-color-surface-default: "#0A0A0C"
-      wa-color-surface-raised: *glass-bg-dark-resting
+      wa-color-surface-raised: "#252B38"
       wa-color-surface-lowered: "#1A1A1E"
-      wa-color-surface-overlay: *glass-bg-dark-hover
+      wa-color-surface-overlay: "#2C3340"
       wa-color-surface-inverse: "#F0F4F8"
       
       wa-color-text-normal: "#F0F4F8"
@@ -194,21 +194,21 @@
       ha-color-text-disabled: "#546E7A"
       ha-color-text-inverse: "#000000"
       
-      ha-color-form-background: *glass-bg-dark-subtle
-      ha-color-form-background-hover: *glass-bg-dark-resting
-      ha-color-form-background-focus: *glass-bg-dark-hover
-      ha-color-form-background-disabled: "rgba(26, 26, 30, 0.3)"
+      ha-color-form-background: "#1E2430"
+      ha-color-form-background-hover: "#252B38"
+      ha-color-form-background-focus: "#2C3340"
+      ha-color-form-background-disabled: "rgba(37, 43, 56, 0.5)"
       ha-color-form-text: "#F0F4F8"
-      ha-color-form-text-disabled: "#616161"
-      ha-color-form-placeholder: "#78909C"
-      ha-color-form-border: *glass-border-dark-quiet
-      ha-color-form-border-hover: *glass-border-dark-normal
-      ha-color-form-border-focus: *glass-border-dark-accent
+      ha-color-form-text-disabled: "#757575"
+      ha-color-form-placeholder: "#9E9E9E"
+      ha-color-form-border: "rgba(255, 255, 255, 0.08)"
+      ha-color-form-border-hover: "rgba(255, 255, 255, 0.12)"
+      ha-color-form-border-focus: "rgba(33, 150, 243, 0.40)"
       ha-color-form-border-error: "rgba(239, 83, 80, 0.6)"
       
-      ha-color-border-neutral-quiet: *glass-border-dark-quiet
-      ha-color-border-neutral-normal: *glass-border-dark-normal
-      ha-color-border-neutral-loud: *glass-border-dark-loud
+      ha-color-border-neutral-quiet: "rgba(255, 255, 255, 0.08)"
+      ha-color-border-neutral-normal: "rgba(255, 255, 255, 0.12)"
+      ha-color-border-neutral-loud: "rgba(255, 255, 255, 0.20)"
       ha-color-border-primary-quiet: "rgba(66, 165, 245, 0.3)"
       ha-color-border-primary-normal: "rgba(66, 165, 245, 0.5)"
       ha-color-border-primary-loud: "rgba(66, 165, 245, 0.7)"
@@ -235,9 +235,9 @@
       ha-color-fill-neutral-normal-hover: "#B0BEC5"
       ha-color-fill-neutral-normal-active: "#CFD8DC"
       
-      ha-color-fill-neutral-quiet-resting: *glass-bg-dark-subtle
-      ha-color-fill-neutral-quiet-hover: *glass-bg-dark-resting
-      ha-color-fill-neutral-quiet-active: *glass-bg-dark-hover
+      ha-color-fill-neutral-quiet-resting: "#1E2430"
+      ha-color-fill-neutral-quiet-hover: "#252B38"
+      ha-color-fill-neutral-quiet-active: "#2C3340"
       
       ha-color-on-primary-quiet: "#42A5F5"
       ha-color-on-primary-normal: "#000000"
@@ -276,9 +276,9 @@
       ha-color-info-active: "#80DEEA"
       
       ha-color-surface-default: "#0A0A0C"
-      ha-color-surface-raised: *glass-bg-dark-resting
+      ha-color-surface-raised: "#252B38"
       ha-color-surface-lowered: "#1A1A1E"
-      ha-color-surface-overlay: *glass-bg-dark-hover
+      ha-color-surface-overlay: "#2C3340"
       
       ha-color-background-primary: "#0A0A0C"
       ha-color-background-secondary: "#1A1A1E"
@@ -298,21 +298,21 @@
       # ------------------------------------------------------------------------
       
       bubble-main-background-color: "#0A0A0C"
-      bubble-secondary-background-color: *glass-bg-dark-resting
-      bubble-card-background-color: *glass-bg-dark-resting
-      bubble-backdrop-background-color: "rgba(0, 0, 0, 0.6)"
-      bubble-accent-color: "#42A5F5"
+      bubble-secondary-background-color: "#252B38"
+      bubble-card-background-color: "#252B38"
+      bubble-backdrop-background-color: "rgba(0, 0, 0, 0.5)"
+      bubble-accent-color: "#82B1FF"
       bubble-icon-color: "#B0BEC5"
       bubble-name-color: "#F0F4F8"
       bubble-state-color: "#B0BEC5"
-      bubble-shadow: *glass-shadow-dark-md
-      bubble-shadow-active: *glass-shadow-dark-sm
-      bubble-shadow-hover: *glass-shadow-dark-lg
-      bubble-button-background: *glass-bg-dark-subtle
-      bubble-button-background-hover: *glass-bg-dark-resting
-      bubble-button-background-active: *glass-bg-dark-active
-      bubble-pop-up-background: *glass-bg-dark-intense
-      bubble-media-player-background: *glass-bg-dark-resting
+      bubble-shadow: "0px 4px 8px rgba(0, 0, 0, 0.30), 0px 2px 12px rgba(0, 0, 0, 0.20)"
+      bubble-shadow-active: "0px 2px 4px rgba(0, 0, 0, 0.30), 0px 1px 6px rgba(0, 0, 0, 0.20)"
+      bubble-shadow-hover: "0px 8px 16px rgba(0, 0, 0, 0.30), 0px 4px 24px rgba(0, 0, 0, 0.20)"
+      bubble-button-background: "#1E2430"
+      bubble-button-background-hover: "#252B38"
+      bubble-button-background-active: "#343B48"
+      bubble-pop-up-background: "#2C2C30"
+      bubble-media-player-background: "#252B38"
       
       # ------------------------------------------------------------------------
       # ENERGY DASHBOARD - Dark Mode
@@ -333,43 +333,43 @@
       energy-device-consumption-color: "#AB47BC"
       
       # ------------------------------------------------------------------------
-      # COMPATIBILITY ALIASES
+      # SHADOW COMPATIBILITY - Dark Mode
       # ------------------------------------------------------------------------
       
-      # Neumorphic shadow compatibility (map to liquid glass shadows)
-      neu-shadow-raised-sm: *glass-shadow-dark-sm
-      neu-shadow-raised: *glass-shadow-dark-md
-      neu-shadow-raised-lg: *glass-shadow-dark-lg
-      neu-shadow-raised-xl: *glass-shadow-dark-xl
-      neu-shadow-float: *glass-shadow-dark-lg
-      neu-shadow-pressed-sm: *glass-shadow-dark-subtle
-      neu-shadow-pressed: *glass-shadow-dark-sm
-      neu-shadow-pressed-lg: *glass-shadow-dark-md
-      neu-shadow-subtle: *glass-shadow-dark-subtle
+      # Neumorphic shadow compatibility
+      neu-shadow-raised-sm: "0px 2px 4px rgba(0, 0, 0, 0.30), 0px 1px 6px rgba(0, 0, 0, 0.20)"
+      neu-shadow-raised: "0px 4px 8px rgba(0, 0, 0, 0.30), 0px 2px 12px rgba(0, 0, 0, 0.20)"
+      neu-shadow-raised-lg: "0px 8px 16px rgba(0, 0, 0, 0.30), 0px 4px 24px rgba(0, 0, 0, 0.20)"
+      neu-shadow-raised-xl: "0px 12px 24px rgba(0, 0, 0, 0.30), 0px 6px 36px rgba(0, 0, 0, 0.20)"
+      neu-shadow-float: "0px 8px 16px rgba(0, 0, 0, 0.30), 0px 4px 24px rgba(0, 0, 0, 0.20)"
+      neu-shadow-pressed-sm: "0px 1px 2px rgba(0, 0, 0, 0.30), 0px 1px 3px rgba(0, 0, 0, 0.20)"
+      neu-shadow-pressed: "0px 2px 4px rgba(0, 0, 0, 0.30), 0px 1px 6px rgba(0, 0, 0, 0.20)"
+      neu-shadow-pressed-lg: "0px 4px 8px rgba(0, 0, 0, 0.30), 0px 2px 12px rgba(0, 0, 0, 0.20)"
+      neu-shadow-subtle: "0px 1px 2px rgba(0, 0, 0, 0.30), 0px 1px 3px rgba(0, 0, 0, 0.20)"
       
       # Material elevation compatibility
       m3-elevation-0: "none"
-      m3-elevation-1: *glass-shadow-dark-subtle
-      m3-elevation-2: *glass-shadow-dark-sm
-      m3-elevation-3: *glass-shadow-dark-md
-      m3-elevation-4: *glass-shadow-dark-lg
-      m3-elevation-5: *glass-shadow-dark-xl
+      m3-elevation-1: "0px 1px 2px rgba(0, 0, 0, 0.30), 0px 1px 3px rgba(0, 0, 0, 0.20)"
+      m3-elevation-2: "0px 2px 4px rgba(0, 0, 0, 0.30), 0px 1px 6px rgba(0, 0, 0, 0.20)"
+      m3-elevation-3: "0px 4px 8px rgba(0, 0, 0, 0.30), 0px 2px 12px rgba(0, 0, 0, 0.20)"
+      m3-elevation-4: "0px 8px 16px rgba(0, 0, 0, 0.30), 0px 4px 24px rgba(0, 0, 0, 0.20)"
+      m3-elevation-5: "0px 12px 24px rgba(0, 0, 0, 0.30), 0px 6px 36px rgba(0, 0, 0, 0.20)"
       
       # Card shadows
-      card-box-shadow: *glass-shadow-dark-md
+      card-box-shadow: "0px 4px 8px rgba(0, 0, 0, 0.30), 0px 2px 12px rgba(0, 0, 0, 0.20)"
       
       # Component shadows
-      button-box-shadow: *glass-shadow-dark-subtle
-      dialog-box-shadow: *glass-shadow-dark-xl
-      sidebar-shadow: *glass-shadow-dark-lg
-      app-header-shadow: *glass-shadow-dark-sm
+      button-box-shadow: "0px 1px 2px rgba(0, 0, 0, 0.30), 0px 1px 3px rgba(0, 0, 0, 0.20)"
+      dialog-box-shadow: "0px 12px 24px rgba(0, 0, 0, 0.30), 0px 6px 36px rgba(0, 0, 0, 0.20)"
+      sidebar-shadow: "0px 8px 16px rgba(0, 0, 0, 0.30), 0px 4px 24px rgba(0, 0, 0, 0.20)"
+      app-header-shadow: "0px 2px 4px rgba(0, 0, 0, 0.30), 0px 1px 6px rgba(0, 0, 0, 0.20)"
       
       # ------------------------------------------------------------------------
       # ADDITIONAL HOME ASSISTANT VARIABLES
       # ------------------------------------------------------------------------
       
       divider-color: "rgba(255, 255, 255, 0.12)"
-      label-badge-background-color: *glass-bg-dark-resting
+      label-badge-background-color: "#252B38"
       label-badge-text-color: "#F0F4F8"
       label-badge-red: "#EF5350"
       label-badge-blue: "#42A5F5"
@@ -377,10 +377,10 @@
       label-badge-yellow: "#FFA726"
       label-badge-grey: "#78909C"
       
-      table-row-background-color: *glass-bg-dark-subtle
-      table-row-alternative-background-color: *glass-bg-dark-resting
+      table-row-background-color: "#1E2430"
+      table-row-alternative-background-color: "#252B38"
       
-      paper-listbox-background-color: *glass-bg-dark-resting
+      paper-listbox-background-color: "#252B38"
       paper-item-icon-color: "#B0BEC5"
       paper-item-icon-active-color: "#42A5F5"
       
