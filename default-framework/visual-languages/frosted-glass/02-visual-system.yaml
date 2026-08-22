@@ -93,8 +93,8 @@
   # ----------------------------------------------------------------------------
   # Soft, semi-transparent borders
   
-  fg-border-width: "0.5px"
-  fg-border-width-thick: "1px"
+  fg-border-width: &fg-border-width "0.5px"
+  fg-border-width-thick: &fg-border-width-thick "1px"
   fg-border-style: "solid"
   
   # ----------------------------------------------------------------------------
