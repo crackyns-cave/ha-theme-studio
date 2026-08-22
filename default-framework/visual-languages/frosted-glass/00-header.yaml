@@ -41,6 +41,3 @@ Frosted Glass:
   # Framework metadata
   __version: "1.0.0"
   __target: "2026.x"
-  
-  # Mode definitions - modern structure
-  modes:
