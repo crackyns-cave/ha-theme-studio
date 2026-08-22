@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const { buildTheme } = require('../ha-theme-studio-bkp/build.js');
+const { buildTheme } = require('./build.js');
 
 const VISUAL_LANGUAGES = [
   'material3',

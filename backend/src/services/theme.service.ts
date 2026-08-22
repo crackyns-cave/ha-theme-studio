@@ -13,7 +13,11 @@ export interface ThemeConfig {
 }
 
 export class ThemeService {
-  private configPath = '/framework/current-config.json';
+  // Detect environment: Docker vs local development
+  private isDocker = require('fs').existsSync('/framework');
+  private configPath = this.isDocker 
+    ? '/framework/current-config.json' 
+    : path.join(__dirname, '../../../framework/current-config.json');
 
   async getCurrentConfig(): Promise<ThemeConfig> {
     try {

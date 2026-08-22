@@ -9,7 +9,11 @@ export interface VisualLanguage {
 }
 
 export class VisualService {
-  private visualsPath = '/framework/visual-languages';
+  // Detect environment: Docker vs local development
+  private isDocker = require('fs').existsSync('/framework');
+  private visualsPath = this.isDocker 
+    ? '/framework/visual-languages' 
+    : path.join(__dirname, '../../../framework/visual-languages');
 
   async getAllVisuals(): Promise<VisualLanguage[]> {
     try {

@@ -16,8 +16,12 @@ export interface BuildResult {
 }
 
 export class BuildService {
-  private frameworkPath = '/framework';
-  private outputPath = '/output';
+  // Detect environment: Docker vs local development
+  private isDocker = require('fs').existsSync('/framework');
+  private frameworkPath = this.isDocker ? '/framework' : path.join(__dirname, '../../../framework');
+  private outputPath = this.isDocker ? '/output' : path.join(__dirname, '../../../output');
+  private buildScriptPath = this.isDocker ? '/app/build.js' : path.join(__dirname, '../../../build.js');
+  private buildAllScriptPath = this.isDocker ? '/app/build-all.js' : path.join(__dirname, '../../../build-all.js');
 
   async buildTheme(visual: string, palette: string): Promise<BuildResult> {
     try {
@@ -25,8 +29,7 @@ export class BuildService {
       const outputFile = path.join(this.outputPath, `${themeName}.yaml`);
 
       // Execute build script
-      const buildScript = path.join(this.frameworkPath, '../build.js');
-      await execAsync(`node ${buildScript} ${visual} ${palette}`);
+      await execAsync(`node "${this.buildScriptPath}" ${visual} ${palette}`);
 
       // Get file stats
       const stats = await fs.stat(outputFile);
@@ -63,8 +66,7 @@ export class BuildService {
   async buildAll(): Promise<BuildResult[]> {
     try {
       // Execute build-all script
-      const buildScript = path.join(this.frameworkPath, '../build-all.js');
-      await execAsync(`node ${buildScript}`);
+      await execAsync(`node "${this.buildAllScriptPath}"`);
 
       // Read all generated files
       const files = await fs.readdir(this.outputPath);

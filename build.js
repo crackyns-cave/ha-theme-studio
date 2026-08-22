@@ -4,8 +4,10 @@ const fs = require('fs').promises;
 const path = require('path');
 const yaml = require('js-yaml');
 
-const FRAMEWORK_PATH = '/framework';
-const OUTPUT_PATH = '/output';
+// Detect environment: Docker uses /framework, local uses ./framework
+const isDocker = require('fs').existsSync('/framework');
+const FRAMEWORK_PATH = isDocker ? '/framework' : path.join(__dirname, 'framework');
+const OUTPUT_PATH = isDocker ? '/output' : path.join(__dirname, 'output');
 
 /**
  * Build a Home Assistant theme from framework components

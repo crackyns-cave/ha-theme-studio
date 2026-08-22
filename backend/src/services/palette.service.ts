@@ -15,7 +15,11 @@ export interface ColorPalette {
 }
 
 export class PaletteService {
-  private palettesPath = '/framework/color-palettes';
+  // Detect environment: Docker vs local development
+  private isDocker = require('fs').existsSync('/framework');
+  private palettesPath = this.isDocker 
+    ? '/framework/color-palettes' 
+    : path.join(__dirname, '../../../framework/color-palettes');
 
   async getAllPalettes(): Promise<ColorPalette[]> {
     try {
