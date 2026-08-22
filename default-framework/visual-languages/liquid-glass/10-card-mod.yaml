@@ -6,6 +6,16 @@
   # ==========================================================================
   
   card-mod-theme: Liquid Glass
+
+  card-mod-view: |
+    hui-view {
+      background: var(--lovelace-background) !important;
+    }
+
+    hui-masonry-view,
+    hui-sections-view {
+      background: transparent !important;
+    }
   
   card-mod-root: |
     

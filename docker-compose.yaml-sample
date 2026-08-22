@@ -18,11 +18,14 @@ services:
       - ./framework:/framework
       # Generated themes output (persistent)
       - ./output:/output
+      # Wallpaper assets (mount to Home Assistant's /config/www/theme-studio)
+      - ./assets:/assets
       # Optional: Direct integration with Home Assistant
       # - ./ha/config/themes:/output
     environment:
       - NODE_ENV=production
       - PORT=3001
+      - ASSETS_PATH=/assets
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3001/api/health"]

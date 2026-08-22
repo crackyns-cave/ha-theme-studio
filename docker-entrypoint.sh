@@ -8,7 +8,7 @@ echo "==========================================
 
 # Ensure volume directories exist
 echo "📁 Setting up volume directories..."
-mkdir -p /framework /output
+mkdir -p /framework /output /assets
 
 # Check if framework folder is empty or doesn't exist
 if [ -z "$(ls -A /framework 2>/dev/null)" ]; then

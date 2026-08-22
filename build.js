@@ -8,6 +8,10 @@ const yaml = require('js-yaml');
 const isDocker = require('fs').existsSync('/framework');
 const FRAMEWORK_PATH = isDocker ? '/framework' : path.join(__dirname, 'framework');
 const OUTPUT_PATH = isDocker ? '/output' : path.join(__dirname, 'output');
+const ASSETS_PATH = process.env.ASSETS_PATH || path.join(OUTPUT_PATH, 'images');
+const DEFAULT_IMAGES_PATH = isDocker
+  ? '/app/default-framework/images'
+  : path.join(__dirname, 'default-framework', 'images');
 
 /**
  * Build a Home Assistant theme from framework components
@@ -76,6 +80,9 @@ async function buildTheme(visualLanguage, colorPalette) {
 
     // Concatenate all YAML files
     let yamlContent = await concatenateYaml(components, visualLanguage);
+    if (isGlassTheme(visualLanguage)) {
+      await copyWallpaperAssets();
+    }
     
     // Replace the visual language name with full theme name
     // Convert visual-language slug to Title Case
@@ -147,6 +154,12 @@ async function concatenateYaml(filePaths, visualLanguage) {
         } else if (filePath.endsWith('12-dark-mode.yaml')) {
           content = applyNeumorphicMode(content, 'dark');
         }
+      } else if (isGlassTheme(visualLanguage)) {
+        if (filePath.endsWith('11-light-mode.yaml')) {
+          content = applyGlassWallpaper(content, 'light');
+        } else if (filePath.endsWith('12-dark-mode.yaml')) {
+          content = applyGlassWallpaper(content, 'dark');
+        }
       }
       parts.push(content);
     } catch (error) {
@@ -155,6 +168,39 @@ async function concatenateYaml(filePaths, visualLanguage) {
   }
   
   return parts.join('\n');
+}
+
+function isGlassTheme(visualLanguage) {
+  return visualLanguage === 'frosted-glass' || visualLanguage === 'liquid-glass';
+}
+
+function applyGlassWallpaper(content, mode) {
+  const wallpaper = `center / cover no-repeat fixed url('/local/theme-studio/${mode}-bg.png')`;
+  return content.replace(
+    /^(\s+)lovelace-background:.*$/m,
+    `$1lovelace-background: "${wallpaper}"`
+  );
+}
+
+async function copyWallpaperAssets() {
+  const frameworkImagesPath = path.join(FRAMEWORK_PATH, 'images');
+  const sourcePath = await pathExists(frameworkImagesPath)
+    ? frameworkImagesPath
+    : DEFAULT_IMAGES_PATH;
+
+  await fs.mkdir(ASSETS_PATH, { recursive: true });
+  await Promise.all(['light-bg.png', 'dark-bg.png'].map(fileName =>
+    fs.copyFile(path.join(sourcePath, fileName), path.join(ASSETS_PATH, fileName))
+  ));
+}
+
+async function pathExists(targetPath) {
+  try {
+    await fs.access(targetPath);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 function applyNeumorphicMode(content, mode) {

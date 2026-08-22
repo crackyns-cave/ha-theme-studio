@@ -18,6 +18,7 @@ const fallbackColors = {
 }
 
 export default function Preview({ config, palette }: PreviewProps) {
+  const isGlassTheme = config.visual === 'frosted-glass' || config.visual === 'liquid-glass'
   const paletteColors = palette?.modes?.[config.mode] ?? palette?.colors ?? fallbackColors
   const colors = config.visual === 'neumorphic-material'
     ? {
@@ -77,6 +78,10 @@ export default function Preview({ config, palette }: PreviewProps) {
           flex: 1,
           p: 3,
           bgcolor: 'background.default',
+          backgroundImage: isGlassTheme ? `url('/api/wallpapers/${config.mode}-bg.png')` : 'none',
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          backgroundAttachment: 'fixed',
           color: 'text.primary',
           overflowY: 'auto',
           transition: 'background-color 180ms ease, color 180ms ease',

@@ -52,7 +52,7 @@ COPY docker-entrypoint.sh /app/
 RUN chmod +x /app/docker-entrypoint.sh
 
 # Create volume mount points
-RUN mkdir -p /framework /output
+RUN mkdir -p /framework /output /assets
 
 # Environment
 ENV NODE_ENV=production

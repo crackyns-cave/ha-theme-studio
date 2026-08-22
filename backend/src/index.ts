@@ -1,5 +1,6 @@
 import express, { Express, Request, Response } from 'express';
 import cors from 'cors';
+import fs from 'fs';
 import path from 'path';
 import themeRoutes from './routes/theme.routes';
 import paletteRoutes from './routes/palette.routes';
@@ -24,6 +25,11 @@ app.use('/api/themes', themeRoutes);
 app.use('/api/palettes', paletteRoutes);
 app.use('/api/visuals', visualRoutes);
 app.use('/api/build', buildRoutes);
+
+const frameworkImagesPath = fs.existsSync('/framework/images')
+  ? '/framework/images'
+  : path.join(__dirname, '../../default-framework/images');
+app.use('/api/wallpapers', express.static(frameworkImagesPath));
 
 // Serve frontend in production
 if (process.env.NODE_ENV === 'production') {
