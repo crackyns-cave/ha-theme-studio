@@ -122,10 +122,10 @@
   glass-blur-medium: *fg-backdrop-blur-medium
   glass-blur-heavy: *fg-backdrop-blur-heavy
   glass-blur-intense: *fg-backdrop-blur-heavy
-  glass-blur-card: *fg-backdrop-blur-card
-  glass-blur-dialog: *fg-backdrop-blur-dialog
-  glass-blur-sidebar: *fg-backdrop-blur-sidebar
-  glass-blur-header: *fg-backdrop-blur-header
+  glass-blur-card: *fg-backdrop-blur-light
+  glass-blur-dialog: *fg-backdrop-blur-medium
+  glass-blur-sidebar: *fg-backdrop-blur-light
+  glass-blur-header: *fg-backdrop-blur-light
   
   # Glass border aliases
   glass-border-light-quiet: &glass-border-light-quiet "rgba(255, 255, 255, 0.25)"
