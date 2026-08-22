@@ -10,97 +10,97 @@
   # --------------------------------------------------------------------------
   
   # Light mode glass backgrounds
-  &glass-bg-light-resting "rgba(255, 255, 255, 0.65)"
-  &glass-bg-light-hover "rgba(255, 255, 255, 0.80)"
-  &glass-bg-light-active "rgba(255, 255, 255, 0.50)"
-  &glass-bg-light-subtle "rgba(255, 255, 255, 0.45)"
-  &glass-bg-light-intense "rgba(255, 255, 255, 0.90)"
+  glass-bg-light-resting: &glass-bg-light-resting "rgba(255, 255, 255, 0.65)"
+  glass-bg-light-hover: &glass-bg-light-hover "rgba(255, 255, 255, 0.80)"
+  glass-bg-light-active: &glass-bg-light-active "rgba(255, 255, 255, 0.50)"
+  glass-bg-light-subtle: &glass-bg-light-subtle "rgba(255, 255, 255, 0.45)"
+  glass-bg-light-intense: &glass-bg-light-intense "rgba(255, 255, 255, 0.90)"
   
   # Dark mode glass backgrounds
-  &glass-bg-dark-resting "rgba(26, 26, 30, 0.70)"
-  &glass-bg-dark-hover "rgba(42, 42, 48, 0.85)"
-  &glass-bg-dark-active "rgba(26, 26, 30, 0.55)"
-  &glass-bg-dark-subtle "rgba(18, 18, 22, 0.50)"
-  &glass-bg-dark-intense "rgba(52, 52, 58, 0.95)"
+  glass-bg-dark-resting: &glass-bg-dark-resting "rgba(26, 26, 30, 0.70)"
+  glass-bg-dark-hover: &glass-bg-dark-hover "rgba(42, 42, 48, 0.85)"
+  glass-bg-dark-active: &glass-bg-dark-active "rgba(26, 26, 30, 0.55)"
+  glass-bg-dark-subtle: &glass-bg-dark-subtle "rgba(18, 18, 22, 0.50)"
+  glass-bg-dark-intense: &glass-bg-dark-intense "rgba(52, 52, 58, 0.95)"
   
   # --------------------------------------------------------------------------
   # GLASS BLUR SYSTEM - Layered Depth
   # --------------------------------------------------------------------------
   
   # Progressive blur levels for dimensional layering
-  &glass-blur-subtle "blur(8px) saturate(150%)"
-  &glass-blur-light "blur(16px) saturate(170%)"
-  &glass-blur-medium "blur(24px) saturate(180%)"
-  &glass-blur-heavy "blur(36px) saturate(200%)"
-  &glass-blur-intense "blur(48px) saturate(220%)"
+  glass-blur-subtle: &glass-blur-subtle "blur(8px) saturate(150%)"
+  glass-blur-light: &glass-blur-light "blur(16px) saturate(170%)"
+  glass-blur-medium: &glass-blur-medium "blur(24px) saturate(180%)"
+  glass-blur-heavy: &glass-blur-heavy "blur(36px) saturate(200%)"
+  glass-blur-intense: &glass-blur-intense "blur(48px) saturate(220%)"
   
   # Specialized blur effects
-  &glass-blur-card "blur(20px) saturate(175%)"
-  &glass-blur-dialog "blur(40px) saturate(200%)"
-  &glass-blur-sidebar "blur(28px) saturate(180%)"
-  &glass-blur-header "blur(24px) saturate(175%)"
+  glass-blur-card: &glass-blur-card "blur(20px) saturate(175%)"
+  glass-blur-dialog: &glass-blur-dialog "blur(40px) saturate(200%)"
+  glass-blur-sidebar: &glass-blur-sidebar "blur(28px) saturate(180%)"
+  glass-blur-header: &glass-blur-header "blur(24px) saturate(175%)"
   
   # --------------------------------------------------------------------------
   # GLASS BORDER SYSTEM - Reflective Edges
   # --------------------------------------------------------------------------
   
   # Light mode reflective borders
-  &glass-border-light-quiet "rgba(255, 255, 255, 0.30)"
-  &glass-border-light-normal "rgba(255, 255, 255, 0.45)"
-  &glass-border-light-loud "rgba(255, 255, 255, 0.65)"
-  &glass-border-light-luminous "rgba(255, 255, 255, 0.85)"
-  &glass-border-light-accent "rgba(120, 120, 255, 0.40)"
+  glass-border-light-quiet: &glass-border-light-quiet "rgba(255, 255, 255, 0.30)"
+  glass-border-light-normal: &glass-border-light-normal "rgba(255, 255, 255, 0.45)"
+  glass-border-light-loud: &glass-border-light-loud "rgba(255, 255, 255, 0.65)"
+  glass-border-light-luminous: &glass-border-light-luminous "rgba(255, 255, 255, 0.85)"
+  glass-border-light-accent: &glass-border-light-accent "rgba(120, 120, 255, 0.40)"
   
   # Dark mode reflective borders
-  &glass-border-dark-quiet "rgba(255, 255, 255, 0.10)"
-  &glass-border-dark-normal "rgba(255, 255, 255, 0.18)"
-  &glass-border-dark-loud "rgba(255, 255, 255, 0.28)"
-  &glass-border-dark-luminous "rgba(255, 255, 255, 0.45)"
-  &glass-border-dark-accent "rgba(140, 140, 255, 0.50)"
+  glass-border-dark-quiet: &glass-border-dark-quiet "rgba(255, 255, 255, 0.10)"
+  glass-border-dark-normal: &glass-border-dark-normal "rgba(255, 255, 255, 0.18)"
+  glass-border-dark-loud: &glass-border-dark-loud "rgba(255, 255, 255, 0.28)"
+  glass-border-dark-luminous: &glass-border-dark-luminous "rgba(255, 255, 255, 0.45)"
+  glass-border-dark-accent: &glass-border-dark-accent "rgba(140, 140, 255, 0.50)"
   
   # Border widths
-  &glass-border-width-thin "0.75px"
-  &glass-border-width-normal "1px"
-  &glass-border-width-thick "1.5px"
+  glass-border-width-thin: &glass-border-width-thin "0.75px"
+  glass-border-width-normal: &glass-border-width-normal "1px"
+  glass-border-width-thick: &glass-border-width-thick "1.5px"
   
   # --------------------------------------------------------------------------
   # GLASS SHADOW SYSTEM - Liquid Depth
   # --------------------------------------------------------------------------
   
   # Light mode liquid shadows - flowing, not dual
-  &glass-shadow-light-subtle "0 2px 12px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04), 0 0 1px rgba(0, 0, 0, 0.04)"
-  &glass-shadow-light-sm "0 3px 16px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04)"
-  &glass-shadow-light-md "0 6px 24px rgba(0, 0, 0, 0.10), 0 3px 12px rgba(0, 0, 0, 0.07), 0 1px 4px rgba(0, 0, 0, 0.05)"
-  &glass-shadow-light-lg "0 12px 36px rgba(0, 0, 0, 0.12), 0 6px 18px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.06)"
-  &glass-shadow-light-xl "0 24px 64px rgba(0, 0, 0, 0.16), 0 12px 32px rgba(0, 0, 0, 0.10), 0 4px 12px rgba(0, 0, 0, 0.08)"
+  glass-shadow-light-subtle: &glass-shadow-light-subtle "0 2px 12px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04), 0 0 1px rgba(0, 0, 0, 0.04)"
+  glass-shadow-light-sm: &glass-shadow-light-sm "0 3px 16px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04)"
+  glass-shadow-light-md: &glass-shadow-light-md "0 6px 24px rgba(0, 0, 0, 0.10), 0 3px 12px rgba(0, 0, 0, 0.07), 0 1px 4px rgba(0, 0, 0, 0.05)"
+  glass-shadow-light-lg: &glass-shadow-light-lg "0 12px 36px rgba(0, 0, 0, 0.12), 0 6px 18px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.06)"
+  glass-shadow-light-xl: &glass-shadow-light-xl "0 24px 64px rgba(0, 0, 0, 0.16), 0 12px 32px rgba(0, 0, 0, 0.10), 0 4px 12px rgba(0, 0, 0, 0.08)"
   
   # Dark mode liquid shadows - deeper, more dramatic
-  &glass-shadow-dark-subtle "0 2px 12px rgba(0, 0, 0, 0.30), 0 1px 4px rgba(0, 0, 0, 0.20), 0 0 1px rgba(0, 0, 0, 0.20)"
-  &glass-shadow-dark-sm "0 3px 16px rgba(0, 0, 0, 0.40), 0 2px 8px rgba(0, 0, 0, 0.30), 0 1px 2px rgba(0, 0, 0, 0.20)"
-  &glass-shadow-dark-md "0 6px 24px rgba(0, 0, 0, 0.50), 0 3px 12px rgba(0, 0, 0, 0.35), 0 1px 4px rgba(0, 0, 0, 0.25)"
-  &glass-shadow-dark-lg "0 12px 36px rgba(0, 0, 0, 0.60), 0 6px 18px rgba(0, 0, 0, 0.45), 0 2px 6px rgba(0, 0, 0, 0.30)"
-  &glass-shadow-dark-xl "0 24px 64px rgba(0, 0, 0, 0.75), 0 12px 32px rgba(0, 0, 0, 0.55), 0 4px 12px rgba(0, 0, 0, 0.40)"
+  glass-shadow-dark-subtle: &glass-shadow-dark-subtle "0 2px 12px rgba(0, 0, 0, 0.30), 0 1px 4px rgba(0, 0, 0, 0.20), 0 0 1px rgba(0, 0, 0, 0.20)"
+  glass-shadow-dark-sm: &glass-shadow-dark-sm "0 3px 16px rgba(0, 0, 0, 0.40), 0 2px 8px rgba(0, 0, 0, 0.30), 0 1px 2px rgba(0, 0, 0, 0.20)"
+  glass-shadow-dark-md: &glass-shadow-dark-md "0 6px 24px rgba(0, 0, 0, 0.50), 0 3px 12px rgba(0, 0, 0, 0.35), 0 1px 4px rgba(0, 0, 0, 0.25)"
+  glass-shadow-dark-lg: &glass-shadow-dark-lg "0 12px 36px rgba(0, 0, 0, 0.60), 0 6px 18px rgba(0, 0, 0, 0.45), 0 2px 6px rgba(0, 0, 0, 0.30)"
+  glass-shadow-dark-xl: &glass-shadow-dark-xl "0 24px 64px rgba(0, 0, 0, 0.75), 0 12px 32px rgba(0, 0, 0, 0.55), 0 4px 12px rgba(0, 0, 0, 0.40)"
   
   # --------------------------------------------------------------------------
   # GLASS HIGHLIGHT SYSTEM - Luminous Edges
   # --------------------------------------------------------------------------
   
   # Light mode highlights
-  &glass-highlight-light-edge "rgba(255, 255, 255, 0.60)"
-  &glass-highlight-light-glow "rgba(255, 255, 255, 0.40)"
-  &glass-highlight-light-shine "linear-gradient(135deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0) 50%)"
+  glass-highlight-light-edge: &glass-highlight-light-edge "rgba(255, 255, 255, 0.60)"
+  glass-highlight-light-glow: &glass-highlight-light-glow "rgba(255, 255, 255, 0.40)"
+  glass-highlight-light-shine: &glass-highlight-light-shine "linear-gradient(135deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0) 50%)"
   
   # Dark mode highlights
-  &glass-highlight-dark-edge "rgba(255, 255, 255, 0.25)"
-  &glass-highlight-dark-glow "rgba(255, 255, 255, 0.15)"
-  &glass-highlight-dark-shine "linear-gradient(135deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0) 50%)"
+  glass-highlight-dark-edge: &glass-highlight-dark-edge "rgba(255, 255, 255, 0.25)"
+  glass-highlight-dark-glow: &glass-highlight-dark-glow "rgba(255, 255, 255, 0.15)"
+  glass-highlight-dark-shine: &glass-highlight-dark-shine "linear-gradient(135deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0) 50%)"
   
   # --------------------------------------------------------------------------
   # GLASS RADIUS SYSTEM - Fluid Corners
   # --------------------------------------------------------------------------
   
-  &glass-radius-sm "8px"
-  &glass-radius "12px"
-  &glass-radius-lg "16px"
-  &glass-radius-xl "24px"
-  &glass-radius-pill "999px"
+  glass-radius-sm: &glass-radius-sm "8px"
+  glass-radius: &glass-radius "12px"
+  glass-radius-lg: &glass-radius-lg "16px"
+  glass-radius-xl: &glass-radius-xl "24px"
+  glass-radius-pill: &glass-radius-pill "999px"
