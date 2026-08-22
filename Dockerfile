@@ -43,8 +43,8 @@ RUN set -ex; \
 
 WORKDIR /app
 
-# Install bash and js-yaml globally for build scripts
-RUN apk add --no-cache bash && \
+# Install bash, su-exec (for privilege dropping), and js-yaml
+RUN apk add --no-cache bash su-exec && \
     npm install -g js-yaml
 
 # Copy backend
@@ -67,19 +67,22 @@ COPY default-framework /app/default-framework
 COPY docker-entrypoint.sh /app/
 RUN chmod +x /app/docker-entrypoint.sh
 
-# Create volume mount points and set ownership
+# Create volume mount points and set ownership of /app only
 # Redeclare args for this build stage
 ARG USER_ID=1000
 ARG GROUP_ID=1000
 RUN mkdir -p /framework /output && \
-    chown -R ${USER_ID}:${GROUP_ID} /app /framework /output
+    chown -R ${USER_ID}:${GROUP_ID} /app
 
-# Switch to non-root user (use numeric UID:GID)
-USER ${USER_ID}:${GROUP_ID}
+# Store user/group IDs for entrypoint
+ENV APP_USER_ID=${USER_ID}
+ENV APP_GROUP_ID=${GROUP_ID}
 
 # Environment
 ENV NODE_ENV=production
 ENV PORT=3001
+
+# Note: We start as root to fix volume permissions, then drop to app user in entrypoint
 
 EXPOSE 3000 3001
 
