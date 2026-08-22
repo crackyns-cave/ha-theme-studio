@@ -23,6 +23,7 @@ dist
 build
 
 # Exclude documentation we don't need in container
+README.md
 ARCHITECTURE.md
 PROJECT-SUMMARY.md
 QUICKSTART.md
