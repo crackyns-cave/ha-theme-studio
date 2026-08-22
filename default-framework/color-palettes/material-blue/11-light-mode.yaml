@@ -11,59 +11,6 @@
     light:
       
       # ------------------------------------------------------------------------
-      # LIQUID GLASS VISUAL VARIABLES
-      # ------------------------------------------------------------------------
-      
-      # Glass backgrounds
-      glass-bg: *glass-bg-light-resting
-      glass-bg-hover: *glass-bg-light-hover
-      glass-bg-active: *glass-bg-light-active
-      glass-bg-subtle: *glass-bg-light-subtle
-      glass-bg-intense: *glass-bg-light-intense
-      
-      # Glass blur
-      glass-blur-card: *glass-blur-card
-      glass-blur-dialog: *glass-blur-dialog
-      glass-blur-sidebar: *glass-blur-sidebar
-      glass-blur-header: *glass-blur-header
-      glass-blur-light: *glass-blur-light
-      glass-blur-medium: *glass-blur-medium
-      glass-blur-heavy: *glass-blur-heavy
-      
-      # Glass borders
-      glass-border-color: *glass-border-light-normal
-      glass-border-color-hover: *glass-border-light-accent
-      glass-border-quiet: *glass-border-light-quiet
-      glass-border-normal: *glass-border-light-normal
-      glass-border-loud: *glass-border-light-loud
-      glass-border-luminous: *glass-border-light-luminous
-      glass-border-accent: *glass-border-light-accent
-      glass-border-width: *glass-border-width-normal
-      glass-border-width-thin: *glass-border-width-thin
-      glass-border-width-thick: *glass-border-width-thick
-      
-      # Glass shadows
-      glass-shadow: *glass-shadow-light-md
-      glass-shadow-hover: *glass-shadow-light-lg
-      glass-shadow-active: *glass-shadow-light-sm
-      glass-shadow-subtle: *glass-shadow-light-subtle
-      glass-shadow-sm: *glass-shadow-light-sm
-      glass-shadow-md: *glass-shadow-light-md
-      glass-shadow-lg: *glass-shadow-light-lg
-      glass-shadow-xl: *glass-shadow-light-xl
-      
-      # Glass highlights
-      glass-highlight-edge: *glass-highlight-light-edge
-      glass-highlight-glow: *glass-highlight-light-glow
-      glass-highlight-shine: *glass-highlight-light-shine
-      
-      # Glass radius
-      glass-radius: *glass-radius
-      glass-radius-sm: *glass-radius-sm
-      glass-radius-lg: *glass-radius-lg
-      glass-radius-xl: *glass-radius-xl
-      
-      # ------------------------------------------------------------------------
       # BASE COLORS - Foundation
       # ------------------------------------------------------------------------
       
@@ -370,8 +317,6 @@
       bubble-button-background-active: *glass-bg-light-active
       bubble-pop-up-background: *glass-bg-light-intense
       bubble-media-player-background: *glass-bg-light-resting
-      bubble-backdrop-filter: *glass-blur-card
-      bubble-pop-up-backdrop-filter: *glass-blur-dialog
       
       # ------------------------------------------------------------------------
       # ENERGY DASHBOARD - Light Mode

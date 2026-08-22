@@ -1,64 +1,10 @@
     # ==========================================================================
-    # DARK MODE - Liquid Glass
+    # DARK MODE - Material Blue
     # ==========================================================================
-    # Adaptive translucent surfaces with layered blur, luminous highlights,
-    # and reflective edges. Deep, rich aesthetic with dramatic depth.
+    # Deep, rich blue with excellent contrast and vibrant accents
     # ==========================================================================
     
     dark:
-      
-      # ------------------------------------------------------------------------
-      # LIQUID GLASS VISUAL VARIABLES
-      # ------------------------------------------------------------------------
-      
-      # Glass backgrounds
-      glass-bg: *glass-bg-dark-resting
-      glass-bg-hover: *glass-bg-dark-hover
-      glass-bg-active: *glass-bg-dark-active
-      glass-bg-subtle: *glass-bg-dark-subtle
-      glass-bg-intense: *glass-bg-dark-intense
-      
-      # Glass blur - more intense in dark mode
-      glass-blur-card: *glass-blur-medium
-      glass-blur-dialog: *glass-blur-intense
-      glass-blur-sidebar: *glass-blur-heavy
-      glass-blur-header: *glass-blur-medium
-      glass-blur-light: *glass-blur-light
-      glass-blur-medium: *glass-blur-medium
-      glass-blur-heavy: *glass-blur-heavy
-      
-      # Glass borders
-      glass-border-color: *glass-border-dark-normal
-      glass-border-color-hover: *glass-border-dark-accent
-      glass-border-quiet: *glass-border-dark-quiet
-      glass-border-normal: *glass-border-dark-normal
-      glass-border-loud: *glass-border-dark-loud
-      glass-border-luminous: *glass-border-dark-luminous
-      glass-border-accent: *glass-border-dark-accent
-      glass-border-width: *glass-border-width-normal
-      glass-border-width-thin: *glass-border-width-thin
-      glass-border-width-thick: *glass-border-width-thick
-      
-      # Glass shadows - deeper in dark mode
-      glass-shadow: *glass-shadow-dark-md
-      glass-shadow-hover: *glass-shadow-dark-lg
-      glass-shadow-active: *glass-shadow-dark-sm
-      glass-shadow-subtle: *glass-shadow-dark-subtle
-      glass-shadow-sm: *glass-shadow-dark-sm
-      glass-shadow-md: *glass-shadow-dark-md
-      glass-shadow-lg: *glass-shadow-dark-lg
-      glass-shadow-xl: *glass-shadow-dark-xl
-      
-      # Glass highlights
-      glass-highlight-edge: *glass-highlight-dark-edge
-      glass-highlight-glow: *glass-highlight-dark-glow
-      glass-highlight-shine: *glass-highlight-dark-shine
-      
-      # Glass radius
-      glass-radius: *glass-radius
-      glass-radius-sm: *glass-radius-sm
-      glass-radius-lg: *glass-radius-lg
-      glass-radius-xl: *glass-radius-xl
       
       # ------------------------------------------------------------------------
       # BASE COLORS - Foundation
@@ -367,8 +313,6 @@
       bubble-button-background-active: *glass-bg-dark-active
       bubble-pop-up-background: *glass-bg-dark-intense
       bubble-media-player-background: *glass-bg-dark-resting
-      bubble-backdrop-filter: *glass-blur-medium
-      bubble-pop-up-backdrop-filter: *glass-blur-intense
       
       # ------------------------------------------------------------------------
       # ENERGY DASHBOARD - Dark Mode
