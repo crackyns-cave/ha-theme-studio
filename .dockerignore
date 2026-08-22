@@ -1,24 +1,30 @@
+# Dependencies (will be installed in Dockerfile)
 node_modules
 npm-debug.log
+
+# Build outputs (will be built in Dockerfile)
 dist
 build
+frontend/dist
+backend/dist
+
+# Git and Docker files
 .git
 .gitignore
 .dockerignore
-Dockerfile
 docker-compose.yaml
-README.md
+
+# Documentation (not needed in container)
+*.md
+!README.md
+
+# Environment files
 .env
 .env.local
-*.md
+
+# IDE files
 .vscode
 .idea
-
-# Keep these
-!backend/node_modules
-!frontend/node_modules
-!package.json
-!package-lock.json
 
 # OS files
 .DS_Store
@@ -34,3 +40,10 @@ coverage
 
 # Build artifacts
 *.tgz
+
+# Keep source files and configs
+!frontend/src
+!backend/src
+!frontend/package.json
+!backend/package.json
+!package.json
