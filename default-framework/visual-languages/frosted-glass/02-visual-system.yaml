@@ -96,3 +96,79 @@
   fg-border-width: "0.5px"
   fg-border-width-thick: "1px"
   fg-border-style: "solid"
+  
+  # ----------------------------------------------------------------------------
+  # CROSS-COMPATIBILITY ALIASES
+  # ----------------------------------------------------------------------------
+  # Aliases for glass-* variables used by some color palettes
+  # Maps Liquid Glass naming to Frosted Glass equivalents
+  
+  # Glass background aliases (translucent surfaces)
+  glass-bg-light-resting: &glass-bg-light-resting "rgba(255, 255, 255, 0.72)"
+  glass-bg-light-hover: &glass-bg-light-hover "rgba(255, 255, 255, 0.85)"
+  glass-bg-light-active: &glass-bg-light-active "rgba(255, 255, 255, 0.60)"
+  glass-bg-light-subtle: &glass-bg-light-subtle "rgba(255, 255, 255, 0.50)"
+  glass-bg-light-intense: &glass-bg-light-intense "rgba(255, 255, 255, 0.92)"
+  
+  glass-bg-dark-resting: &glass-bg-dark-resting "rgba(30, 30, 34, 0.75)"
+  glass-bg-dark-hover: &glass-bg-dark-hover "rgba(45, 45, 50, 0.88)"
+  glass-bg-dark-active: &glass-bg-dark-active "rgba(30, 30, 34, 0.62)"
+  glass-bg-dark-subtle: &glass-bg-dark-subtle "rgba(22, 22, 26, 0.55)"
+  glass-bg-dark-intense: &glass-bg-dark-intense "rgba(55, 55, 60, 0.95)"
+  
+  # Glass blur aliases
+  glass-blur-subtle: *fg-backdrop-blur-light
+  glass-blur-light: *fg-backdrop-blur-light
+  glass-blur-medium: *fg-backdrop-blur-medium
+  glass-blur-heavy: *fg-backdrop-blur-heavy
+  glass-blur-intense: *fg-backdrop-blur-heavy
+  glass-blur-card: *fg-backdrop-blur-card
+  glass-blur-dialog: *fg-backdrop-blur-dialog
+  glass-blur-sidebar: *fg-backdrop-blur-sidebar
+  glass-blur-header: *fg-backdrop-blur-header
+  
+  # Glass border aliases
+  glass-border-light-quiet: &glass-border-light-quiet "rgba(255, 255, 255, 0.25)"
+  glass-border-light-normal: &glass-border-light-normal "rgba(255, 255, 255, 0.35)"
+  glass-border-light-loud: &glass-border-light-loud "rgba(255, 255, 255, 0.50)"
+  glass-border-light-luminous: &glass-border-light-luminous "rgba(255, 255, 255, 0.70)"
+  glass-border-light-accent: &glass-border-light-accent "rgba(120, 120, 255, 0.35)"
+  
+  glass-border-dark-quiet: &glass-border-dark-quiet "rgba(255, 255, 255, 0.08)"
+  glass-border-dark-normal: &glass-border-dark-normal "rgba(255, 255, 255, 0.15)"
+  glass-border-dark-loud: &glass-border-dark-loud "rgba(255, 255, 255, 0.25)"
+  glass-border-dark-luminous: &glass-border-dark-luminous "rgba(255, 255, 255, 0.40)"
+  glass-border-dark-accent: &glass-border-dark-accent "rgba(140, 140, 255, 0.45)"
+  
+  glass-border-width-thin: *fg-border-width
+  glass-border-width-normal: *fg-border-width-thick
+  glass-border-width-thick: *fg-border-width-thick
+  
+  # Glass shadow aliases
+  glass-shadow-light-subtle: *fg-light-shadow-subtle
+  glass-shadow-light-sm: *fg-light-shadow-sm
+  glass-shadow-light-md: *fg-light-shadow-md
+  glass-shadow-light-lg: *fg-light-shadow-lg
+  glass-shadow-light-xl: *fg-light-shadow-xl
+  
+  glass-shadow-dark-subtle: *fg-dark-shadow-subtle
+  glass-shadow-dark-sm: *fg-dark-shadow-sm
+  glass-shadow-dark-md: *fg-dark-shadow-md
+  glass-shadow-dark-lg: *fg-dark-shadow-lg
+  glass-shadow-dark-xl: *fg-dark-shadow-xl
+  
+  # Glass highlight aliases (frosted glass doesn't use highlights, provide subtle values)
+  glass-highlight-light-edge: &glass-highlight-light-edge "rgba(255, 255, 255, 0.50)"
+  glass-highlight-light-glow: &glass-highlight-light-glow "rgba(255, 255, 255, 0.30)"
+  glass-highlight-light-shine: &glass-highlight-light-shine "linear-gradient(135deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0) 50%)"
+  
+  glass-highlight-dark-edge: &glass-highlight-dark-edge "rgba(255, 255, 255, 0.20)"
+  glass-highlight-dark-glow: &glass-highlight-dark-glow "rgba(255, 255, 255, 0.10)"
+  glass-highlight-dark-shine: &glass-highlight-dark-shine "linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 50%)"
+  
+  # Glass radius aliases
+  glass-radius-sm: &glass-radius-sm "10px"
+  glass-radius: &glass-radius "14px"
+  glass-radius-lg: &glass-radius-lg "18px"
+  glass-radius-xl: &glass-radius-xl "26px"
+  glass-radius-pill: &glass-radius-pill "999px"

@@ -96,3 +96,79 @@
   neu-dark-shadow-subtle: &neu-dark-shadow-subtle |
     1px 1px 2px rgba(0,0,0,.25),
     -1px -1px 2px rgba(255,255,255,.02)
+  
+  # ----------------------------------------------------------------------------
+  # CROSS-COMPATIBILITY ALIASES
+  # ----------------------------------------------------------------------------
+  # Aliases for glass-* variables used by some color palettes
+  # Neumorphic uses same base colors as background, not glass effects
+  
+  # Glass background aliases (solid neumorphic surfaces)
+  glass-bg-light-resting: &glass-bg-light-resting "#ECEFF4"
+  glass-bg-light-hover: &glass-bg-light-hover "#E5E8EF"
+  glass-bg-light-active: &glass-bg-light-active "#F0F2F7"
+  glass-bg-light-subtle: &glass-bg-light-subtle "#F5F6F9"
+  glass-bg-light-intense: &glass-bg-light-intense "#E0E3EA"
+  
+  glass-bg-dark-resting: &glass-bg-dark-resting "#2E3440"
+  glass-bg-dark-hover: &glass-bg-dark-hover "#3B4252"
+  glass-bg-dark-active: &glass-bg-dark-active "#323844"
+  glass-bg-dark-subtle: &glass-bg-dark-subtle "#242933"
+  glass-bg-dark-intense: &glass-bg-dark-intense "#434C5E"
+  
+  # Glass blur aliases (Neumorphic doesn't use blur)
+  glass-blur-subtle: &glass-blur-subtle "none"
+  glass-blur-light: &glass-blur-light "none"
+  glass-blur-medium: &glass-blur-medium "none"
+  glass-blur-heavy: &glass-blur-heavy "none"
+  glass-blur-intense: &glass-blur-intense "none"
+  glass-blur-card: &glass-blur-card "none"
+  glass-blur-dialog: &glass-blur-dialog "none"
+  glass-blur-sidebar: &glass-blur-sidebar "none"
+  glass-blur-header: &glass-blur-header "none"
+  
+  # Glass border aliases (Neumorphic uses no borders, providing minimal)
+  glass-border-light-quiet: &glass-border-light-quiet "rgba(163, 177, 198, 0.15)"
+  glass-border-light-normal: &glass-border-light-normal "rgba(163, 177, 198, 0.20)"
+  glass-border-light-loud: &glass-border-light-loud "rgba(163, 177, 198, 0.30)"
+  glass-border-light-luminous: &glass-border-light-luminous "rgba(163, 177, 198, 0.40)"
+  glass-border-light-accent: &glass-border-light-accent "rgba(98, 114, 164, 0.35)"
+  
+  glass-border-dark-quiet: &glass-border-dark-quiet "rgba(255, 255, 255, 0.05)"
+  glass-border-dark-normal: &glass-border-dark-normal "rgba(255, 255, 255, 0.08)"
+  glass-border-dark-loud: &glass-border-dark-loud "rgba(255, 255, 255, 0.12)"
+  glass-border-dark-luminous: &glass-border-dark-luminous "rgba(255, 255, 255, 0.18)"
+  glass-border-dark-accent: &glass-border-dark-accent "rgba(136, 192, 208, 0.30)"
+  
+  glass-border-width-thin: &glass-border-width-thin "0.5px"
+  glass-border-width-normal: &glass-border-width-normal "1px"
+  glass-border-width-thick: &glass-border-width-thick "1.5px"
+  
+  # Glass shadow aliases (using neumorphic shadows)
+  glass-shadow-light-subtle: *neu-light-shadow-subtle
+  glass-shadow-light-sm: *neu-light-shadow-raised-sm
+  glass-shadow-light-md: *neu-light-shadow-raised
+  glass-shadow-light-lg: *neu-light-shadow-raised-lg
+  glass-shadow-light-xl: *neu-light-shadow-raised-xl
+  
+  glass-shadow-dark-subtle: *neu-dark-shadow-subtle
+  glass-shadow-dark-sm: *neu-dark-shadow-raised-sm
+  glass-shadow-dark-md: *neu-dark-shadow-raised
+  glass-shadow-dark-lg: *neu-dark-shadow-raised-lg
+  glass-shadow-dark-xl: *neu-dark-shadow-raised-xl
+  
+  # Glass highlight aliases (Neumorphic uses shadows, not highlights)
+  glass-highlight-light-edge: &glass-highlight-light-edge "rgba(255, 255, 255, 0.80)"
+  glass-highlight-light-glow: &glass-highlight-light-glow "rgba(255, 255, 255, 0.60)"
+  glass-highlight-light-shine: &glass-highlight-light-shine "none"
+  
+  glass-highlight-dark-edge: &glass-highlight-dark-edge "rgba(255, 255, 255, 0.03)"
+  glass-highlight-dark-glow: &glass-highlight-dark-glow "rgba(255, 255, 255, 0.02)"
+  glass-highlight-dark-shine: &glass-highlight-dark-shine "none"
+  
+  # Glass radius aliases
+  glass-radius-sm: &glass-radius-sm "8px"
+  glass-radius: &glass-radius "12px"
+  glass-radius-lg: &glass-radius-lg "16px"
+  glass-radius-xl: &glass-radius-xl "24px"
+  glass-radius-pill: &glass-radius-pill "999px"

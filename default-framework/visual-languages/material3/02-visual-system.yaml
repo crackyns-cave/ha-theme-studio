@@ -90,3 +90,79 @@
   m3-border-width: "1px"
   m3-border-width-thick: "2px"
   m3-border-style: "solid"
+  
+  # ----------------------------------------------------------------------------
+  # CROSS-COMPATIBILITY ALIASES
+  # ----------------------------------------------------------------------------
+  # Aliases for glass-* variables used by some color palettes
+  # Material 3 uses solid surfaces, not glass effects - providing solid equivalents
+  
+  # Glass background aliases (solid surfaces for Material 3)
+  glass-bg-light-resting: &glass-bg-light-resting "#FFFFFF"
+  glass-bg-light-hover: &glass-bg-light-hover "#F5F5F5"
+  glass-bg-light-active: &glass-bg-light-active "#FAFAFA"
+  glass-bg-light-subtle: &glass-bg-light-subtle "#FCFCFC"
+  glass-bg-light-intense: &glass-bg-light-intense "#F0F0F0"
+  
+  glass-bg-dark-resting: &glass-bg-dark-resting "#1E1E22"
+  glass-bg-dark-hover: &glass-bg-dark-hover "#2A2A30"
+  glass-bg-dark-active: &glass-bg-dark-active "#242428"
+  glass-bg-dark-subtle: &glass-bg-dark-subtle "#18181C"
+  glass-bg-dark-intense: &glass-bg-dark-intense "#34343A"
+  
+  # Glass blur aliases (Material 3 doesn't use blur)
+  glass-blur-subtle: &glass-blur-subtle "none"
+  glass-blur-light: &glass-blur-light "none"
+  glass-blur-medium: &glass-blur-medium "none"
+  glass-blur-heavy: &glass-blur-heavy "none"
+  glass-blur-intense: &glass-blur-intense "none"
+  glass-blur-card: &glass-blur-card "none"
+  glass-blur-dialog: &glass-blur-dialog "none"
+  glass-blur-sidebar: &glass-blur-sidebar "none"
+  glass-blur-header: &glass-blur-header "none"
+  
+  # Glass border aliases
+  glass-border-light-quiet: &glass-border-light-quiet "rgba(0, 0, 0, 0.08)"
+  glass-border-light-normal: &glass-border-light-normal "rgba(0, 0, 0, 0.12)"
+  glass-border-light-loud: &glass-border-light-loud "rgba(0, 0, 0, 0.18)"
+  glass-border-light-luminous: &glass-border-light-luminous "rgba(0, 0, 0, 0.24)"
+  glass-border-light-accent: &glass-border-light-accent "rgba(98, 0, 238, 0.30)"
+  
+  glass-border-dark-quiet: &glass-border-dark-quiet "rgba(255, 255, 255, 0.08)"
+  glass-border-dark-normal: &glass-border-dark-normal "rgba(255, 255, 255, 0.12)"
+  glass-border-dark-loud: &glass-border-dark-loud "rgba(255, 255, 255, 0.18)"
+  glass-border-dark-luminous: &glass-border-dark-luminous "rgba(255, 255, 255, 0.24)"
+  glass-border-dark-accent: &glass-border-dark-accent "rgba(187, 134, 252, 0.40)"
+  
+  glass-border-width-thin: *m3-border-width
+  glass-border-width-normal: *m3-border-width
+  glass-border-width-thick: *m3-border-width-thick
+  
+  # Glass shadow aliases (using Material elevation shadows)
+  glass-shadow-light-subtle: *m3-light-elevation-1
+  glass-shadow-light-sm: *m3-light-elevation-2
+  glass-shadow-light-md: *m3-light-elevation-3
+  glass-shadow-light-lg: *m3-light-elevation-4
+  glass-shadow-light-xl: *m3-light-elevation-5
+  
+  glass-shadow-dark-subtle: *m3-dark-elevation-1
+  glass-shadow-dark-sm: *m3-dark-elevation-2
+  glass-shadow-dark-md: *m3-dark-elevation-3
+  glass-shadow-dark-lg: *m3-dark-elevation-4
+  glass-shadow-dark-xl: *m3-dark-elevation-5
+  
+  # Glass highlight aliases (Material 3 doesn't use highlights)
+  glass-highlight-light-edge: &glass-highlight-light-edge "rgba(255, 255, 255, 0.40)"
+  glass-highlight-light-glow: &glass-highlight-light-glow "rgba(255, 255, 255, 0.20)"
+  glass-highlight-light-shine: &glass-highlight-light-shine "none"
+  
+  glass-highlight-dark-edge: &glass-highlight-dark-edge "rgba(255, 255, 255, 0.12)"
+  glass-highlight-dark-glow: &glass-highlight-dark-glow "rgba(255, 255, 255, 0.06)"
+  glass-highlight-dark-shine: &glass-highlight-dark-shine "none"
+  
+  # Glass radius aliases
+  glass-radius-sm: &glass-radius-sm "8px"
+  glass-radius: &glass-radius "12px"
+  glass-radius-lg: &glass-radius-lg "16px"
+  glass-radius-xl: &glass-radius-xl "24px"
+  glass-radius-pill: &glass-radius-pill "999px"
