@@ -1,26 +1,22 @@
 # Build stage for frontend
 FROM node:20-alpine AS frontend-builder
 
-WORKDIR /app
-
-# Copy everything first
-COPY . .
-
-# Move to frontend directory and build
 WORKDIR /app/frontend
+
+# Copy frontend directory only
+COPY frontend ./
+
 RUN npm install
 RUN npm run build
 
 # Build stage for backend
 FROM node:20-alpine AS backend-builder
 
-WORKDIR /app
-
-# Copy everything first
-COPY . .
-
-# Move to backend directory and build
 WORKDIR /app/backend
+
+# Copy backend directory only
+COPY backend ./
+
 RUN npm install
 RUN npm run build
 
