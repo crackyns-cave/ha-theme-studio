@@ -106,10 +106,10 @@ export default function Header({ config }: HeaderProps) {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            <MenuItem onClick={handleBuildAll}>
+            {/* <MenuItem onClick={handleBuildAll}>
               <BuildIcon sx={{ mr: 1 }} fontSize="small" />
               Build All Themes
-            </MenuItem>
+            </MenuItem> */}
             <MenuItem onClick={handleExport}>
               <DownloadIcon sx={{ mr: 1 }} fontSize="small" />
               Export as ZIP
