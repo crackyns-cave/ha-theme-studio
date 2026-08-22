@@ -75,7 +75,25 @@ async function buildTheme(visualLanguage, colorPalette) {
     ];
 
     // Concatenate all YAML files
-    const yamlContent = await concatenateYaml(components);
+    let yamlContent = await concatenateYaml(components);
+    
+    // Replace the visual language name with full theme name
+    // Convert visual-language slug to Title Case
+    const visualTitle = visualLanguage.split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join(' ');
+    
+    // Convert palette slug to Title Case
+    const paletteTitle = colorPalette.split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join(' ');
+    
+    // Replace "Visual Language:" with "Visual Language - Palette:"
+    const fullThemeName = `${visualTitle} - ${paletteTitle}`;
+    yamlContent = yamlContent.replace(
+      new RegExp(`^${visualTitle}:`, 'm'),
+      `${fullThemeName}:`
+    );
 
     // Write output
     const outputFile = path.join(OUTPUT_PATH, `${themeName}.yaml`);
