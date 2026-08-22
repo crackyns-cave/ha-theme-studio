@@ -2,7 +2,16 @@
 FROM node:20-alpine AS frontend-builder
 
 WORKDIR /app/frontend
-COPY frontend/package*.json ./
+
+# Debug: List what we're about to copy
+RUN echo "=== Preparing to copy frontend files ==="
+
+# Copy package files explicitly
+COPY frontend/package.json ./package.json
+
+# Debug: Verify the file was copied
+RUN echo "=== Files in /app/frontend after COPY ===" && ls -la
+
 RUN npm install
 
 COPY frontend/ ./
@@ -12,7 +21,10 @@ RUN npm run build
 FROM node:20-alpine AS backend-builder
 
 WORKDIR /app/backend
-COPY backend/package*.json ./
+
+# Copy package files explicitly
+COPY backend/package.json ./package.json
+
 RUN npm install
 
 COPY backend/ ./
