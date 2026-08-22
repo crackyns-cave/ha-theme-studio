@@ -69,12 +69,15 @@ COPY default-framework /app/default-framework
 COPY docker-entrypoint.sh /app/
 RUN chmod +x /app/docker-entrypoint.sh
 
-# Create volume mount points and set ownership of /app only
+# Create volume mount points (ownership handled by entrypoint as root)
 # Redeclare args for this build stage
 ARG USER_ID=1000
 ARG GROUP_ID=1000
-RUN mkdir -p /framework /output && \
-    chown -R ${USER_ID}:${GROUP_ID} /app
+RUN mkdir -p /framework /output
+
+# Note: No chown needed here - app files are read-only and owned by root.
+# The entrypoint (running as root) handles /framework and /output permissions,
+# then drops to the app user which can read all files due to standard permissions.
 
 # Store user/group IDs for entrypoint
 ENV APP_USER_ID=${USER_ID}
