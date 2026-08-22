@@ -1,0 +1,92 @@
+  # ============================================================================
+  # MATERIAL 3 VISUAL SYSTEM
+  # ============================================================================
+  # Material Design 3 elevation system with subtle, realistic shadows.
+  # Uses standard Material elevation levels (0-5) with appropriate shadows.
+  # Includes soft borders for surface definition.
+  # ============================================================================
+
+  # ----------------------------------------------------------------------------
+  # MATERIAL 3 ELEVATION SHADOWS - LIGHT MODE
+  # ----------------------------------------------------------------------------
+  # Realistic shadows following Material Design 3 elevation specifications
+  # Key shadow (umbra) + Ambient shadow (penumbra)
+  
+  m3-light-elevation-0: &m3-light-elevation-0 "none"
+  
+  m3-light-elevation-1: &m3-light-elevation-1 |
+    0px 1px 2px rgba(0, 0, 0, 0.3),
+    0px 1px 3px rgba(0, 0, 0, 0.15)
+  
+  m3-light-elevation-2: &m3-light-elevation-2 |
+    0px 1px 5px rgba(0, 0, 0, 0.3),
+    0px 3px 4px rgba(0, 0, 0, 0.15)
+  
+  m3-light-elevation-3: &m3-light-elevation-3 |
+    0px 4px 8px rgba(0, 0, 0, 0.3),
+    0px 1px 3px rgba(0, 0, 0, 0.15)
+  
+  m3-light-elevation-4: &m3-light-elevation-4 |
+    0px 6px 10px rgba(0, 0, 0, 0.3),
+    0px 1px 18px rgba(0, 0, 0, 0.15)
+  
+  m3-light-elevation-5: &m3-light-elevation-5 |
+    0px 8px 12px rgba(0, 0, 0, 0.3),
+    0px 4px 16px rgba(0, 0, 0, 0.15)
+  
+  # Hover states (elevated by +1 level)
+  m3-light-elevation-1-hover: *m3-light-elevation-2
+  m3-light-elevation-2-hover: *m3-light-elevation-3
+  m3-light-elevation-3-hover: *m3-light-elevation-4
+  
+  # Pressed states (lowered by -1 level, minimum 0)
+  m3-light-elevation-1-pressed: *m3-light-elevation-0
+  m3-light-elevation-2-pressed: *m3-light-elevation-1
+  m3-light-elevation-3-pressed: *m3-light-elevation-2
+  
+  # ----------------------------------------------------------------------------
+  # MATERIAL 3 ELEVATION SHADOWS - DARK MODE
+  # ----------------------------------------------------------------------------
+  # Dark mode uses slightly more prominent shadows for depth perception
+  
+  m3-dark-elevation-0: &m3-dark-elevation-0 "none"
+  
+  m3-dark-elevation-1: &m3-dark-elevation-1 |
+    0px 1px 3px rgba(0, 0, 0, 0.5),
+    0px 1px 2px rgba(0, 0, 0, 0.3)
+  
+  m3-dark-elevation-2: &m3-dark-elevation-2 |
+    0px 2px 6px rgba(0, 0, 0, 0.5),
+    0px 1px 4px rgba(0, 0, 0, 0.3)
+  
+  m3-dark-elevation-3: &m3-dark-elevation-3 |
+    0px 4px 10px rgba(0, 0, 0, 0.5),
+    0px 2px 4px rgba(0, 0, 0, 0.3)
+  
+  m3-dark-elevation-4: &m3-dark-elevation-4 |
+    0px 6px 12px rgba(0, 0, 0, 0.5),
+    0px 2px 20px rgba(0, 0, 0, 0.3)
+  
+  m3-dark-elevation-5: &m3-dark-elevation-5 |
+    0px 8px 14px rgba(0, 0, 0, 0.5),
+    0px 4px 18px rgba(0, 0, 0, 0.3)
+  
+  # Hover states (elevated by +1 level)
+  m3-dark-elevation-1-hover: *m3-dark-elevation-2
+  m3-dark-elevation-2-hover: *m3-dark-elevation-3
+  m3-dark-elevation-3-hover: *m3-dark-elevation-4
+  
+  # Pressed states (lowered by -1 level, minimum 0)
+  m3-dark-elevation-1-pressed: *m3-dark-elevation-0
+  m3-dark-elevation-2-pressed: *m3-dark-elevation-1
+  m3-dark-elevation-3-pressed: *m3-dark-elevation-2
+  
+  # ----------------------------------------------------------------------------
+  # MATERIAL 3 BORDER SYSTEM
+  # ----------------------------------------------------------------------------
+  # Soft borders for surface definition (mode-agnostic)
+  # Actual border colors defined in light/dark mode files
+  
+  m3-border-width: "1px"
+  m3-border-width-thick: "2px"
+  m3-border-style: "solid"

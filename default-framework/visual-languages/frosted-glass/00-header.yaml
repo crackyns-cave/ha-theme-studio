@@ -1,0 +1,46 @@
+# ============================================================================
+# FROSTED GLASS THEME
+# ============================================================================
+# Version: 1.0.0
+# Target: Home Assistant 2026.x
+# Design System: Frosted Glass (Apple Big Sur Inspired)
+# Author: Home Assistant Community
+# License: MIT
+# ============================================================================
+#
+# This is a modern, production-quality Home Assistant theme that implements
+# a frosted glass aesthetic with translucent surfaces and backdrop blur,
+# inspired by Apple's Big Sur design language.
+#
+# FEATURES:
+# - Frosted glass translucent surfaces
+# - Backdrop blur and saturation enhancement
+# - Soft, subtle borders
+# - Subtle elevation shadows
+# - Material 3 semantic color system
+# - WebAwesome component compatibility
+# - Native dashboard support (Sidebar, Sections, Tiles)
+# - Mushroom Cards integration
+# - Bubble Cards integration
+# - Global card-mod styling
+# - Energy dashboard color system
+# - Room-based color system
+#
+# DESIGN PRINCIPLES:
+# - Frosted glass aesthetic (translucent + blur)
+# - NOT neumorphic (no dual shadows)
+# - NOT liquid glass (no glow effects)
+# - Soft borders for definition
+# - Subtle shadows for depth
+# - Enhanced saturation for vibrancy
+# - Apple Big Sur inspired
+#
+# ============================================================================
+
+Frosted Glass:
+  # Framework metadata
+  __version: "1.0.0"
+  __target: "2026.x"
+  
+  # Mode definitions - modern structure
+  modes:

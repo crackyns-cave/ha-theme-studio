@@ -1,0 +1,66 @@
+import { Box, Paper, Typography, TextField } from '@mui/material'
+import { ThemeConfig } from '../types'
+
+interface InspectorProps {
+  config: ThemeConfig
+}
+
+export default function Inspector({ config }: InspectorProps) {
+  const mockVariables = [
+    { name: '--primary-color', value: '#6750A4' },
+    { name: '--accent-color', value: '#6750A4' },
+    { name: '--background-color', value: '#FEF7FF' },
+    { name: '--card-background', value: '#F3EDF7' },
+    { name: '--text-primary', value: '#1C1B1F' },
+    { name: '--border-radius', value: `${config.shape.radius}px` },
+  ]
+
+  return (
+    <Paper
+      elevation={0}
+      sx={{
+        width: 320,
+        p: 3,
+        bgcolor: 'background.paper',
+        borderLeft: 1,
+        borderColor: 'divider',
+        overflowY: 'auto',
+      }}
+    >
+      <Typography variant="h6" gutterBottom>
+        Theme Variables
+      </Typography>
+
+      <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
+        CSS variables generated for {config.visual}
+      </Typography>
+
+      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+        {mockVariables.map((variable) => (
+          <Box key={variable.name}>
+            <Typography variant="caption" color="text.secondary">
+              {variable.name}
+            </Typography>
+            <TextField
+              fullWidth
+              size="small"
+              value={variable.value}
+              InputProps={{
+                readOnly: true,
+                sx: { fontFamily: 'monospace', fontSize: '0.875rem' },
+              }}
+            />
+          </Box>
+        ))}
+      </Box>
+
+      <Box sx={{ mt: 4, p: 2, bgcolor: 'action.hover', borderRadius: 1 }}>
+        <Typography variant="caption" color="text.secondary">
+          Total variables: 400+
+          <br />
+          Including Material Web, WebAwesome, and Home Assistant semantic colors
+        </Typography>
+      </Box>
+    </Paper>
+  )
+}

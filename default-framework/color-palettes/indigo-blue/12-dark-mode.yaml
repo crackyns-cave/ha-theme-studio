@@ -1,0 +1,395 @@
+    # ==========================================================================
+    # DARK MODE - Complete Color Palette
+    # ==========================================================================
+    # Dark, modern neumorphic design with subtle depth.
+    # Background: #1B1D24 | Surface: #23262D
+    # Shadow positive: rgba(0,0,0,.35)
+    # Shadow negative: rgba(255,255,255,.03)
+    # ==========================================================================
+    
+    dark:
+      
+      # ------------------------------------------------------------------------
+      # BASE COLORS - Foundation
+      # ------------------------------------------------------------------------
+      
+      # Primary brand color
+      primary-color: "#7179ff"
+      accent-color: "#7179ff"
+      
+      # Semantic state colors
+      state-icon-color: "#7a96c5"
+      state-icon-active-color: "#7179ff"
+      state-icon-unavailable-color: "#6b7280"
+      
+      # Text colors
+      primary-text-color: "#e5e7eb"
+      secondary-text-color: "#9ca3af"
+      text-primary-color: "#1f2937"
+      disabled-text-color: "#6b7280"
+      
+      # Background and surface
+      primary-background-color: "#1B1D24"
+      secondary-background-color: "#1B1D24"
+      lovelace-background: "#1B1D24"
+      
+      # Cards
+      card-background-color: "#23262D"
+      ha-card-background: "#23262D"
+      
+      # Sidebar
+      sidebar-background-color: "#1B1D24"
+      sidebar-icon-color: "#9ca3af"
+      sidebar-selected-icon-color: "#7179ff"
+      sidebar-selected-text-color: "#e5e7eb"
+      sidebar-text-color: "#9ca3af"
+      
+      # ------------------------------------------------------------------------
+      # NEUMORPHIC SHADOWS - Dark Mode
+      # ------------------------------------------------------------------------
+      
+      neu-shadow-raised-sm: "2px 2px 4px rgba(0,0,0,.35), -2px -2px 4px rgba(255,255,255,.03)"
+      neu-shadow-raised: "4px 4px 8px rgba(0,0,0,.35), -4px -4px 8px rgba(255,255,255,.03)"
+      neu-shadow-raised-lg: "8px 8px 16px rgba(0,0,0,.35), -8px -8px 16px rgba(255,255,255,.03)"
+      neu-shadow-raised-xl: "12px 12px 24px rgba(0,0,0,.35), -12px -12px 24px rgba(255,255,255,.03)"
+      neu-shadow-float: "6px 6px 12px rgba(0,0,0,.45), -6px -6px 12px rgba(255,255,255,.05), 0px 4px 16px rgba(0,0,0,.25)"
+      neu-shadow-pressed-sm: "inset 2px 2px 4px rgba(0,0,0,.35), inset -2px -2px 4px rgba(255,255,255,.03)"
+      neu-shadow-pressed: "inset 4px 4px 8px rgba(0,0,0,.35), inset -4px -4px 8px rgba(255,255,255,.03)"
+      neu-shadow-pressed-lg: "inset 6px 6px 12px rgba(0,0,0,.35), inset -6px -6px 12px rgba(255,255,255,.03)"
+      neu-shadow-subtle: "1px 1px 2px rgba(0,0,0,.25), -1px -1px 2px rgba(255,255,255,.02)"
+      
+      # Card shadows using neumorphic system
+      card-box-shadow: "4px 4px 8px rgba(0,0,0,.35), -4px -4px 8px rgba(255,255,255,.03)"
+      card-box-shadow-hover: "6px 6px 12px rgba(0,0,0,.45), -6px -6px 12px rgba(255,255,255,.05), 0px 4px 16px rgba(0,0,0,.25)"
+      card-box-shadow-active: "inset 2px 2px 4px rgba(0,0,0,.35), inset -2px -2px 4px rgba(255,255,255,.03)"
+      
+      # Component shadows
+      button-box-shadow: "2px 2px 4px rgba(0,0,0,.35), -2px -2px 4px rgba(255,255,255,.03)"
+      button-box-shadow-hover: "4px 4px 8px rgba(0,0,0,.35), -4px -4px 8px rgba(255,255,255,.03)"
+      button-box-shadow-active: "inset 2px 2px 4px rgba(0,0,0,.35), inset -2px -2px 4px rgba(255,255,255,.03)"
+      
+      dialog-box-shadow: "12px 12px 24px rgba(0,0,0,.35), -12px -12px 24px rgba(255,255,255,.03)"
+      sidebar-shadow: "4px 0px 8px rgba(0,0,0,.3)"
+      app-header-shadow: "0px 2px 4px rgba(0,0,0,.25)"
+      
+      # ------------------------------------------------------------------------
+      # MATERIAL WEB COLORS - Dark Mode
+      # ------------------------------------------------------------------------
+      
+      # Primary
+      md-sys-color-primary: "#b8c3ff"
+      md-sys-color-on-primary: "#0f1da8"
+      md-sys-color-primary-container: "#2d35c0"
+      md-sys-color-on-primary-container: "#dfe0ff"
+      
+      # Secondary
+      md-sys-color-secondary: "#c5c4dd"
+      md-sys-color-on-secondary: "#2e2f42"
+      md-sys-color-secondary-container: "#454659"
+      md-sys-color-on-secondary-container: "#e2e0f9"
+      
+      # Tertiary
+      md-sys-color-tertiary: "#eeb9d3"
+      md-sys-color-on-tertiary: "#46263a"
+      md-sys-color-tertiary-container: "#5f3c50"
+      md-sys-color-on-tertiary-container: "#ffd8ea"
+      
+      # Error
+      md-sys-color-error: "#ffb4ab"
+      md-sys-color-on-error: "#690005"
+      md-sys-color-error-container: "#93000a"
+      md-sys-color-on-error-container: "#ffdad6"
+      
+      # Surface
+      md-sys-color-surface: "#23262D"
+      md-sys-color-on-surface: "#e5e7eb"
+      md-sys-color-on-surface-variant: "#9ca3af"
+      md-sys-color-surface-dim: "#1B1D24"
+      md-sys-color-surface-bright: "#2e3239"
+      md-sys-color-surface-container-lowest: "#0f1115"
+      md-sys-color-surface-container-low: "#1B1D24"
+      md-sys-color-surface-container: "#23262D"
+      md-sys-color-surface-container-high: "#2d3037"
+      md-sys-color-surface-container-highest: "#383b42"
+      
+      # Background
+      md-sys-color-background: "#1B1D24"
+      md-sys-color-on-background: "#e5e7eb"
+      
+      # Outline
+      md-sys-color-outline: "#4b5563"
+      md-sys-color-outline-variant: "#374151"
+      
+      # Inverse
+      md-sys-color-inverse-surface: "#e5e7eb"
+      md-sys-color-inverse-on-surface: "#1f2937"
+      md-sys-color-inverse-primary: "#464feb"
+      
+      # Scrim & shadow
+      md-sys-color-scrim: "#000000"
+      md-sys-color-shadow: "#000000"
+      md-sys-color-surface-tint: "#b8c3ff"
+      
+      # ------------------------------------------------------------------------
+      # WEBAWESOME COLORS - Dark Mode
+      # ------------------------------------------------------------------------
+      
+      wa-color-surface-default: "#23262D"
+      wa-color-surface-raised: "#2d3037"
+      wa-color-surface-lowered: "#1B1D24"
+      wa-color-surface-overlay: "#2e3239"
+      wa-color-surface-inverse: "#e5e7eb"
+      
+      wa-color-text-normal: "#e5e7eb"
+      wa-color-text-quiet: "#9ca3af"
+      wa-color-text-loud: "#f9fafb"
+      wa-color-text-inverse: "#1f2937"
+      wa-color-text-disabled: "#6b7280"
+      wa-color-text-link: "#b8c3ff"
+      
+      wa-color-brand-fill-normal: "#7179ff"
+      wa-color-brand-fill-loud: "#9198ff"
+      wa-color-brand-fill-quiet: "#2d35c0"
+      wa-color-brand-fill-inverse: "#464feb"
+      
+      wa-color-brand-text-normal: "#b8c3ff"
+      wa-color-brand-text-loud: "#dfe0ff"
+      wa-color-brand-text-quiet: "#9198ff"
+      
+      wa-color-brand-border-normal: "#7179ff"
+      wa-color-brand-border-loud: "#9198ff"
+      wa-color-brand-border-quiet: "#464feb"
+      
+      wa-color-neutral-fill-normal: "#4b5563"
+      wa-color-neutral-fill-loud: "#6b7280"
+      wa-color-neutral-fill-quiet: "#374151"
+      wa-color-neutral-fill-inverse: "#d1d5db"
+      
+      wa-color-neutral-text-normal: "#e5e7eb"
+      wa-color-neutral-text-loud: "#f9fafb"
+      wa-color-neutral-text-quiet: "#9ca3af"
+      
+      wa-color-neutral-border-normal: "#4b5563"
+      wa-color-neutral-border-loud: "#6b7280"
+      wa-color-neutral-border-quiet: "#374151"
+      
+      wa-color-success-fill-normal: "#10b981"
+      wa-color-success-fill-loud: "#34d399"
+      wa-color-success-fill-quiet: "#047857"
+      wa-color-success-text-normal: "#6ee7b7"
+      wa-color-success-text-loud: "#a7f3d0"
+      wa-color-success-text-quiet: "#34d399"
+      wa-color-success-border-normal: "#10b981"
+      
+      wa-color-warning-fill-normal: "#f59e0b"
+      wa-color-warning-fill-loud: "#fbbf24"
+      wa-color-warning-fill-quiet: "#d97706"
+      wa-color-warning-text-normal: "#fcd34d"
+      wa-color-warning-text-loud: "#fde68a"
+      wa-color-warning-text-quiet: "#fbbf24"
+      wa-color-warning-border-normal: "#f59e0b"
+      
+      wa-color-danger-fill-normal: "#ef4444"
+      wa-color-danger-fill-loud: "#f87171"
+      wa-color-danger-fill-quiet: "#dc2626"
+      wa-color-danger-text-normal: "#fca5a5"
+      wa-color-danger-text-loud: "#fecaca"
+      wa-color-danger-text-quiet: "#f87171"
+      wa-color-danger-border-normal: "#ef4444"
+      
+      wa-color-info-fill-normal: "#3b82f6"
+      wa-color-info-fill-loud: "#60a5fa"
+      wa-color-info-fill-quiet: "#2563eb"
+      wa-color-info-text-normal: "#93c5fd"
+      wa-color-info-text-loud: "#bfdbfe"
+      wa-color-info-text-quiet: "#60a5fa"
+      wa-color-info-border-normal: "#3b82f6"
+      
+      wa-color-focus-ring: "#7179ff"
+      wa-color-overlay: "rgba(0, 0, 0, 0.7)"
+      
+      # ------------------------------------------------------------------------
+      # HOME ASSISTANT SEMANTIC COLORS - Dark Mode
+      # ------------------------------------------------------------------------
+      
+      ha-color-text-primary: "#e5e7eb"
+      ha-color-text-secondary: "#9ca3af"
+      ha-color-text-tertiary: "#6b7280"
+      ha-color-text-disabled: "#4b5563"
+      ha-color-text-inverse: "#1f2937"
+      
+      ha-color-form-background: "#2d3037"
+      ha-color-form-background-hover: "#383b42"
+      ha-color-form-background-focus: "#2d3037"
+      ha-color-form-background-disabled: "#1f2228"
+      ha-color-form-text: "#e5e7eb"
+      ha-color-form-text-disabled: "#6b7280"
+      ha-color-form-placeholder: "#6b7280"
+      ha-color-form-border: "#4b5563"
+      ha-color-form-border-hover: "#6b7280"
+      ha-color-form-border-focus: "#7179ff"
+      ha-color-form-border-error: "#ef4444"
+      
+      ha-color-border-neutral-quiet: "#374151"
+      ha-color-border-neutral-normal: "#4b5563"
+      ha-color-border-neutral-loud: "#6b7280"
+      ha-color-border-primary-quiet: "#464feb"
+      ha-color-border-primary-normal: "#7179ff"
+      ha-color-border-primary-loud: "#9198ff"
+      
+      ha-color-fill-primary-loud-resting: "#7179ff"
+      ha-color-fill-primary-loud-hover: "#9198ff"
+      ha-color-fill-primary-loud-active: "#b8c3ff"
+      ha-color-fill-primary-loud-disabled: "#4b5563"
+      
+      ha-color-fill-primary-normal-resting: "#5d5fff"
+      ha-color-fill-primary-normal-hover: "#7179ff"
+      ha-color-fill-primary-normal-active: "#9198ff"
+      ha-color-fill-primary-normal-disabled: "#374151"
+      
+      ha-color-fill-primary-quiet-resting: "#2d35c0"
+      ha-color-fill-primary-quiet-hover: "#464feb"
+      ha-color-fill-primary-quiet-active: "#5d5fff"
+      
+      ha-color-fill-neutral-loud-resting: "#9ca3af"
+      ha-color-fill-neutral-loud-hover: "#d1d5db"
+      ha-color-fill-neutral-loud-active: "#e5e7eb"
+      
+      ha-color-fill-neutral-normal-resting: "#6b7280"
+      ha-color-fill-neutral-normal-hover: "#9ca3af"
+      ha-color-fill-neutral-normal-active: "#d1d5db"
+      
+      ha-color-fill-neutral-quiet-resting: "#374151"
+      ha-color-fill-neutral-quiet-hover: "#4b5563"
+      ha-color-fill-neutral-quiet-active: "#6b7280"
+      
+      ha-color-on-primary-quiet: "#b8c3ff"
+      ha-color-on-primary-normal: "#1f2937"
+      ha-color-on-primary-loud: "#1f2937"
+      
+      ha-color-on-neutral-quiet: "#e5e7eb"
+      ha-color-on-neutral-normal: "#1f2937"
+      ha-color-on-neutral-loud: "#1f2937"
+      
+      ha-color-on-error-quiet: "#fca5a5"
+      ha-color-on-error-normal: "#1f2937"
+      ha-color-on-error-loud: "#1f2937"
+      
+      ha-color-on-success-quiet: "#6ee7b7"
+      ha-color-on-success-normal: "#1f2937"
+      ha-color-on-success-loud: "#1f2937"
+      
+      ha-color-on-warning-quiet: "#fcd34d"
+      ha-color-on-warning-normal: "#1f2937"
+      ha-color-on-warning-loud: "#1f2937"
+      
+      ha-color-success: "#10b981"
+      ha-color-success-hover: "#34d399"
+      ha-color-success-active: "#6ee7b7"
+      
+      ha-color-warning: "#f59e0b"
+      ha-color-warning-hover: "#fbbf24"
+      ha-color-warning-active: "#fcd34d"
+      
+      ha-color-error: "#ef4444"
+      ha-color-error-hover: "#f87171"
+      ha-color-error-active: "#fca5a5"
+      
+      ha-color-info: "#3b82f6"
+      ha-color-info-hover: "#60a5fa"
+      ha-color-info-active: "#93c5fd"
+      
+      ha-color-surface-default: "#23262D"
+      ha-color-surface-raised: "#2d3037"
+      ha-color-surface-lowered: "#1B1D24"
+      ha-color-surface-overlay: "#2e3239"
+      
+      ha-color-background-primary: "#1B1D24"
+      ha-color-background-secondary: "#23262D"
+      
+      ha-color-divider-quiet: "#1f2228"
+      ha-color-divider-normal: "#374151"
+      ha-color-divider-loud: "#4b5563"
+      
+      ha-color-focus-ring: "#7179ff"
+      ha-color-focus-background: "rgba(113, 121, 255, 0.15)"
+      
+      ha-color-overlay-scrim: "rgba(0, 0, 0, 0.7)"
+      ha-color-overlay-backdrop: "rgba(0, 0, 0, 0.5)"
+      
+      # ------------------------------------------------------------------------
+      # BUBBLE CARD - Dark Mode
+      # ------------------------------------------------------------------------
+      
+      bubble-main-background-color: "#1B1D24"
+      bubble-secondary-background-color: "#23262D"
+      bubble-card-background-color: "#23262D"
+      bubble-backdrop-background-color: "rgba(0, 0, 0, 0.7)"
+      bubble-accent-color: "#7179ff"
+      bubble-icon-color: "#9ca3af"
+      bubble-name-color: "#e5e7eb"
+      bubble-state-color: "#9ca3af"
+      bubble-shadow: "4px 4px 8px rgba(0,0,0,.35), -4px -4px 8px rgba(255,255,255,.03)"
+      bubble-shadow-active: "inset 2px 2px 4px rgba(0,0,0,.35), inset -2px -2px 4px rgba(255,255,255,.03)"
+      bubble-shadow-hover: "6px 6px 12px rgba(0,0,0,.45), -6px -6px 12px rgba(255,255,255,.05)"
+      bubble-button-background: "#23262D"
+      bubble-button-background-hover: "#2d3037"
+      bubble-button-background-active: "#383b42"
+      bubble-pop-up-background: "#23262D"
+      bubble-media-player-background: "#23262D"
+      
+      # ------------------------------------------------------------------------
+      # ENERGY DASHBOARD - Dark Mode
+      # ------------------------------------------------------------------------
+      
+      energy-grid-consumption-color: "#7179ff"
+      energy-grid-return-color: "#10b981"
+      energy-solar-color: "#fbbf24"
+      energy-battery-in-color: "#a78bfa"
+      energy-battery-out-color: "#22d3ee"
+      energy-non-fossil-color: "#34d399"
+      energy-fossil-color: "#9ca3af"
+      energy-gas-color: "#f87171"
+      energy-water-color: "#22d3ee"
+      energy-cost-color: "#fca5a5"
+      energy-savings-color: "#6ee7b7"
+      energy-home-consumption-color: "#fcd34d"
+      energy-device-consumption-color: "#c4b5fd"
+      
+      # ------------------------------------------------------------------------
+      # ADDITIONAL HOME ASSISTANT VARIABLES
+      # ------------------------------------------------------------------------
+      
+      app-header-background-color: "#1B1D24"
+      app-header-text-color: "#e5e7eb"
+      divider-color: "rgba(255, 255, 255, 0.12)"
+      label-badge-background-color: "#2d3037"
+      label-badge-text-color: "#e5e7eb"
+      label-badge-red: "#f87171"
+      label-badge-blue: "#60a5fa"
+      label-badge-green: "#34d399"
+      label-badge-yellow: "#fbbf24"
+      label-badge-grey: "#9ca3af"
+      
+      table-row-background-color: "#23262D"
+      table-row-alternative-background-color: "#2d3037"
+      
+      paper-listbox-background-color: "#2d3037"
+      paper-item-icon-color: "#9ca3af"
+      paper-item-icon-active-color: "#7179ff"
+      
+      mdc-theme-primary: "#7179ff"
+      mdc-theme-secondary: "#c5c4dd"
+      mdc-theme-on-primary: "#1f2937"
+      mdc-theme-on-secondary: "#1f2937"
+      
+      switch-checked-color: "#7179ff"
+      switch-unchecked-button-color: "#6b7280"
+      switch-unchecked-track-color: "#4b5563"
+      
+      slider-color: "#7179ff"
+      slider-secondary-color: "#4b5563"
+      slider-track-color: "#374151"
+      
+      material-secondary-text-color: "#9ca3af"
+      material-disabled-text-color: "#6b7280"

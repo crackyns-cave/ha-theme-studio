@@ -1,0 +1,74 @@
+  # ============================================================================
+  # ENERGY DASHBOARD COLOR SYSTEM
+  # ============================================================================
+  # Semantic colors for Home Assistant Energy Dashboard.
+  # These colors provide clear visual distinction between energy sources,
+  # consumption, and flow directions.
+  # Shared across all theme variants.
+  # ============================================================================
+
+  # ----------------------------------------------------------------------------
+  # ENERGY GRID COLORS (Mode-Agnostic Anchors)
+  # ----------------------------------------------------------------------------
+  # Colors for grid consumption and return (solar export)
+  
+  energy-grid-consumption-color: &energy-grid-consumption-color-anchor "energy-grid-consumption-color"
+  energy-grid-return-color: &energy-grid-return-color-anchor "energy-grid-return-color"
+  
+  # ----------------------------------------------------------------------------
+  # ENERGY SOLAR COLORS (Mode-Agnostic Anchors)
+  # ----------------------------------------------------------------------------
+  # Colors for solar generation
+  
+  energy-solar-color: &energy-solar-color-anchor "energy-solar-color"
+  energy-solar-production-color: *energy-solar-color-anchor
+  
+  # ----------------------------------------------------------------------------
+  # ENERGY BATTERY COLORS (Mode-Agnostic Anchors)
+  # ----------------------------------------------------------------------------
+  # Colors for battery charging and discharging
+  
+  energy-battery-in-color: &energy-battery-in-color-anchor "energy-battery-in-color"
+  energy-battery-out-color: &energy-battery-out-color-anchor "energy-battery-out-color"
+  energy-battery-charge-color: *energy-battery-in-color-anchor
+  energy-battery-discharge-color: *energy-battery-out-color-anchor
+  
+  # ----------------------------------------------------------------------------
+  # ENERGY SOURCE TYPE COLORS (Mode-Agnostic Anchors)
+  # ----------------------------------------------------------------------------
+  # Colors for different energy source types
+  
+  energy-non-fossil-color: &energy-non-fossil-color-anchor "energy-non-fossil-color"
+  energy-fossil-color: &energy-fossil-color-anchor "energy-fossil-color"
+  
+  # ----------------------------------------------------------------------------
+  # ENERGY GAS COLORS (Mode-Agnostic Anchors)
+  # ----------------------------------------------------------------------------
+  # Colors for gas consumption
+  
+  energy-gas-color: &energy-gas-color-anchor "energy-gas-color"
+  energy-gas-consumption-color: *energy-gas-color-anchor
+  
+  # ----------------------------------------------------------------------------
+  # ENERGY WATER COLORS (Mode-Agnostic Anchors)
+  # ----------------------------------------------------------------------------
+  # Colors for water consumption
+  
+  energy-water-color: &energy-water-color-anchor "energy-water-color"
+  energy-water-consumption-color: *energy-water-color-anchor
+  
+  # ----------------------------------------------------------------------------
+  # ENERGY COST COLORS (Mode-Agnostic Anchors)
+  # ----------------------------------------------------------------------------
+  # Colors for cost visualization
+  
+  energy-cost-color: &energy-cost-color-anchor "energy-cost-color"
+  energy-savings-color: &energy-savings-color-anchor "energy-savings-color"
+  
+  # ----------------------------------------------------------------------------
+  # ENERGY CHART ACCENT COLORS (Mode-Agnostic Anchors)
+  # ----------------------------------------------------------------------------
+  # Additional colors for complex energy flow diagrams
+  
+  energy-home-consumption-color: &energy-home-consumption-color-anchor "energy-home-consumption-color"
+  energy-device-consumption-color: &energy-device-consumption-color-anchor "energy-device-consumption-color"

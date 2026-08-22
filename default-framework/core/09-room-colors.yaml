@@ -1,0 +1,102 @@
+  # ============================================================================
+  # ROOM-BASED COLOR SYSTEM
+  # ============================================================================
+  # Semantic color system for room/area identification in dashboards.
+  # RGB format allows for alpha channel manipulation in custom cards.
+  # These colors help create visual consistency across room-based views.
+  # Shared across all theme variants.
+  # ============================================================================
+
+  # ----------------------------------------------------------------------------
+  # LIVING SPACES
+  # ----------------------------------------------------------------------------
+  
+  room-living-rgb: &room-living-rgb-anchor "106, 156, 137"  # Calming green
+  room-living-room-rgb: *room-living-rgb-anchor
+  room-family-room-rgb: "118, 142, 168"  # Soft blue
+  room-dining-room-rgb: "191, 144, 112"  # Warm terracotta
+  
+  # ----------------------------------------------------------------------------
+  # KITCHEN & UTILITY
+  # ----------------------------------------------------------------------------
+  
+  room-kitchen-rgb: &room-kitchen-rgb-anchor "224, 177, 89"  # Warm yellow
+  room-pantry-rgb: "198, 156, 109"  # Beige
+  room-laundry-rgb: "147, 186, 209"  # Light blue
+  
+  # ----------------------------------------------------------------------------
+  # BEDROOMS
+  # ----------------------------------------------------------------------------
+  
+  room-bedroom-rgb: &room-bedroom-rgb-anchor "159, 134, 192"  # Lavender
+  room-master-bedroom-rgb: "138, 120, 165"  # Deep purple
+  room-guest-bedroom-rgb: "179, 157, 199"  # Light purple
+  room-kids-bedroom-rgb: "255, 183, 178"  # Soft pink
+  
+  # ----------------------------------------------------------------------------
+  # BATHROOMS
+  # ----------------------------------------------------------------------------
+  
+  room-bathroom-rgb: &room-bathroom-rgb-anchor "120, 194, 201"  # Aqua
+  room-master-bathroom-rgb: "102, 178, 186"  # Teal
+  room-powder-room-rgb: "158, 210, 216"  # Light aqua
+  
+  # ----------------------------------------------------------------------------
+  # WORK & STUDY SPACES
+  # ----------------------------------------------------------------------------
+  
+  room-office-rgb: &room-office-rgb-anchor "93, 138, 168"  # Professional blue
+  room-study-rgb: "115, 147, 164"  # Calm blue
+  room-library-rgb: "124, 106, 89"  # Warm brown
+  
+  # ----------------------------------------------------------------------------
+  # OUTDOOR & GARDEN
+  # ----------------------------------------------------------------------------
+  
+  room-garden-rgb: &room-garden-rgb-anchor "118, 165, 94"  # Garden green
+  room-patio-rgb: "142, 178, 121"  # Light green
+  room-deck-rgb: "166, 134, 102"  # Wood tone
+  room-balcony-rgb: "133, 158, 138"  # Sage green
+  
+  # ----------------------------------------------------------------------------
+  # GARAGE & STORAGE
+  # ----------------------------------------------------------------------------
+  
+  room-garage-rgb: &room-garage-rgb-anchor "128, 128, 128"  # Neutral grey
+  room-basement-rgb: "115, 115, 115"  # Dark grey
+  room-attic-rgb: "145, 145, 145"  # Medium grey
+  room-storage-rgb: "158, 158, 158"  # Light grey
+  
+  # ----------------------------------------------------------------------------
+  # WORKSHOP & HOBBY
+  # ----------------------------------------------------------------------------
+  
+  room-workshop-rgb: &room-workshop-rgb-anchor "189, 128, 65"  # Tool orange
+  room-craft-room-rgb: "255, 167, 165"  # Craft pink
+  room-gym-rgb: "203, 93, 94"  # Energy red
+  
+  # ----------------------------------------------------------------------------
+  # ENTERTAINMENT & RECREATION
+  # ----------------------------------------------------------------------------
+  
+  room-media-room-rgb: "78, 92, 133"  # Cinema blue
+  room-game-room-rgb: "155, 93, 168"  # Playful purple
+  room-music-room-rgb: "217, 128, 89"  # Creative orange
+  
+  # ----------------------------------------------------------------------------
+  # HALLWAYS & TRANSITIONS
+  # ----------------------------------------------------------------------------
+  
+  room-hallway-rgb: "175, 175, 175"  # Neutral
+  room-entry-rgb: "155, 155, 155"  # Welcome grey
+  room-foyer-rgb: "165, 165, 165"  # Entrance grey
+  room-corridor-rgb: "185, 185, 185"  # Passage grey
+  
+  # ----------------------------------------------------------------------------
+  # MISCELLANEOUS AREAS
+  # ----------------------------------------------------------------------------
+  
+  room-closet-rgb: "148, 148, 148"  # Storage grey
+  room-mudroom-rgb: "134, 154, 144"  # Earthy grey-green
+  room-sunroom-rgb: "255, 235, 138"  # Sunny yellow
+  room-conservatory-rgb: "178, 214, 144"  # Botanical green

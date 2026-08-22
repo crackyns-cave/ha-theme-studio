@@ -1,0 +1,119 @@
+import fs from 'fs/promises';
+import path from 'path';
+import { exec } from 'child_process';
+import { promisify } from 'util';
+import archiver from 'archiver';
+import { createWriteStream } from 'fs';
+
+const execAsync = promisify(exec);
+
+export interface BuildResult {
+  success: boolean;
+  themeName: string;
+  outputPath: string;
+  size: number;
+  error?: string;
+}
+
+export class BuildService {
+  private frameworkPath = '/framework';
+  private outputPath = '/output';
+
+  async buildTheme(visual: string, palette: string): Promise<BuildResult> {
+    try {
+      const themeName = `${visual}-${palette}`;
+      const outputFile = path.join(this.outputPath, `${themeName}.yaml`);
+
+      // Execute build script
+      const buildScript = path.join(this.frameworkPath, '../build.js');
+      await execAsync(`node ${buildScript} ${visual} ${palette}`);
+
+      // Get file stats
+      const stats = await fs.stat(outputFile);
+
+      return {
+        success: true,
+        themeName,
+        outputPath: outputFile,
+        size: stats.size
+      };
+    } catch (error) {
+      return {
+        success: false,
+        themeName: `${visual}-${palette}`,
+        outputPath: '',
+        size: 0,
+        error: error instanceof Error ? error.message : 'Unknown error'
+      };
+    }
+  }
+
+  async buildFamily(palette: string): Promise<BuildResult[]> {
+    const visuals = ['material3', 'neumorphic-material', 'frosted-glass', 'liquid-glass'];
+    const results: BuildResult[] = [];
+
+    for (const visual of visuals) {
+      const result = await this.buildTheme(visual, palette);
+      results.push(result);
+    }
+
+    return results;
+  }
+
+  async buildAll(): Promise<BuildResult[]> {
+    try {
+      // Execute build-all script
+      const buildScript = path.join(this.frameworkPath, '../build-all.js');
+      await execAsync(`node ${buildScript}`);
+
+      // Read all generated files
+      const files = await fs.readdir(this.outputPath);
+      const results: BuildResult[] = [];
+
+      for (const file of files) {
+        if (file.endsWith('.yaml')) {
+          const filePath = path.join(this.outputPath, file);
+          const stats = await fs.stat(filePath);
+          
+          results.push({
+            success: true,
+            themeName: file.replace('.yaml', ''),
+            outputPath: filePath,
+            size: stats.size
+          });
+        }
+      }
+
+      return results;
+    } catch (error) {
+      return [{
+        success: false,
+        themeName: 'all',
+        outputPath: '',
+        size: 0,
+        error: error instanceof Error ? error.message : 'Unknown error'
+      }];
+    }
+  }
+
+  async exportZip(themes: string[]): Promise<string> {
+    const zipPath = path.join(this.outputPath, 'themes-export.zip');
+    const output = createWriteStream(zipPath);
+    const archive = archiver('zip', { zlib: { level: 9 } });
+
+    return new Promise((resolve, reject) => {
+      output.on('close', () => resolve(zipPath));
+      archive.on('error', (err) => reject(err));
+
+      archive.pipe(output);
+
+      // Add each theme file to the archive
+      themes.forEach(theme => {
+        const themePath = path.join(this.outputPath, `${theme}.yaml`);
+        archive.file(themePath, { name: `${theme}.yaml` });
+      });
+
+      archive.finalize();
+    });
+  }
+}

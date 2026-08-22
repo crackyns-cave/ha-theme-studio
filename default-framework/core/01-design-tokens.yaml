@@ -1,0 +1,116 @@
+  # ============================================================================
+  # DESIGN TOKENS - Foundation Layer
+  # ============================================================================
+  # Core design tokens that define the foundation of the design system.
+  # These are referenced throughout the theme using YAML anchors.
+  # Shared across all theme variants.
+  # ============================================================================
+
+  # ----------------------------------------------------------------------------
+  # SPACING SYSTEM - Material 3 Compatible
+  # ----------------------------------------------------------------------------
+  # Consistent spacing scale for layouts, padding, and margins
+  
+  m3-spacing-xs: &m3-spacing-xs "4px"
+  m3-spacing-sm: &m3-spacing-sm "8px"
+  m3-spacing-md: &m3-spacing-md "16px"
+  m3-spacing-lg: &m3-spacing-lg "24px"
+  m3-spacing-xl: &m3-spacing-xl "32px"
+  m3-spacing-2xl: &m3-spacing-2xl "48px"
+  m3-spacing-3xl: &m3-spacing-3xl "64px"
+  
+  # Dashboard-specific spacing
+  dashboard-gap: &dashboard-gap "24px"
+  section-gap: &section-gap "16px"
+  card-gap: &card-gap "12px"
+  card-padding: &card-padding "16px"
+  
+  # ----------------------------------------------------------------------------
+  # SHAPE SYSTEM - Material 3 Radius Scale
+  # ----------------------------------------------------------------------------
+  # Rounded corner system for consistent component styling
+  
+  m3-radius-none: &m3-radius-none "0px"
+  m3-radius-xs: &m3-radius-xs "4px"
+  m3-radius-sm: &m3-radius-sm "8px"
+  m3-radius-md: &m3-radius-md "12px"
+  m3-radius-lg: &m3-radius-lg "16px"
+  m3-radius-xl: &m3-radius-xl "24px"
+  m3-radius-2xl: &m3-radius-2xl "28px"
+  m3-radius-pill: &m3-radius-pill "999px"
+  
+  # Component-specific radius
+  m3-radius-card: &m3-radius-card "24px"
+  m3-radius-dialog: &m3-radius-dialog "28px"
+  m3-radius-button: &m3-radius-button "12px"
+  m3-radius-chip: &m3-radius-chip "8px"
+  m3-radius-fab: &m3-radius-fab "16px"
+  
+  # ----------------------------------------------------------------------------
+  # TYPOGRAPHY SCALE - Material 3 Type System
+  # ----------------------------------------------------------------------------
+  # Font sizing and line heights
+  
+  m3-font-size-xs: &m3-font-size-xs "11px"
+  m3-font-size-sm: &m3-font-size-sm "12px"
+  m3-font-size-md: &m3-font-size-md "14px"
+  m3-font-size-lg: &m3-font-size-lg "16px"
+  m3-font-size-xl: &m3-font-size-xl "20px"
+  m3-font-size-2xl: &m3-font-size-2xl "24px"
+  m3-font-size-3xl: &m3-font-size-3xl "32px"
+  m3-font-size-4xl: &m3-font-size-4xl "45px"
+  
+  m3-line-height-tight: &m3-line-height-tight "1.25"
+  m3-line-height-normal: &m3-line-height-normal "1.5"
+  m3-line-height-relaxed: &m3-line-height-relaxed "1.75"
+  
+  m3-font-weight-regular: &m3-font-weight-regular "400"
+  m3-font-weight-medium: &m3-font-weight-medium "500"
+  m3-font-weight-semibold: &m3-font-weight-semibold "600"
+  m3-font-weight-bold: &m3-font-weight-bold "700"
+  
+  # ----------------------------------------------------------------------------
+  # ELEVATION SYSTEM - Material 3 Levels
+  # ----------------------------------------------------------------------------
+  # Elevation levels (interpretation varies by theme)
+  
+  m3-elevation-0: &m3-elevation-0 "0"
+  m3-elevation-1: &m3-elevation-1 "1"
+  m3-elevation-2: &m3-elevation-2 "2"
+  m3-elevation-3: &m3-elevation-3 "3"
+  m3-elevation-4: &m3-elevation-4 "4"
+  m3-elevation-5: &m3-elevation-5 "5"
+  
+  # ----------------------------------------------------------------------------
+  # OPACITY SCALE
+  # ----------------------------------------------------------------------------
+  # Standard opacity values for overlays, disabled states, etc.
+  
+  m3-opacity-disabled: &m3-opacity-disabled "0.38"
+  m3-opacity-hover: &m3-opacity-hover "0.08"
+  m3-opacity-focus: &m3-opacity-focus "0.12"
+  m3-opacity-pressed: &m3-opacity-pressed "0.16"
+  m3-opacity-dragged: &m3-opacity-dragged "0.16"
+  
+  # ----------------------------------------------------------------------------
+  # ANIMATION TIMING
+  # ----------------------------------------------------------------------------
+  # Standard durations and easing functions
+  
+  m3-duration-short-1: &m3-duration-short-1 "50ms"
+  m3-duration-short-2: &m3-duration-short-2 "100ms"
+  m3-duration-short-3: &m3-duration-short-3 "150ms"
+  m3-duration-short-4: &m3-duration-short-4 "200ms"
+  m3-duration-medium-1: &m3-duration-medium-1 "250ms"
+  m3-duration-medium-2: &m3-duration-medium-2 "300ms"
+  m3-duration-medium-3: &m3-duration-medium-3 "350ms"
+  m3-duration-medium-4: &m3-duration-medium-4 "400ms"
+  m3-duration-long-1: &m3-duration-long-1 "450ms"
+  m3-duration-long-2: &m3-duration-long-2 "500ms"
+  m3-duration-long-3: &m3-duration-long-3 "550ms"
+  m3-duration-long-4: &m3-duration-long-4 "600ms"
+  
+  m3-easing-standard: &m3-easing-standard "cubic-bezier(0.2, 0.0, 0, 1.0)"
+  m3-easing-emphasized: &m3-easing-emphasized "cubic-bezier(0.2, 0.0, 0, 1.0)"
+  m3-easing-decelerated: &m3-easing-decelerated "cubic-bezier(0.0, 0.0, 0, 1.0)"
+  m3-easing-accelerated: &m3-easing-accelerated "cubic-bezier(0.3, 0.0, 1, 1.0)"

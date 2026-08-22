@@ -1,0 +1,98 @@
+  # ============================================================================
+  # NEUMORPHIC VISUAL SYSTEM
+  # ============================================================================
+  # Dual-shadow system that creates soft, subtle depth without borders.
+  # Shadows are defined per mode (light/dark) with different intensities.
+  # ============================================================================
+
+  # ----------------------------------------------------------------------------
+  # LIGHT MODE NEUMORPHIC SHADOWS
+  # ----------------------------------------------------------------------------
+  # Light background with soft depth through positive/negative shadows
+  # Positive shadow: rgba(163,177,198,.6) - darker, creates depth
+  # Negative shadow: rgba(255,255,255,.8) - lighter, creates highlight
+  
+  neu-light-shadow-raised-sm: &neu-light-shadow-raised-sm |
+    2px 2px 4px rgba(163,177,198,.6),
+    -2px -2px 4px rgba(255,255,255,.8)
+  
+  neu-light-shadow-raised: &neu-light-shadow-raised |
+    4px 4px 8px rgba(163,177,198,.6),
+    -4px -4px 8px rgba(255,255,255,.8)
+  
+  neu-light-shadow-raised-lg: &neu-light-shadow-raised-lg |
+    8px 8px 16px rgba(163,177,198,.6),
+    -8px -8px 16px rgba(255,255,255,.8)
+  
+  neu-light-shadow-raised-xl: &neu-light-shadow-raised-xl |
+    12px 12px 24px rgba(163,177,198,.6),
+    -12px -12px 24px rgba(255,255,255,.8)
+  
+  neu-light-shadow-pressed-sm: &neu-light-shadow-pressed-sm |
+    inset 2px 2px 4px rgba(163,177,198,.6),
+    inset -2px -2px 4px rgba(255,255,255,.8)
+  
+  neu-light-shadow-pressed: &neu-light-shadow-pressed |
+    inset 4px 4px 8px rgba(163,177,198,.6),
+    inset -4px -4px 8px rgba(255,255,255,.8)
+  
+  neu-light-shadow-pressed-lg: &neu-light-shadow-pressed-lg |
+    inset 6px 6px 12px rgba(163,177,198,.6),
+    inset -6px -6px 12px rgba(255,255,255,.8)
+  
+  # Floating/elevated state (cards on hover)
+  neu-light-shadow-float: &neu-light-shadow-float |
+    6px 6px 12px rgba(163,177,198,.7),
+    -6px -6px 12px rgba(255,255,255,.9),
+    0px 4px 16px rgba(163,177,198,.3)
+  
+  # Subtle state (minimal depth)
+  neu-light-shadow-subtle: &neu-light-shadow-subtle |
+    1px 1px 2px rgba(163,177,198,.4),
+    -1px -1px 2px rgba(255,255,255,.6)
+  
+  # ----------------------------------------------------------------------------
+  # DARK MODE NEUMORPHIC SHADOWS
+  # ----------------------------------------------------------------------------
+  # Dark background with subtle depth through positive/negative shadows
+  # Positive shadow: rgba(0,0,0,.35) - darker, creates depth
+  # Negative shadow: rgba(255,255,255,.03) - lighter, creates subtle highlight
+  
+  neu-dark-shadow-raised-sm: &neu-dark-shadow-raised-sm |
+    2px 2px 4px rgba(0,0,0,.35),
+    -2px -2px 4px rgba(255,255,255,.03)
+  
+  neu-dark-shadow-raised: &neu-dark-shadow-raised |
+    4px 4px 8px rgba(0,0,0,.35),
+    -4px -4px 8px rgba(255,255,255,.03)
+  
+  neu-dark-shadow-raised-lg: &neu-dark-shadow-raised-lg |
+    8px 8px 16px rgba(0,0,0,.35),
+    -8px -8px 16px rgba(255,255,255,.03)
+  
+  neu-dark-shadow-raised-xl: &neu-dark-shadow-raised-xl |
+    12px 12px 24px rgba(0,0,0,.35),
+    -12px -12px 24px rgba(255,255,255,.03)
+  
+  neu-dark-shadow-pressed-sm: &neu-dark-shadow-pressed-sm |
+    inset 2px 2px 4px rgba(0,0,0,.35),
+    inset -2px -2px 4px rgba(255,255,255,.03)
+  
+  neu-dark-shadow-pressed: &neu-dark-shadow-pressed |
+    inset 4px 4px 8px rgba(0,0,0,.35),
+    inset -4px -4px 8px rgba(255,255,255,.03)
+  
+  neu-dark-shadow-pressed-lg: &neu-dark-shadow-pressed-lg |
+    inset 6px 6px 12px rgba(0,0,0,.35),
+    inset -6px -6px 12px rgba(255,255,255,.03)
+  
+  # Floating/elevated state (cards on hover)
+  neu-dark-shadow-float: &neu-dark-shadow-float |
+    6px 6px 12px rgba(0,0,0,.45),
+    -6px -6px 12px rgba(255,255,255,.05),
+    0px 4px 16px rgba(0,0,0,.25)
+  
+  # Subtle state (minimal depth)
+  neu-dark-shadow-subtle: &neu-dark-shadow-subtle |
+    1px 1px 2px rgba(0,0,0,.25),
+    -1px -1px 2px rgba(255,255,255,.02)

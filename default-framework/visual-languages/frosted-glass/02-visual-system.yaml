@@ -1,0 +1,98 @@
+  # ============================================================================
+  # FROSTED GLASS VISUAL SYSTEM
+  # ============================================================================
+  # Apple Big Sur-style frosted glass with backdrop blur and saturation.
+  # Uses translucent surfaces with blur effects and subtle shadows.
+  # Soft borders provide definition without harsh lines.
+  # ============================================================================
+
+  # ----------------------------------------------------------------------------
+  # FROSTED GLASS BACKDROP FILTERS
+  # ----------------------------------------------------------------------------
+  # Blur and saturation effects for frosted glass appearance
+  
+  fg-backdrop-blur-light: &fg-backdrop-blur-light "blur(20px) saturate(180%)"
+  fg-backdrop-blur-medium: &fg-backdrop-blur-medium "blur(30px) saturate(180%)"
+  fg-backdrop-blur-heavy: &fg-backdrop-blur-heavy "blur(40px) saturate(200%)"
+  
+  fg-backdrop-blur-card: *fg-backdrop-blur-light
+  fg-backdrop-blur-dialog: *fg-backdrop-blur-medium
+  fg-backdrop-blur-sidebar: *fg-backdrop-blur-light
+  fg-backdrop-blur-header: *fg-backdrop-blur-light
+  
+  # ----------------------------------------------------------------------------
+  # FROSTED GLASS SHADOWS - LIGHT MODE
+  # ----------------------------------------------------------------------------
+  # Subtle, soft shadows that complement translucent surfaces
+  
+  fg-light-shadow-subtle: &fg-light-shadow-subtle |
+    0px 1px 3px rgba(0, 0, 0, 0.08),
+    0px 1px 2px rgba(0, 0, 0, 0.06)
+  
+  fg-light-shadow-sm: &fg-light-shadow-sm |
+    0px 2px 8px rgba(0, 0, 0, 0.08),
+    0px 1px 4px rgba(0, 0, 0, 0.06)
+  
+  fg-light-shadow-md: &fg-light-shadow-md |
+    0px 4px 16px rgba(0, 0, 0, 0.1),
+    0px 2px 8px rgba(0, 0, 0, 0.06)
+  
+  fg-light-shadow-lg: &fg-light-shadow-lg |
+    0px 8px 24px rgba(0, 0, 0, 0.12),
+    0px 4px 12px rgba(0, 0, 0, 0.08)
+  
+  fg-light-shadow-xl: &fg-light-shadow-xl |
+    0px 16px 48px rgba(0, 0, 0, 0.14),
+    0px 8px 24px rgba(0, 0, 0, 0.1)
+  
+  # Hover state (slightly elevated)
+  fg-light-shadow-sm-hover: &fg-light-shadow-sm-hover |
+    0px 4px 12px rgba(0, 0, 0, 0.1),
+    0px 2px 6px rgba(0, 0, 0, 0.08)
+  
+  fg-light-shadow-md-hover: &fg-light-shadow-md-hover |
+    0px 6px 20px rgba(0, 0, 0, 0.12),
+    0px 3px 10px rgba(0, 0, 0, 0.08)
+  
+  # ----------------------------------------------------------------------------
+  # FROSTED GLASS SHADOWS - DARK MODE
+  # ----------------------------------------------------------------------------
+  # Slightly stronger shadows for dark backgrounds with translucency
+  
+  fg-dark-shadow-subtle: &fg-dark-shadow-subtle |
+    0px 1px 3px rgba(0, 0, 0, 0.3),
+    0px 1px 2px rgba(0, 0, 0, 0.2)
+  
+  fg-dark-shadow-sm: &fg-dark-shadow-sm |
+    0px 2px 8px rgba(0, 0, 0, 0.4),
+    0px 1px 4px rgba(0, 0, 0, 0.3)
+  
+  fg-dark-shadow-md: &fg-dark-shadow-md |
+    0px 4px 16px rgba(0, 0, 0, 0.5),
+    0px 2px 8px rgba(0, 0, 0, 0.3)
+  
+  fg-dark-shadow-lg: &fg-dark-shadow-lg |
+    0px 8px 24px rgba(0, 0, 0, 0.6),
+    0px 4px 12px rgba(0, 0, 0, 0.4)
+  
+  fg-dark-shadow-xl: &fg-dark-shadow-xl |
+    0px 16px 48px rgba(0, 0, 0, 0.7),
+    0px 8px 24px rgba(0, 0, 0, 0.5)
+  
+  # Hover state (slightly elevated)
+  fg-dark-shadow-sm-hover: &fg-dark-shadow-sm-hover |
+    0px 4px 12px rgba(0, 0, 0, 0.5),
+    0px 2px 6px rgba(0, 0, 0, 0.4)
+  
+  fg-dark-shadow-md-hover: &fg-dark-shadow-md-hover |
+    0px 6px 20px rgba(0, 0, 0, 0.6),
+    0px 3px 10px rgba(0, 0, 0, 0.4)
+  
+  # ----------------------------------------------------------------------------
+  # FROSTED GLASS BORDER SYSTEM
+  # ----------------------------------------------------------------------------
+  # Soft, semi-transparent borders
+  
+  fg-border-width: "0.5px"
+  fg-border-width-thick: "1px"
+  fg-border-style: "solid"

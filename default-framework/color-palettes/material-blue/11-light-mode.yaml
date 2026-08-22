@@ -1,0 +1,457 @@
+    # ==========================================================================
+    # LIGHT MODE - Liquid Glass
+    # ==========================================================================
+    # Adaptive translucent surfaces with layered blur, luminous highlights,
+    # and reflective edges. Bright, airy aesthetic with fluid depth.
+    # ==========================================================================
+    
+    light:
+      
+      # ------------------------------------------------------------------------
+      # LIQUID GLASS VISUAL VARIABLES
+      # ------------------------------------------------------------------------
+      
+      # Glass backgrounds
+      glass-bg: *glass-bg-light-resting
+      glass-bg-hover: *glass-bg-light-hover
+      glass-bg-active: *glass-bg-light-active
+      glass-bg-subtle: *glass-bg-light-subtle
+      glass-bg-intense: *glass-bg-light-intense
+      
+      # Glass blur
+      glass-blur-card: *glass-blur-card
+      glass-blur-dialog: *glass-blur-dialog
+      glass-blur-sidebar: *glass-blur-sidebar
+      glass-blur-header: *glass-blur-header
+      glass-blur-light: *glass-blur-light
+      glass-blur-medium: *glass-blur-medium
+      glass-blur-heavy: *glass-blur-heavy
+      
+      # Glass borders
+      glass-border-color: *glass-border-light-normal
+      glass-border-color-hover: *glass-border-light-accent
+      glass-border-quiet: *glass-border-light-quiet
+      glass-border-normal: *glass-border-light-normal
+      glass-border-loud: *glass-border-light-loud
+      glass-border-luminous: *glass-border-light-luminous
+      glass-border-accent: *glass-border-light-accent
+      glass-border-width: *glass-border-width-normal
+      glass-border-width-thin: *glass-border-width-thin
+      glass-border-width-thick: *glass-border-width-thick
+      
+      # Glass shadows
+      glass-shadow: *glass-shadow-light-md
+      glass-shadow-hover: *glass-shadow-light-lg
+      glass-shadow-active: *glass-shadow-light-sm
+      glass-shadow-subtle: *glass-shadow-light-subtle
+      glass-shadow-sm: *glass-shadow-light-sm
+      glass-shadow-md: *glass-shadow-light-md
+      glass-shadow-lg: *glass-shadow-light-lg
+      glass-shadow-xl: *glass-shadow-light-xl
+      
+      # Glass highlights
+      glass-highlight-edge: *glass-highlight-light-edge
+      glass-highlight-glow: *glass-highlight-light-glow
+      glass-highlight-shine: *glass-highlight-light-shine
+      
+      # Glass radius
+      glass-radius: *glass-radius
+      glass-radius-sm: *glass-radius-sm
+      glass-radius-lg: *glass-radius-lg
+      glass-radius-xl: *glass-radius-xl
+      
+      # ------------------------------------------------------------------------
+      # BASE COLORS - Foundation
+      # ------------------------------------------------------------------------
+      
+      # Primary brand color - vibrant blue
+      primary-color: "#2196F3"
+      accent-color: "#2196F3"
+      
+      # Semantic state colors
+      state-icon-color: "#5E35B1"
+      state-icon-active-color: "#2196F3"
+      state-icon-unavailable-color: "#9E9E9E"
+      
+      # Text colors
+      primary-text-color: "#1A1A1E"
+      secondary-text-color: "#424242"
+      text-primary-color: "#ffffff"
+      disabled-text-color: "#9E9E9E"
+      
+      # Background and surface
+      primary-background-color: "#F0F4F8"
+      secondary-background-color: "#E3EAF1"
+      lovelace-background: "#F0F4F8"
+      
+      # Cards - using glass backgrounds
+      card-background-color: *glass-bg-light-resting
+      ha-card-background: *glass-bg-light-resting
+      
+      # Sidebar
+      sidebar-background-color: *glass-bg-light-intense
+      sidebar-icon-color: "#424242"
+      sidebar-selected-icon-color: "#2196F3"
+      sidebar-selected-text-color: "#1A1A1E"
+      sidebar-text-color: "#424242"
+      
+      # Dialogs
+      dialog-background-color: *glass-bg-light-intense
+      
+      # App header
+      app-header-background-color: *glass-bg-light-intense
+      app-header-text-color: "#1A1A1E"
+      
+      # ------------------------------------------------------------------------
+      # MATERIAL WEB COLORS - Light Mode
+      # ------------------------------------------------------------------------
+      
+      # Primary - vibrant blue
+      md-sys-color-primary: "#2196F3"
+      md-sys-color-on-primary: "#ffffff"
+      md-sys-color-primary-container: "#BBDEFB"
+      md-sys-color-on-primary-container: "#0D47A1"
+      
+      # Secondary - purple accent
+      md-sys-color-secondary: "#5E35B1"
+      md-sys-color-on-secondary: "#ffffff"
+      md-sys-color-secondary-container: "#D1C4E9"
+      md-sys-color-on-secondary-container: "#311B92"
+      
+      # Tertiary - teal
+      md-sys-color-tertiary: "#00ACC1"
+      md-sys-color-on-tertiary: "#ffffff"
+      md-sys-color-tertiary-container: "#B2EBF2"
+      md-sys-color-on-tertiary-container: "#006064"
+      
+      # Error
+      md-sys-color-error: "#F44336"
+      md-sys-color-on-error: "#ffffff"
+      md-sys-color-error-container: "#FFCDD2"
+      md-sys-color-on-error-container: "#B71C1C"
+      
+      # Surface
+      md-sys-color-surface: "#F0F4F8"
+      md-sys-color-on-surface: "#1A1A1E"
+      md-sys-color-on-surface-variant: "#424242"
+      md-sys-color-surface-dim: "#E3EAF1"
+      md-sys-color-surface-bright: "#FAFCFD"
+      md-sys-color-surface-container-lowest: "#ffffff"
+      md-sys-color-surface-container-low: "#F5F8FB"
+      md-sys-color-surface-container: "#F0F4F8"
+      md-sys-color-surface-container-high: "#E3EAF1"
+      md-sys-color-surface-container-highest: "#D6DFE9"
+      
+      # Background
+      md-sys-color-background: "#F0F4F8"
+      md-sys-color-on-background: "#1A1A1E"
+      
+      # Outline
+      md-sys-color-outline: "#9E9E9E"
+      md-sys-color-outline-variant: "#BDBDBD"
+      
+      # Inverse
+      md-sys-color-inverse-surface: "#2C2C30"
+      md-sys-color-inverse-on-surface: "#F0F4F8"
+      md-sys-color-inverse-primary: "#82B1FF"
+      
+      # Scrim & shadow
+      md-sys-color-scrim: "#000000"
+      md-sys-color-shadow: "#000000"
+      md-sys-color-surface-tint: "#2196F3"
+      
+      # ------------------------------------------------------------------------
+      # WEBAWESOME COLORS - Light Mode
+      # ------------------------------------------------------------------------
+      
+      wa-color-surface-default: "#F0F4F8"
+      wa-color-surface-raised: *glass-bg-light-resting
+      wa-color-surface-lowered: "#E3EAF1"
+      wa-color-surface-overlay: *glass-bg-light-hover
+      wa-color-surface-inverse: "#2C2C30"
+      
+      wa-color-text-normal: "#1A1A1E"
+      wa-color-text-quiet: "#424242"
+      wa-color-text-loud: "#000000"
+      wa-color-text-inverse: "#ffffff"
+      wa-color-text-disabled: "#9E9E9E"
+      wa-color-text-link: "#2196F3"
+      
+      wa-color-brand-fill-normal: "#2196F3"
+      wa-color-brand-fill-loud: "#1976D2"
+      wa-color-brand-fill-quiet: "#BBDEFB"
+      wa-color-brand-fill-inverse: "#82B1FF"
+      
+      wa-color-brand-text-normal: "#2196F3"
+      wa-color-brand-text-loud: "#1976D2"
+      wa-color-brand-text-quiet: "#5E35B1"
+      
+      wa-color-brand-border-normal: "#2196F3"
+      wa-color-brand-border-loud: "#1976D2"
+      wa-color-brand-border-quiet: "rgba(33, 150, 243, 0.4)"
+      
+      wa-color-neutral-fill-normal: "#E3EAF1"
+      wa-color-neutral-fill-loud: "#9E9E9E"
+      wa-color-neutral-fill-quiet: "#F5F8FB"
+      wa-color-neutral-fill-inverse: "#2C2C30"
+      
+      wa-color-neutral-text-normal: "#1A1A1E"
+      wa-color-neutral-text-loud: "#000000"
+      wa-color-neutral-text-quiet: "#424242"
+      
+      wa-color-neutral-border-normal: "#BDBDBD"
+      wa-color-neutral-border-loud: "#9E9E9E"
+      wa-color-neutral-border-quiet: "rgba(0, 0, 0, 0.12)"
+      
+      wa-color-success-fill-normal: "#4CAF50"
+      wa-color-success-fill-loud: "#388E3C"
+      wa-color-success-fill-quiet: "#C8E6C9"
+      wa-color-success-text-normal: "#388E3C"
+      wa-color-success-text-loud: "#2E7D32"
+      wa-color-success-text-quiet: "#4CAF50"
+      wa-color-success-border-normal: "#4CAF50"
+      
+      wa-color-warning-fill-normal: "#FF9800"
+      wa-color-warning-fill-loud: "#F57C00"
+      wa-color-warning-fill-quiet: "#FFE0B2"
+      wa-color-warning-text-normal: "#F57C00"
+      wa-color-warning-text-loud: "#E65100"
+      wa-color-warning-text-quiet: "#FF9800"
+      wa-color-warning-border-normal: "#FF9800"
+      
+      wa-color-danger-fill-normal: "#F44336"
+      wa-color-danger-fill-loud: "#D32F2F"
+      wa-color-danger-fill-quiet: "#FFCDD2"
+      wa-color-danger-text-normal: "#D32F2F"
+      wa-color-danger-text-loud: "#B71C1C"
+      wa-color-danger-text-quiet: "#F44336"
+      wa-color-danger-border-normal: "#F44336"
+      
+      wa-color-info-fill-normal: "#00BCD4"
+      wa-color-info-fill-loud: "#0097A7"
+      wa-color-info-fill-quiet: "#B2EBF2"
+      wa-color-info-text-normal: "#0097A7"
+      wa-color-info-text-loud: "#006064"
+      wa-color-info-text-quiet: "#00BCD4"
+      wa-color-info-border-normal: "#00BCD4"
+      
+      wa-color-focus-ring: "#2196F3"
+      wa-color-overlay: "rgba(0, 0, 0, 0.32)"
+      
+      # ------------------------------------------------------------------------
+      # HOME ASSISTANT SEMANTIC COLORS - Light Mode
+      # ------------------------------------------------------------------------
+      
+      ha-color-text-primary: "#1A1A1E"
+      ha-color-text-secondary: "#424242"
+      ha-color-text-tertiary: "#757575"
+      ha-color-text-disabled: "#BDBDBD"
+      ha-color-text-inverse: "#ffffff"
+      
+      ha-color-form-background: *glass-bg-light-subtle
+      ha-color-form-background-hover: *glass-bg-light-resting
+      ha-color-form-background-focus: *glass-bg-light-hover
+      ha-color-form-background-disabled: "rgba(227, 234, 241, 0.5)"
+      ha-color-form-text: "#1A1A1E"
+      ha-color-form-text-disabled: "#9E9E9E"
+      ha-color-form-placeholder: "#9E9E9E"
+      ha-color-form-border: *glass-border-light-quiet
+      ha-color-form-border-hover: *glass-border-light-normal
+      ha-color-form-border-focus: *glass-border-light-accent
+      ha-color-form-border-error: "rgba(244, 67, 54, 0.6)"
+      
+      ha-color-border-neutral-quiet: *glass-border-light-quiet
+      ha-color-border-neutral-normal: *glass-border-light-normal
+      ha-color-border-neutral-loud: *glass-border-light-loud
+      ha-color-border-primary-quiet: "rgba(33, 150, 243, 0.3)"
+      ha-color-border-primary-normal: "rgba(33, 150, 243, 0.5)"
+      ha-color-border-primary-loud: "rgba(33, 150, 243, 0.7)"
+      
+      ha-color-fill-primary-loud-resting: "#2196F3"
+      ha-color-fill-primary-loud-hover: "#1976D2"
+      ha-color-fill-primary-loud-active: "#1565C0"
+      ha-color-fill-primary-loud-disabled: "#BDBDBD"
+      
+      ha-color-fill-primary-normal-resting: "#82B1FF"
+      ha-color-fill-primary-normal-hover: "#2196F3"
+      ha-color-fill-primary-normal-active: "#1976D2"
+      ha-color-fill-primary-normal-disabled: "#E3EAF1"
+      
+      ha-color-fill-primary-quiet-resting: "#BBDEFB"
+      ha-color-fill-primary-quiet-hover: "#90CAF9"
+      ha-color-fill-primary-quiet-active: "#64B5F6"
+      
+      ha-color-fill-neutral-loud-resting: "#424242"
+      ha-color-fill-neutral-loud-hover: "#2C2C30"
+      ha-color-fill-neutral-loud-active: "#1A1A1E"
+      
+      ha-color-fill-neutral-normal-resting: "#9E9E9E"
+      ha-color-fill-neutral-normal-hover: "#757575"
+      ha-color-fill-neutral-normal-active: "#424242"
+      
+      ha-color-fill-neutral-quiet-resting: *glass-bg-light-subtle
+      ha-color-fill-neutral-quiet-hover: *glass-bg-light-resting
+      ha-color-fill-neutral-quiet-active: *glass-bg-light-hover
+      
+      ha-color-on-primary-quiet: "#2196F3"
+      ha-color-on-primary-normal: "#ffffff"
+      ha-color-on-primary-loud: "#ffffff"
+      
+      ha-color-on-neutral-quiet: "#1A1A1E"
+      ha-color-on-neutral-normal: "#ffffff"
+      ha-color-on-neutral-loud: "#ffffff"
+      
+      ha-color-on-error-quiet: "#D32F2F"
+      ha-color-on-error-normal: "#ffffff"
+      ha-color-on-error-loud: "#ffffff"
+      
+      ha-color-on-success-quiet: "#388E3C"
+      ha-color-on-success-normal: "#ffffff"
+      ha-color-on-success-loud: "#ffffff"
+      
+      ha-color-on-warning-quiet: "#F57C00"
+      ha-color-on-warning-normal: "#000000"
+      ha-color-on-warning-loud: "#000000"
+      
+      ha-color-success: "#4CAF50"
+      ha-color-success-hover: "#66BB6A"
+      ha-color-success-active: "#81C784"
+      
+      ha-color-warning: "#FF9800"
+      ha-color-warning-hover: "#FFA726"
+      ha-color-warning-active: "#FFB74D"
+      
+      ha-color-error: "#F44336"
+      ha-color-error-hover: "#EF5350"
+      ha-color-error-active: "#E57373"
+      
+      ha-color-info: "#00BCD4"
+      ha-color-info-hover: "#26C6DA"
+      ha-color-info-active: "#4DD0E1"
+      
+      ha-color-surface-default: "#F0F4F8"
+      ha-color-surface-raised: *glass-bg-light-resting
+      ha-color-surface-lowered: "#E3EAF1"
+      ha-color-surface-overlay: *glass-bg-light-hover
+      
+      ha-color-background-primary: "#F0F4F8"
+      ha-color-background-secondary: "#E3EAF1"
+      
+      ha-color-divider-quiet: "rgba(0, 0, 0, 0.06)"
+      ha-color-divider-normal: "rgba(0, 0, 0, 0.12)"
+      ha-color-divider-loud: "rgba(0, 0, 0, 0.20)"
+      
+      ha-color-focus-ring: "#2196F3"
+      ha-color-focus-background: "rgba(33, 150, 243, 0.12)"
+      
+      ha-color-overlay-scrim: "rgba(0, 0, 0, 0.32)"
+      ha-color-overlay-backdrop: "rgba(0, 0, 0, 0.24)"
+      
+      # ------------------------------------------------------------------------
+      # BUBBLE CARD - Light Mode
+      # ------------------------------------------------------------------------
+      
+      bubble-main-background-color: "#F0F4F8"
+      bubble-secondary-background-color: *glass-bg-light-resting
+      bubble-card-background-color: *glass-bg-light-resting
+      bubble-backdrop-background-color: "rgba(0, 0, 0, 0.32)"
+      bubble-accent-color: "#2196F3"
+      bubble-icon-color: "#424242"
+      bubble-name-color: "#1A1A1E"
+      bubble-state-color: "#424242"
+      bubble-shadow: *glass-shadow-light-md
+      bubble-shadow-active: *glass-shadow-light-sm
+      bubble-shadow-hover: *glass-shadow-light-lg
+      bubble-button-background: *glass-bg-light-subtle
+      bubble-button-background-hover: *glass-bg-light-resting
+      bubble-button-background-active: *glass-bg-light-active
+      bubble-pop-up-background: *glass-bg-light-intense
+      bubble-media-player-background: *glass-bg-light-resting
+      bubble-backdrop-filter: *glass-blur-card
+      bubble-pop-up-backdrop-filter: *glass-blur-dialog
+      
+      # ------------------------------------------------------------------------
+      # ENERGY DASHBOARD - Light Mode
+      # ------------------------------------------------------------------------
+      
+      energy-grid-consumption-color: "#2196F3"
+      energy-grid-return-color: "#4CAF50"
+      energy-solar-color: "#FF9800"
+      energy-battery-in-color: "#5E35B1"
+      energy-battery-out-color: "#00BCD4"
+      energy-non-fossil-color: "#4CAF50"
+      energy-fossil-color: "#9E9E9E"
+      energy-gas-color: "#F44336"
+      energy-water-color: "#00BCD4"
+      energy-cost-color: "#F44336"
+      energy-savings-color: "#4CAF50"
+      energy-home-consumption-color: "#FF9800"
+      energy-device-consumption-color: "#5E35B1"
+      
+      # ------------------------------------------------------------------------
+      # COMPATIBILITY ALIASES
+      # ------------------------------------------------------------------------
+      
+      # Neumorphic shadow compatibility (map to liquid glass shadows)
+      neu-shadow-raised-sm: *glass-shadow-light-sm
+      neu-shadow-raised: *glass-shadow-light-md
+      neu-shadow-raised-lg: *glass-shadow-light-lg
+      neu-shadow-raised-xl: *glass-shadow-light-xl
+      neu-shadow-float: *glass-shadow-light-lg
+      neu-shadow-pressed-sm: *glass-shadow-light-subtle
+      neu-shadow-pressed: *glass-shadow-light-sm
+      neu-shadow-pressed-lg: *glass-shadow-light-md
+      neu-shadow-subtle: *glass-shadow-light-subtle
+      
+      # Material elevation compatibility
+      m3-elevation-0: "none"
+      m3-elevation-1: *glass-shadow-light-subtle
+      m3-elevation-2: *glass-shadow-light-sm
+      m3-elevation-3: *glass-shadow-light-md
+      m3-elevation-4: *glass-shadow-light-lg
+      m3-elevation-5: *glass-shadow-light-xl
+      
+      # Card shadows
+      card-box-shadow: *glass-shadow-light-md
+      
+      # Component shadows
+      button-box-shadow: *glass-shadow-light-subtle
+      dialog-box-shadow: *glass-shadow-light-xl
+      sidebar-shadow: *glass-shadow-light-lg
+      app-header-shadow: *glass-shadow-light-sm
+      
+      # ------------------------------------------------------------------------
+      # ADDITIONAL HOME ASSISTANT VARIABLES
+      # ------------------------------------------------------------------------
+      
+      divider-color: "rgba(0, 0, 0, 0.12)"
+      label-badge-background-color: *glass-bg-light-resting
+      label-badge-text-color: "#1A1A1E"
+      label-badge-red: "#F44336"
+      label-badge-blue: "#2196F3"
+      label-badge-green: "#4CAF50"
+      label-badge-yellow: "#FF9800"
+      label-badge-grey: "#9E9E9E"
+      
+      table-row-background-color: *glass-bg-light-subtle
+      table-row-alternative-background-color: *glass-bg-light-resting
+      
+      paper-listbox-background-color: *glass-bg-light-resting
+      paper-item-icon-color: "#424242"
+      paper-item-icon-active-color: "#2196F3"
+      
+      mdc-theme-primary: "#2196F3"
+      mdc-theme-secondary: "#5E35B1"
+      mdc-theme-on-primary: "#ffffff"
+      mdc-theme-on-secondary: "#ffffff"
+      
+      switch-checked-color: "#4CAF50"
+      switch-unchecked-button-color: "#9E9E9E"
+      switch-unchecked-track-color: "#BDBDBD"
+      
+      slider-color: "#2196F3"
+      slider-secondary-color: "#BDBDBD"
+      slider-track-color: "#E3EAF1"
+      
+      material-secondary-text-color: "#424242"
+      material-disabled-text-color: "#9E9E9E"

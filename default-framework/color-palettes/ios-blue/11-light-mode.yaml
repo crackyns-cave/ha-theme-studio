@@ -1,0 +1,448 @@
+    # ==========================================================================
+    # LIGHT MODE - Frosted Glass
+    # ==========================================================================
+    # Translucent frosted glass surfaces with backdrop blur and saturation.
+    # Apple Big Sur inspired with soft, vibrant aesthetic.
+    # ==========================================================================
+    
+    light:
+      
+      # ------------------------------------------------------------------------
+      # FROSTED GLASS BACKDROP FILTERS
+      # ------------------------------------------------------------------------
+      
+      fg-backdrop-blur-card: "blur(20px) saturate(180%)"
+      fg-backdrop-blur-dialog: "blur(30px) saturate(180%)"
+      fg-backdrop-blur-sidebar: "blur(20px) saturate(180%)"
+      fg-backdrop-blur-header: "blur(20px) saturate(180%)"
+      
+      # ------------------------------------------------------------------------
+      # BASE COLORS - Foundation
+      # ------------------------------------------------------------------------
+      
+      # Primary brand color
+      primary-color: "#007AFF"
+      accent-color: "#007AFF"
+      
+      # Semantic state colors
+      state-icon-color: "#5E5CE6"
+      state-icon-active-color: "#007AFF"
+      state-icon-unavailable-color: "#a0a0a0"
+      
+      # Text colors
+      primary-text-color: "#1C1C1E"
+      secondary-text-color: "#3C3C43"
+      text-primary-color: "#ffffff"
+      disabled-text-color: "#8E8E93"
+      
+      # Background and surface - translucent!
+      primary-background-color: "#F2F2F7"
+      secondary-background-color: "#E5E5EA"
+      lovelace-background: "#F2F2F7"
+      
+      # Cards - translucent with blur
+      card-background-color: "rgba(255, 255, 255, 0.7)"
+      card-background-color-hover: "rgba(255, 255, 255, 0.85)"
+      card-background-color-active: "rgba(255, 255, 255, 0.6)"
+      ha-card-background: "rgba(255, 255, 255, 0.7)"
+      
+      # Tiles - translucent
+      tile-background-color: "rgba(255, 255, 255, 0.6)"
+      tile-background-color-hover: "rgba(255, 255, 255, 0.8)"
+      tile-background-color-active: "rgba(255, 255, 255, 0.5)"
+      
+      # Buttons - translucent
+      button-background-color: "rgba(255, 255, 255, 0.5)"
+      button-background-color-hover: "rgba(255, 255, 255, 0.7)"
+      button-background-color-active: "rgba(255, 255, 255, 0.4)"
+      
+      # Sidebar - translucent
+      sidebar-background-color: "rgba(242, 242, 247, 0.8)"
+      sidebar-icon-color: "#3C3C43"
+      sidebar-selected-icon-color: "#007AFF"
+      sidebar-selected-text-color: "#1C1C1E"
+      sidebar-text-color: "#3C3C43"
+      
+      # Dialogs - translucent with heavy blur
+      dialog-background-color: "rgba(255, 255, 255, 0.75)"
+      
+      # App header - translucent
+      app-header-background-color: "rgba(242, 242, 247, 0.75)"
+      app-header-text-color: "#1C1C1E"
+      
+      # ------------------------------------------------------------------------
+      # FROSTED GLASS BORDERS
+      # ------------------------------------------------------------------------
+      
+      fg-card-border-color: "rgba(0, 0, 0, 0.08)"
+      fg-card-border-color-hover: "rgba(0, 122, 255, 0.3)"
+      fg-tile-border-color: "rgba(0, 0, 0, 0.06)"
+      fg-tile-border-color-hover: "rgba(0, 122, 255, 0.25)"
+      fg-button-border-color: "rgba(0, 0, 0, 0.08)"
+      fg-button-border-color-hover: "rgba(0, 122, 255, 0.3)"
+      fg-sidebar-border-color: "rgba(0, 0, 0, 0.1)"
+      fg-header-border-color: "rgba(0, 0, 0, 0.1)"
+      fg-dialog-border-color: "rgba(0, 0, 0, 0.1)"
+      
+      # ------------------------------------------------------------------------
+      # FROSTED GLASS SHADOWS - Light Mode
+      # ------------------------------------------------------------------------
+      
+      fg-shadow-subtle: "0px 1px 3px rgba(0, 0, 0, 0.08), 0px 1px 2px rgba(0, 0, 0, 0.06)"
+      fg-shadow-sm: "0px 2px 8px rgba(0, 0, 0, 0.08), 0px 1px 4px rgba(0, 0, 0, 0.06)"
+      fg-shadow-md: "0px 4px 16px rgba(0, 0, 0, 0.1), 0px 2px 8px rgba(0, 0, 0, 0.06)"
+      fg-shadow-lg: "0px 8px 24px rgba(0, 0, 0, 0.12), 0px 4px 12px rgba(0, 0, 0, 0.08)"
+      fg-shadow-xl: "0px 16px 48px rgba(0, 0, 0, 0.14), 0px 8px 24px rgba(0, 0, 0, 0.1)"
+      
+      # Neumorphic compatibility aliases (map to frosted glass shadows)
+      neu-shadow-raised-sm: "0px 1px 3px rgba(0, 0, 0, 0.08), 0px 1px 2px rgba(0, 0, 0, 0.06)"
+      neu-shadow-raised: "0px 2px 8px rgba(0, 0, 0, 0.08), 0px 1px 4px rgba(0, 0, 0, 0.06)"
+      neu-shadow-raised-lg: "0px 4px 16px rgba(0, 0, 0, 0.1), 0px 2px 8px rgba(0, 0, 0, 0.06)"
+      neu-shadow-raised-xl: "0px 8px 24px rgba(0, 0, 0, 0.12), 0px 4px 12px rgba(0, 0, 0, 0.08)"
+      neu-shadow-float: "0px 4px 12px rgba(0, 0, 0, 0.1), 0px 2px 6px rgba(0, 0, 0, 0.08)"
+      neu-shadow-pressed-sm: "0px 1px 2px rgba(0, 0, 0, 0.06)"
+      neu-shadow-pressed: "0px 1px 3px rgba(0, 0, 0, 0.08)"
+      neu-shadow-pressed-lg: "0px 2px 4px rgba(0, 0, 0, 0.08)"
+      neu-shadow-subtle: "0px 1px 3px rgba(0, 0, 0, 0.08), 0px 1px 2px rgba(0, 0, 0, 0.06)"
+      
+      # Material elevation compatibility
+      m3-elevation-0: "none"
+      m3-elevation-1: "0px 1px 3px rgba(0, 0, 0, 0.08), 0px 1px 2px rgba(0, 0, 0, 0.06)"
+      m3-elevation-2: "0px 2px 8px rgba(0, 0, 0, 0.08), 0px 1px 4px rgba(0, 0, 0, 0.06)"
+      m3-elevation-3: "0px 4px 16px rgba(0, 0, 0, 0.1), 0px 2px 8px rgba(0, 0, 0, 0.06)"
+      m3-elevation-4: "0px 8px 24px rgba(0, 0, 0, 0.12), 0px 4px 12px rgba(0, 0, 0, 0.08)"
+      m3-elevation-5: "0px 16px 48px rgba(0, 0, 0, 0.14), 0px 8px 24px rgba(0, 0, 0, 0.1)"
+      
+      # Card shadows
+      card-box-shadow: "0px 2px 8px rgba(0, 0, 0, 0.08), 0px 1px 4px rgba(0, 0, 0, 0.06)"
+      card-box-shadow-hover: "0px 4px 12px rgba(0, 0, 0, 0.1), 0px 2px 6px rgba(0, 0, 0, 0.08)"
+      card-box-shadow-active: "0px 1px 3px rgba(0, 0, 0, 0.08), 0px 1px 2px rgba(0, 0, 0, 0.06)"
+      
+      # Component shadows
+      button-box-shadow: "0px 1px 3px rgba(0, 0, 0, 0.08), 0px 1px 2px rgba(0, 0, 0, 0.06)"
+      button-box-shadow-hover: "0px 2px 8px rgba(0, 0, 0, 0.08), 0px 1px 4px rgba(0, 0, 0, 0.06)"
+      button-box-shadow-active: "0px 1px 2px rgba(0, 0, 0, 0.06)"
+      
+      dialog-box-shadow: "0px 16px 48px rgba(0, 0, 0, 0.14), 0px 8px 24px rgba(0, 0, 0, 0.1)"
+      sidebar-shadow: "0px 2px 8px rgba(0, 0, 0, 0.08), 0px 1px 4px rgba(0, 0, 0, 0.06)"
+      app-header-shadow: "0px 1px 3px rgba(0, 0, 0, 0.08), 0px 1px 2px rgba(0, 0, 0, 0.06)"
+      
+      # ------------------------------------------------------------------------
+      # MATERIAL WEB COLORS - Light Mode
+      # ------------------------------------------------------------------------
+      
+      # Primary - iOS blue
+      md-sys-color-primary: "#007AFF"
+      md-sys-color-on-primary: "#ffffff"
+      md-sys-color-primary-container: "#D1E4FF"
+      md-sys-color-on-primary-container: "#001D36"
+      
+      # Secondary - iOS purple
+      md-sys-color-secondary: "#5E5CE6"
+      md-sys-color-on-secondary: "#ffffff"
+      md-sys-color-secondary-container: "#E5E4FF"
+      md-sys-color-on-secondary-container: "#1A1A46"
+      
+      # Tertiary - iOS pink
+      md-sys-color-tertiary: "#FF2D55"
+      md-sys-color-on-tertiary: "#ffffff"
+      md-sys-color-tertiary-container: "#FFD9E2"
+      md-sys-color-on-tertiary-container: "#3E0016"
+      
+      # Error
+      md-sys-color-error: "#FF3B30"
+      md-sys-color-on-error: "#ffffff"
+      md-sys-color-error-container: "#FFDAD6"
+      md-sys-color-on-error-container: "#410002"
+      
+      # Surface
+      md-sys-color-surface: "#F2F2F7"
+      md-sys-color-on-surface: "#1C1C1E"
+      md-sys-color-on-surface-variant: "#3C3C43"
+      md-sys-color-surface-dim: "#E5E5EA"
+      md-sys-color-surface-bright: "#FEFEFE"
+      md-sys-color-surface-container-lowest: "#ffffff"
+      md-sys-color-surface-container-low: "#FAFAFA"
+      md-sys-color-surface-container: "#F2F2F7"
+      md-sys-color-surface-container-high: "#E5E5EA"
+      md-sys-color-surface-container-highest: "#D1D1D6"
+      
+      # Background
+      md-sys-color-background: "#F2F2F7"
+      md-sys-color-on-background: "#1C1C1E"
+      
+      # Outline
+      md-sys-color-outline: "#8E8E93"
+      md-sys-color-outline-variant: "#C6C6C8"
+      
+      # Inverse
+      md-sys-color-inverse-surface: "#2C2C2E"
+      md-sys-color-inverse-on-surface: "#F2F2F7"
+      md-sys-color-inverse-primary: "#5AC8FA"
+      
+      # Scrim & shadow
+      md-sys-color-scrim: "#000000"
+      md-sys-color-shadow: "#000000"
+      md-sys-color-surface-tint: "#007AFF"
+      
+      # ------------------------------------------------------------------------
+      # WEBAWESOME COLORS - Light Mode
+      # ------------------------------------------------------------------------
+      
+      wa-color-surface-default: "#F2F2F7"
+      wa-color-surface-raised: "rgba(255, 255, 255, 0.7)"
+      wa-color-surface-lowered: "#E5E5EA"
+      wa-color-surface-overlay: "rgba(255, 255, 255, 0.85)"
+      wa-color-surface-inverse: "#2C2C2E"
+      
+      wa-color-text-normal: "#1C1C1E"
+      wa-color-text-quiet: "#3C3C43"
+      wa-color-text-loud: "#000000"
+      wa-color-text-inverse: "#ffffff"
+      wa-color-text-disabled: "#8E8E93"
+      wa-color-text-link: "#007AFF"
+      
+      wa-color-brand-fill-normal: "#007AFF"
+      wa-color-brand-fill-loud: "#0051D5"
+      wa-color-brand-fill-quiet: "#D1E4FF"
+      wa-color-brand-fill-inverse: "#5AC8FA"
+      
+      wa-color-brand-text-normal: "#007AFF"
+      wa-color-brand-text-loud: "#0051D5"
+      wa-color-brand-text-quiet: "#5E5CE6"
+      
+      wa-color-brand-border-normal: "#007AFF"
+      wa-color-brand-border-loud: "#0051D5"
+      wa-color-brand-border-quiet: "rgba(0, 122, 255, 0.3)"
+      
+      wa-color-neutral-fill-normal: "#E5E5EA"
+      wa-color-neutral-fill-loud: "#8E8E93"
+      wa-color-neutral-fill-quiet: "#F2F2F7"
+      wa-color-neutral-fill-inverse: "#2C2C2E"
+      
+      wa-color-neutral-text-normal: "#1C1C1E"
+      wa-color-neutral-text-loud: "#000000"
+      wa-color-neutral-text-quiet: "#3C3C43"
+      
+      wa-color-neutral-border-normal: "#C6C6C8"
+      wa-color-neutral-border-loud: "#8E8E93"
+      wa-color-neutral-border-quiet: "rgba(0, 0, 0, 0.08)"
+      
+      wa-color-success-fill-normal: "#34C759"
+      wa-color-success-fill-loud: "#28A745"
+      wa-color-success-fill-quiet: "#D1F2DA"
+      wa-color-success-text-normal: "#28A745"
+      wa-color-success-text-loud: "#1F7A33"
+      wa-color-success-text-quiet: "#34C759"
+      wa-color-success-border-normal: "#34C759"
+      
+      wa-color-warning-fill-normal: "#FF9500"
+      wa-color-warning-fill-loud: "#E67E00"
+      wa-color-warning-fill-quiet: "#FFE5CC"
+      wa-color-warning-text-normal: "#E67E00"
+      wa-color-warning-text-loud: "#CC6E00"
+      wa-color-warning-text-quiet: "#FF9500"
+      wa-color-warning-border-normal: "#FF9500"
+      
+      wa-color-danger-fill-normal: "#FF3B30"
+      wa-color-danger-fill-loud: "#D70015"
+      wa-color-danger-fill-quiet: "#FFD9D6"
+      wa-color-danger-text-normal: "#D70015"
+      wa-color-danger-text-loud: "#A70011"
+      wa-color-danger-text-quiet: "#FF3B30"
+      wa-color-danger-border-normal: "#FF3B30"
+      
+      wa-color-info-fill-normal: "#5AC8FA"
+      wa-color-info-fill-loud: "#32ADE6"
+      wa-color-info-fill-quiet: "#D6F1FD"
+      wa-color-info-text-normal: "#32ADE6"
+      wa-color-info-text-loud: "#0A8FCE"
+      wa-color-info-text-quiet: "#5AC8FA"
+      wa-color-info-border-normal: "#5AC8FA"
+      
+      wa-color-focus-ring: "#007AFF"
+      wa-color-overlay: "rgba(0, 0, 0, 0.3)"
+      
+      # ------------------------------------------------------------------------
+      # HOME ASSISTANT SEMANTIC COLORS - Light Mode
+      # ------------------------------------------------------------------------
+      
+      ha-color-text-primary: "#1C1C1E"
+      ha-color-text-secondary: "#3C3C43"
+      ha-color-text-tertiary: "#8E8E93"
+      ha-color-text-disabled: "#AEAEB2"
+      ha-color-text-inverse: "#ffffff"
+      
+      ha-color-form-background: "rgba(255, 255, 255, 0.6)"
+      ha-color-form-background-hover: "rgba(255, 255, 255, 0.75)"
+      ha-color-form-background-focus: "rgba(255, 255, 255, 0.85)"
+      ha-color-form-background-disabled: "rgba(229, 229, 234, 0.5)"
+      ha-color-form-text: "#1C1C1E"
+      ha-color-form-text-disabled: "#8E8E93"
+      ha-color-form-placeholder: "#8E8E93"
+      ha-color-form-border: "rgba(0, 0, 0, 0.08)"
+      ha-color-form-border-hover: "rgba(0, 0, 0, 0.15)"
+      ha-color-form-border-focus: "rgba(0, 122, 255, 0.5)"
+      ha-color-form-border-error: "rgba(255, 59, 48, 0.5)"
+      
+      ha-color-border-neutral-quiet: "rgba(0, 0, 0, 0.06)"
+      ha-color-border-neutral-normal: "rgba(0, 0, 0, 0.08)"
+      ha-color-border-neutral-loud: "rgba(0, 0, 0, 0.15)"
+      ha-color-border-primary-quiet: "rgba(0, 122, 255, 0.2)"
+      ha-color-border-primary-normal: "rgba(0, 122, 255, 0.4)"
+      ha-color-border-primary-loud: "rgba(0, 122, 255, 0.6)"
+      
+      ha-color-fill-primary-loud-resting: "#007AFF"
+      ha-color-fill-primary-loud-hover: "#0051D5"
+      ha-color-fill-primary-loud-active: "#003EA8"
+      ha-color-fill-primary-loud-disabled: "#C6C6C8"
+      
+      ha-color-fill-primary-normal-resting: "#5AC8FA"
+      ha-color-fill-primary-normal-hover: "#007AFF"
+      ha-color-fill-primary-normal-active: "#0051D5"
+      ha-color-fill-primary-normal-disabled: "#E5E5EA"
+      
+      ha-color-fill-primary-quiet-resting: "#D1E4FF"
+      ha-color-fill-primary-quiet-hover: "#A8CFFF"
+      ha-color-fill-primary-quiet-active: "#7FBDFF"
+      
+      ha-color-fill-neutral-loud-resting: "#3C3C43"
+      ha-color-fill-neutral-loud-hover: "#2C2C2E"
+      ha-color-fill-neutral-loud-active: "#1C1C1E"
+      
+      ha-color-fill-neutral-normal-resting: "#8E8E93"
+      ha-color-fill-neutral-normal-hover: "#3C3C43"
+      ha-color-fill-neutral-normal-active: "#2C2C2E"
+      
+      ha-color-fill-neutral-quiet-resting: "rgba(242, 242, 247, 0.8)"
+      ha-color-fill-neutral-quiet-hover: "rgba(229, 229, 234, 0.9)"
+      ha-color-fill-neutral-quiet-active: "rgba(209, 209, 214, 0.9)"
+      
+      ha-color-on-primary-quiet: "#007AFF"
+      ha-color-on-primary-normal: "#ffffff"
+      ha-color-on-primary-loud: "#ffffff"
+      
+      ha-color-on-neutral-quiet: "#1C1C1E"
+      ha-color-on-neutral-normal: "#ffffff"
+      ha-color-on-neutral-loud: "#ffffff"
+      
+      ha-color-on-error-quiet: "#D70015"
+      ha-color-on-error-normal: "#ffffff"
+      ha-color-on-error-loud: "#ffffff"
+      
+      ha-color-on-success-quiet: "#28A745"
+      ha-color-on-success-normal: "#ffffff"
+      ha-color-on-success-loud: "#ffffff"
+      
+      ha-color-on-warning-quiet: "#E67E00"
+      ha-color-on-warning-normal: "#000000"
+      ha-color-on-warning-loud: "#000000"
+      
+      ha-color-success: "#34C759"
+      ha-color-success-hover: "#28A745"
+      ha-color-success-active: "#1F7A33"
+      
+      ha-color-warning: "#FF9500"
+      ha-color-warning-hover: "#E67E00"
+      ha-color-warning-active: "#CC6E00"
+      
+      ha-color-error: "#FF3B30"
+      ha-color-error-hover: "#D70015"
+      ha-color-error-active: "#A70011"
+      
+      ha-color-info: "#5AC8FA"
+      ha-color-info-hover: "#32ADE6"
+      ha-color-info-active: "#0A8FCE"
+      
+      ha-color-surface-default: "#F2F2F7"
+      ha-color-surface-raised: "rgba(255, 255, 255, 0.7)"
+      ha-color-surface-lowered: "#E5E5EA"
+      ha-color-surface-overlay: "rgba(255, 255, 255, 0.85)"
+      
+      ha-color-background-primary: "#F2F2F7"
+      ha-color-background-secondary: "#E5E5EA"
+      
+      ha-color-divider-quiet: "rgba(0, 0, 0, 0.04)"
+      ha-color-divider-normal: "rgba(0, 0, 0, 0.08)"
+      ha-color-divider-loud: "rgba(0, 0, 0, 0.12)"
+      
+      ha-color-focus-ring: "#007AFF"
+      ha-color-focus-background: "rgba(0, 122, 255, 0.1)"
+      
+      ha-color-overlay-scrim: "rgba(0, 0, 0, 0.3)"
+      ha-color-overlay-backdrop: "rgba(0, 0, 0, 0.2)"
+      
+      # ------------------------------------------------------------------------
+      # BUBBLE CARD - Light Mode
+      # ------------------------------------------------------------------------
+      
+      bubble-main-background-color: "#F2F2F7"
+      bubble-secondary-background-color: "rgba(255, 255, 255, 0.7)"
+      bubble-card-background-color: "rgba(255, 255, 255, 0.7)"
+      bubble-backdrop-background-color: "rgba(0, 0, 0, 0.3)"
+      bubble-accent-color: "#007AFF"
+      bubble-icon-color: "#3C3C43"
+      bubble-name-color: "#1C1C1E"
+      bubble-state-color: "#3C3C43"
+      bubble-shadow: "0px 2px 8px rgba(0, 0, 0, 0.08), 0px 1px 4px rgba(0, 0, 0, 0.06)"
+      bubble-shadow-active: "0px 1px 3px rgba(0, 0, 0, 0.08), 0px 1px 2px rgba(0, 0, 0, 0.06)"
+      bubble-shadow-hover: "0px 4px 12px rgba(0, 0, 0, 0.1), 0px 2px 6px rgba(0, 0, 0, 0.08)"
+      bubble-button-background: "rgba(255, 255, 255, 0.6)"
+      bubble-button-background-hover: "rgba(255, 255, 255, 0.8)"
+      bubble-button-background-active: "rgba(255, 255, 255, 0.5)"
+      bubble-pop-up-background: "rgba(255, 255, 255, 0.75)"
+      bubble-media-player-background: "rgba(255, 255, 255, 0.7)"
+      
+      # ------------------------------------------------------------------------
+      # ENERGY DASHBOARD - Light Mode
+      # ------------------------------------------------------------------------
+      
+      energy-grid-consumption-color: "#007AFF"
+      energy-grid-return-color: "#34C759"
+      energy-solar-color: "#FF9500"
+      energy-battery-in-color: "#5E5CE6"
+      energy-battery-out-color: "#5AC8FA"
+      energy-non-fossil-color: "#34C759"
+      energy-fossil-color: "#8E8E93"
+      energy-gas-color: "#FF3B30"
+      energy-water-color: "#5AC8FA"
+      energy-cost-color: "#FF3B30"
+      energy-savings-color: "#34C759"
+      energy-home-consumption-color: "#FF9500"
+      energy-device-consumption-color: "#5E5CE6"
+      
+      # ------------------------------------------------------------------------
+      # ADDITIONAL HOME ASSISTANT VARIABLES
+      # ------------------------------------------------------------------------
+      
+      divider-color: "rgba(0, 0, 0, 0.08)"
+      label-badge-background-color: "rgba(255, 255, 255, 0.7)"
+      label-badge-text-color: "#1C1C1E"
+      label-badge-red: "#FF3B30"
+      label-badge-blue: "#007AFF"
+      label-badge-green: "#34C759"
+      label-badge-yellow: "#FF9500"
+      label-badge-grey: "#8E8E93"
+      
+      table-row-background-color: "rgba(255, 255, 255, 0.5)"
+      table-row-alternative-background-color: "rgba(242, 242, 247, 0.7)"
+      
+      paper-listbox-background-color: "rgba(255, 255, 255, 0.7)"
+      paper-item-icon-color: "#3C3C43"
+      paper-item-icon-active-color: "#007AFF"
+      
+      mdc-theme-primary: "#007AFF"
+      mdc-theme-secondary: "#5E5CE6"
+      mdc-theme-on-primary: "#ffffff"
+      mdc-theme-on-secondary: "#ffffff"
+      
+      switch-checked-color: "#34C759"
+      switch-unchecked-button-color: "#8E8E93"
+      switch-unchecked-track-color: "#C6C6C8"
+      
+      slider-color: "#007AFF"
+      slider-secondary-color: "#C6C6C8"
+      slider-track-color: "#E5E5EA"
+      
+      material-secondary-text-color: "#3C3C43"
+      material-disabled-text-color: "#8E8E93"

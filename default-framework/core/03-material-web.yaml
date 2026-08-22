@@ -1,0 +1,103 @@
+  # ============================================================================
+  # MATERIAL WEB COMPONENT COLOR SYSTEM
+  # ============================================================================
+  # Complete Material 3 (Material Design 3) semantic token mappings.
+  # These tokens are used by Material Web Components (MWC) and follow
+  # the official Material Design 3 color system specification.
+  # Shared across all theme variants.
+  # ============================================================================
+
+  # ----------------------------------------------------------------------------
+  # MATERIAL 3 COLOR ROLE ANCHORS (Mode-Agnostic Definitions)
+  # ----------------------------------------------------------------------------
+  # These anchors will be referenced in light/dark mode specific values
+  
+  # Primary color roles
+  md-sys-color-primary: &md-sys-color-primary-anchor "md-sys-color-primary"
+  md-sys-color-on-primary: &md-sys-color-on-primary-anchor "md-sys-color-on-primary"
+  md-sys-color-primary-container: &md-sys-color-primary-container-anchor "md-sys-color-primary-container"
+  md-sys-color-on-primary-container: &md-sys-color-on-primary-container-anchor "md-sys-color-on-primary-container"
+  
+  # Secondary color roles
+  md-sys-color-secondary: &md-sys-color-secondary-anchor "md-sys-color-secondary"
+  md-sys-color-on-secondary: &md-sys-color-on-secondary-anchor "md-sys-color-on-secondary"
+  md-sys-color-secondary-container: &md-sys-color-secondary-container-anchor "md-sys-color-secondary-container"
+  md-sys-color-on-secondary-container: &md-sys-color-on-secondary-container-anchor "md-sys-color-on-secondary-container"
+  
+  # Tertiary color roles
+  md-sys-color-tertiary: &md-sys-color-tertiary-anchor "md-sys-color-tertiary"
+  md-sys-color-on-tertiary: &md-sys-color-on-tertiary-anchor "md-sys-color-on-tertiary"
+  md-sys-color-tertiary-container: &md-sys-color-tertiary-container-anchor "md-sys-color-tertiary-container"
+  md-sys-color-on-tertiary-container: &md-sys-color-on-tertiary-container-anchor "md-sys-color-on-tertiary-container"
+  
+  # Error color roles
+  md-sys-color-error: &md-sys-color-error-anchor "md-sys-color-error"
+  md-sys-color-on-error: &md-sys-color-on-error-anchor "md-sys-color-on-error"
+  md-sys-color-error-container: &md-sys-color-error-container-anchor "md-sys-color-error-container"
+  md-sys-color-on-error-container: &md-sys-color-on-error-container-anchor "md-sys-color-on-error-container"
+  
+  # Surface color roles
+  md-sys-color-surface: &md-sys-color-surface-anchor "md-sys-color-surface"
+  md-sys-color-on-surface: &md-sys-color-on-surface-anchor "md-sys-color-on-surface"
+  md-sys-color-on-surface-variant: &md-sys-color-on-surface-variant-anchor "md-sys-color-on-surface-variant"
+  
+  md-sys-color-surface-dim: &md-sys-color-surface-dim-anchor "md-sys-color-surface-dim"
+  md-sys-color-surface-bright: &md-sys-color-surface-bright-anchor "md-sys-color-surface-bright"
+  
+  md-sys-color-surface-container-lowest: &md-sys-color-surface-container-lowest-anchor "md-sys-color-surface-container-lowest"
+  md-sys-color-surface-container-low: &md-sys-color-surface-container-low-anchor "md-sys-color-surface-container-low"
+  md-sys-color-surface-container: &md-sys-color-surface-container-anchor "md-sys-color-surface-container"
+  md-sys-color-surface-container-high: &md-sys-color-surface-container-high-anchor "md-sys-color-surface-container-high"
+  md-sys-color-surface-container-highest: &md-sys-color-surface-container-highest-anchor "md-sys-color-surface-container-highest"
+  
+  # Background color roles
+  md-sys-color-background: &md-sys-color-background-anchor "md-sys-color-background"
+  md-sys-color-on-background: &md-sys-color-on-background-anchor "md-sys-color-on-background"
+  
+  # Outline color roles
+  md-sys-color-outline: &md-sys-color-outline-anchor "md-sys-color-outline"
+  md-sys-color-outline-variant: &md-sys-color-outline-variant-anchor "md-sys-color-outline-variant"
+  
+  # Inverse color roles
+  md-sys-color-inverse-surface: &md-sys-color-inverse-surface-anchor "md-sys-color-inverse-surface"
+  md-sys-color-inverse-on-surface: &md-sys-color-inverse-on-surface-anchor "md-sys-color-inverse-on-surface"
+  md-sys-color-inverse-primary: &md-sys-color-inverse-primary-anchor "md-sys-color-inverse-primary"
+  
+  # Scrim and shadow
+  md-sys-color-scrim: &md-sys-color-scrim-anchor "md-sys-color-scrim"
+  md-sys-color-shadow: &md-sys-color-shadow-anchor "md-sys-color-shadow"
+  
+  # Surface tint
+  md-sys-color-surface-tint: &md-sys-color-surface-tint-anchor "md-sys-color-surface-tint"
+  
+  # ----------------------------------------------------------------------------
+  # MATERIAL 3 SHAPE TOKENS
+  # ----------------------------------------------------------------------------
+  
+  md-sys-shape-corner-none: *m3-radius-none
+  md-sys-shape-corner-extra-small: *m3-radius-xs
+  md-sys-shape-corner-small: *m3-radius-sm
+  md-sys-shape-corner-medium: *m3-radius-md
+  md-sys-shape-corner-large: *m3-radius-lg
+  md-sys-shape-corner-extra-large: *m3-radius-xl
+  md-sys-shape-corner-full: *m3-radius-pill
+  
+  # ----------------------------------------------------------------------------
+  # MATERIAL 3 ELEVATION TOKENS
+  # ----------------------------------------------------------------------------
+  
+  md-sys-elevation-level0: *m3-elevation-0
+  md-sys-elevation-level1: *m3-elevation-1
+  md-sys-elevation-level2: *m3-elevation-2
+  md-sys-elevation-level3: *m3-elevation-3
+  md-sys-elevation-level4: *m3-elevation-4
+  md-sys-elevation-level5: *m3-elevation-5
+  
+  # ----------------------------------------------------------------------------
+  # MATERIAL 3 STATE LAYER OPACITY
+  # ----------------------------------------------------------------------------
+  
+  md-sys-state-hover-opacity: *m3-opacity-hover
+  md-sys-state-focus-opacity: *m3-opacity-focus
+  md-sys-state-pressed-opacity: *m3-opacity-pressed
+  md-sys-state-dragged-opacity: *m3-opacity-dragged

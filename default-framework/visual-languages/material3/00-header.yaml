@@ -1,0 +1,45 @@
+# ============================================================================
+# MATERIAL 3 THEME
+# ============================================================================
+# Version: 1.0.0
+# Target: Home Assistant 2026.x
+# Design System: Material Design 3
+# Author: Home Assistant Community
+# License: MIT
+# ============================================================================
+#
+# This is a modern, production-quality Home Assistant theme that implements
+# Google's Material Design 3 design language with surface hierarchy and
+# elevation system.
+#
+# FEATURES:
+# - Material 3 surface hierarchy (surface-container variations)
+# - Material elevation system (subtle, realistic shadows)
+# - Soft borders for definition
+# - Material 3 semantic color system
+# - WebAwesome component compatibility
+# - Native dashboard support (Sidebar, Sections, Tiles)
+# - Mushroom Cards integration
+# - Bubble Cards integration
+# - Global card-mod styling
+# - Energy dashboard color system
+# - Room-based color system
+#
+# DESIGN PRINCIPLES:
+# - Material Design 3 compliant
+# - NOT glassmorphic (no blur)
+# - NOT neumorphic (no dual shadows)
+# - Surface hierarchy through tonal variations
+# - Elevation through subtle shadows
+# - Soft borders for definition
+# - State layers for interaction
+#
+# ============================================================================
+
+Material 3:
+  # Framework metadata
+  __version: "1.0.0"
+  __target: "2026.x"
+  
+  # Mode definitions - modern structure
+  modes:

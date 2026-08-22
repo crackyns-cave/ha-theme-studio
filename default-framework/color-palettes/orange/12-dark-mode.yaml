@@ -1,0 +1,401 @@
+    # ==========================================================================
+    # DARK MODE - Material Orange
+    # ==========================================================================
+    # Vibrant red color scheme based on Material Design
+    # Primary: #FFB74D | Background: #1C1B1F
+    # ==========================================================================
+    
+    dark:
+      
+      # ------------------------------------------------------------------------
+      # BASE COLORS - Foundation
+      # ------------------------------------------------------------------------
+      
+      # Primary brand color
+      primary-color: "#FFB74D"
+      accent-color: "#FFB74D"
+      
+      # Semantic state colors
+      state-icon-color: "#7FB2DC"
+      state-icon-active-color: "#FFB74D"
+      state-icon-unavailable-color: "#606060"
+      
+      # Text colors
+      primary-text-color: "#E6E1E5"
+      secondary-text-color: "#CAC4D0"
+      text-primary-color: "#1C1B1F"
+      disabled-text-color: "#938F99"
+      
+      # Background and surface
+      primary-background-color: "#1C1B1F"
+      secondary-background-color: "#2B2930"
+      lovelace-background: "#1C1B1F"
+      
+      # Cards - using surface-container
+      card-background-color: "#2B2930"
+      ha-card-background: "#2B2930"
+      
+      # Sidebar - using surface-container-low
+      sidebar-background-color: "#211F26"
+      sidebar-icon-color: "#CAC4D0"
+      sidebar-selected-icon-color: "#FFB74D"
+      sidebar-selected-text-color: "#E6E1E5"
+      sidebar-text-color: "#CAC4D0"
+      
+      # ------------------------------------------------------------------------
+      # MATERIAL 3 ELEVATION SHADOWS - Dark Mode
+      # ------------------------------------------------------------------------
+      
+      m3-elevation-0: "none"
+      m3-elevation-1: "0px 1px 3px rgba(0, 0, 0, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.3)"
+      m3-elevation-2: "0px 2px 6px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3)"
+      m3-elevation-3: "0px 4px 10px rgba(0, 0, 0, 0.5), 0px 2px 4px rgba(0, 0, 0, 0.3)"
+      m3-elevation-4: "0px 6px 12px rgba(0, 0, 0, 0.5), 0px 2px 20px rgba(0, 0, 0, 0.3)"
+      m3-elevation-5: "0px 8px 14px rgba(0, 0, 0, 0.5), 0px 4px 18px rgba(0, 0, 0, 0.3)"
+      
+      # Neumorphic compatibility aliases (map to Material elevation)
+      neu-shadow-raised-sm: "0px 1px 3px rgba(0, 0, 0, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.3)"
+      neu-shadow-raised: "0px 2px 6px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3)"
+      neu-shadow-raised-lg: "0px 4px 10px rgba(0, 0, 0, 0.5), 0px 2px 4px rgba(0, 0, 0, 0.3)"
+      neu-shadow-raised-xl: "0px 8px 14px rgba(0, 0, 0, 0.5), 0px 4px 18px rgba(0, 0, 0, 0.3)"
+      neu-shadow-float: "0px 6px 12px rgba(0, 0, 0, 0.5), 0px 2px 20px rgba(0, 0, 0, 0.3)"
+      neu-shadow-pressed-sm: "none"
+      neu-shadow-pressed: "none"
+      neu-shadow-pressed-lg: "none"
+      neu-shadow-subtle: "0px 1px 3px rgba(0, 0, 0, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.3)"
+      
+      # Card shadows using Material elevation
+      card-box-shadow: "0px 2px 6px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3)"
+      card-box-shadow-hover: "0px 4px 10px rgba(0, 0, 0, 0.5), 0px 2px 4px rgba(0, 0, 0, 0.3)"
+      card-box-shadow-active: "none"
+      
+      # Component shadows
+      button-box-shadow: "0px 1px 3px rgba(0, 0, 0, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.3)"
+      button-box-shadow-hover: "0px 2px 6px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3)"
+      button-box-shadow-active: "none"
+      
+      dialog-box-shadow: "0px 8px 14px rgba(0, 0, 0, 0.5), 0px 4px 18px rgba(0, 0, 0, 0.3)"
+      sidebar-shadow: "0px 2px 6px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3)"
+      app-header-shadow: "0px 1px 3px rgba(0, 0, 0, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.3)"
+      
+      # ------------------------------------------------------------------------
+      # MATERIAL WEB COLORS - Dark Mode
+      # ------------------------------------------------------------------------
+      
+      # Primary
+      md-sys-color-primary: "#FFB74D"
+      md-sys-color-on-primary: "#E65100"
+      md-sys-color-primary-container: "#F57C00"
+      md-sys-color-on-primary-container: "#FFF3E0"
+      
+      # Secondary
+      md-sys-color-secondary: "#FFA726"
+      md-sys-color-on-secondary: "#E65100"
+      md-sys-color-secondary-container: "#F57C00"
+      md-sys-color-on-secondary-container: "#FFE0B2"
+      
+      # Tertiary
+      md-sys-color-tertiary: "#FFCC80"
+      md-sys-color-on-tertiary: "#E65100"
+      md-sys-color-tertiary-container: "#F57C00"
+      md-sys-color-on-tertiary-container: "#FFF8E1"
+      
+      # Error
+      md-sys-color-error: "#F2B8B5"
+      md-sys-color-on-error: "#601410"
+      md-sys-color-error-container: "#F57C00"
+      md-sys-color-on-error-container: "#F9DEDC"
+      
+      # Surface
+      md-sys-color-surface: "#1C1B1F"
+      md-sys-color-on-surface: "#E6E1E5"
+      md-sys-color-on-surface-variant: "#CAC4D0"
+      md-sys-color-surface-dim: "#1C1B1F"
+      md-sys-color-surface-bright: "#3B3A3E"
+      md-sys-color-surface-container-lowest: "#0F0E11"
+      md-sys-color-surface-container-low: "#211F26"
+      md-sys-color-surface-container: "#2B2930"
+      md-sys-color-surface-container-high: "#363440"
+      md-sys-color-surface-container-highest: "#41404B"
+      
+      # Background
+      md-sys-color-background: "#1C1B1F"
+      md-sys-color-on-background: "#E6E1E5"
+      
+      # Outline
+      md-sys-color-outline: "#938F99"
+      md-sys-color-outline-variant: "#49454F"
+      
+      # Inverse
+      md-sys-color-inverse-surface: "#E6E1E5"
+      md-sys-color-inverse-on-surface: "#313033"
+      md-sys-color-inverse-primary: "#FF9800"
+      
+      # Scrim & shadow
+      md-sys-color-scrim: "#000000"
+      md-sys-color-shadow: "#000000"
+      md-sys-color-surface-tint: "#FFB74D"
+      
+      # ------------------------------------------------------------------------
+      # WEBAWESOME COLORS - Dark Mode
+      # ------------------------------------------------------------------------
+      
+      wa-color-surface-default: "#1C1B1F"
+      wa-color-surface-raised: "#2B2930"
+      wa-color-surface-lowered: "#211F26"
+      wa-color-surface-overlay: "#313033"
+      wa-color-surface-inverse: "#E6E1E5"
+      
+      wa-color-text-normal: "#E6E1E5"
+      wa-color-text-quiet: "#CAC4D0"
+      wa-color-text-loud: "#ffffff"
+      wa-color-text-inverse: "#1C1B1F"
+      wa-color-text-disabled: "#938F99"
+      wa-color-text-link: "#FFB74D"
+      
+      wa-color-brand-fill-normal: "#FFB74D"
+      wa-color-brand-fill-loud: "#FFA726"
+      wa-color-brand-fill-quiet: "#E65100"
+      wa-color-brand-fill-inverse: "#FF9800"
+      
+      wa-color-brand-text-normal: "#FFB74D"
+      wa-color-brand-text-loud: "#FFE0B2"
+      wa-color-brand-text-quiet: "#FFA726"
+      
+      wa-color-brand-border-normal: "#FFB74D"
+      wa-color-brand-border-loud: "#FFA726"
+      wa-color-brand-border-quiet: "#E65100"
+      
+      wa-color-neutral-fill-normal: "#41404B"
+      wa-color-neutral-fill-loud: "#938F99"
+      wa-color-neutral-fill-quiet: "#2B2930"
+      wa-color-neutral-fill-inverse: "#E6E1E5"
+      
+      wa-color-neutral-text-normal: "#E6E1E5"
+      wa-color-neutral-text-loud: "#ffffff"
+      wa-color-neutral-text-quiet: "#CAC4D0"
+      
+      wa-color-neutral-border-normal: "#49454F"
+      wa-color-neutral-border-loud: "#938F99"
+      wa-color-neutral-border-quiet: "#41404B"
+      
+      wa-color-success-fill-normal: "#10b981"
+      wa-color-success-fill-loud: "#059669"
+      wa-color-success-fill-quiet: "#064e3b"
+      wa-color-success-text-normal: "#6ee7b7"
+      wa-color-success-text-loud: "#a7f3d0"
+      wa-color-success-text-quiet: "#10b981"
+      wa-color-success-border-normal: "#10b981"
+      
+      wa-color-warning-fill-normal: "#f59e0b"
+      wa-color-warning-fill-loud: "#d97706"
+      wa-color-warning-fill-quiet: "#78350f"
+      wa-color-warning-text-normal: "#fbbf24"
+      wa-color-warning-text-loud: "#fcd34d"
+      wa-color-warning-text-quiet: "#f59e0b"
+      wa-color-warning-border-normal: "#f59e0b"
+      
+      wa-color-danger-fill-normal: "#F2B8B5"
+      wa-color-danger-fill-loud: "#F57C00"
+      wa-color-danger-fill-quiet: "#601410"
+      wa-color-danger-text-normal: "#F2B8B5"
+      wa-color-danger-text-loud: "#F9DEDC"
+      wa-color-danger-text-quiet: "#DC362E"
+      wa-color-danger-border-normal: "#F2B8B5"
+      
+      wa-color-info-fill-normal: "#3b82f6"
+      wa-color-info-fill-loud: "#2563eb"
+      wa-color-info-fill-quiet: "#1e3a8a"
+      wa-color-info-text-normal: "#93c5fd"
+      wa-color-info-text-loud: "#bfdbfe"
+      wa-color-info-text-quiet: "#3b82f6"
+      wa-color-info-border-normal: "#3b82f6"
+      
+      wa-color-focus-ring: "#FFB74D"
+      wa-color-overlay: "rgba(0, 0, 0, 0.7)"
+      
+      # ------------------------------------------------------------------------
+      # HOME ASSISTANT SEMANTIC COLORS - Dark Mode
+      # ------------------------------------------------------------------------
+      
+      ha-color-text-primary: "#E6E1E5"
+      ha-color-text-secondary: "#CAC4D0"
+      ha-color-text-tertiary: "#938F99"
+      ha-color-text-disabled: "#938F99"
+      ha-color-text-inverse: "#1C1B1F"
+      
+      ha-color-form-background: "#2B2930"
+      ha-color-form-background-hover: "#363440"
+      ha-color-form-background-focus: "#2B2930"
+      ha-color-form-background-disabled: "#211F26"
+      ha-color-form-text: "#E6E1E5"
+      ha-color-form-text-disabled: "#938F99"
+      ha-color-form-placeholder: "#938F99"
+      ha-color-form-border: "#49454F"
+      ha-color-form-border-hover: "#938F99"
+      ha-color-form-border-focus: "#FFB74D"
+      ha-color-form-border-error: "#F2B8B5"
+      
+      ha-color-border-neutral-quiet: "#41404B"
+      ha-color-border-neutral-normal: "#49454F"
+      ha-color-border-neutral-loud: "#938F99"
+      ha-color-border-primary-quiet: "#E65100"
+      ha-color-border-primary-normal: "#FFB74D"
+      ha-color-border-primary-loud: "#FFA726"
+      
+      ha-color-fill-primary-loud-resting: "#FFB74D"
+      ha-color-fill-primary-loud-hover: "#FFA726"
+      ha-color-fill-primary-loud-active: "#FF9800"
+      ha-color-fill-primary-loud-disabled: "#49454F"
+      
+      ha-color-fill-primary-normal-resting: "#FFA726"
+      ha-color-fill-primary-normal-hover: "#FFB74D"
+      ha-color-fill-primary-normal-active: "#FFA726"
+      ha-color-fill-primary-normal-disabled: "#41404B"
+      
+      ha-color-fill-primary-quiet-resting: "#E65100"
+      ha-color-fill-primary-quiet-hover: "#F57C00"
+      ha-color-fill-primary-quiet-active: "#E65100"
+      
+      ha-color-fill-neutral-loud-resting: "#CAC4D0"
+      ha-color-fill-neutral-loud-hover: "#E6E1E5"
+      ha-color-fill-neutral-loud-active: "#ffffff"
+      
+      ha-color-fill-neutral-normal-resting: "#938F99"
+      ha-color-fill-neutral-normal-hover: "#CAC4D0"
+      ha-color-fill-neutral-normal-active: "#E6E1E5"
+      
+      ha-color-fill-neutral-quiet-resting: "#2B2930"
+      ha-color-fill-neutral-quiet-hover: "#41404B"
+      ha-color-fill-neutral-quiet-active: "#49454F"
+      
+      ha-color-on-primary-quiet: "#FFB74D"
+      ha-color-on-primary-normal: "#1C1B1F"
+      ha-color-on-primary-loud: "#1C1B1F"
+      
+      ha-color-on-neutral-quiet: "#E6E1E5"
+      ha-color-on-neutral-normal: "#1C1B1F"
+      ha-color-on-neutral-loud: "#1C1B1F"
+      
+      ha-color-on-error-quiet: "#F2B8B5"
+      ha-color-on-error-normal: "#1C1B1F"
+      ha-color-on-error-loud: "#1C1B1F"
+      
+      ha-color-on-success-quiet: "#6ee7b7"
+      ha-color-on-success-normal: "#1C1B1F"
+      ha-color-on-success-loud: "#1C1B1F"
+      
+      ha-color-on-warning-quiet: "#fbbf24"
+      ha-color-on-warning-normal: "#1C1B1F"
+      ha-color-on-warning-loud: "#1C1B1F"
+      
+      ha-color-success: "#10b981"
+      ha-color-success-hover: "#059669"
+      ha-color-success-active: "#047857"
+      
+      ha-color-warning: "#f59e0b"
+      ha-color-warning-hover: "#d97706"
+      ha-color-warning-active: "#b45309"
+      
+      ha-color-error: "#F2B8B5"
+      ha-color-error-hover: "#F57C00"
+      ha-color-error-active: "#601410"
+      
+      ha-color-info: "#3b82f6"
+      ha-color-info-hover: "#2563eb"
+      ha-color-info-active: "#1d4ed8"
+      
+      ha-color-surface-default: "#1C1B1F"
+      ha-color-surface-raised: "#2B2930"
+      ha-color-surface-lowered: "#211F26"
+      ha-color-surface-overlay: "#313033"
+      
+      ha-color-background-primary: "#1C1B1F"
+      ha-color-background-secondary: "#211F26"
+      
+      ha-color-divider-quiet: "#2B2930"
+      ha-color-divider-normal: "#41404B"
+      ha-color-divider-loud: "#49454F"
+      
+      ha-color-focus-ring: "#FFB74D"
+      ha-color-focus-background: "rgba(255, 183, 77, 0.2)"
+      
+      ha-color-overlay-scrim: "rgba(0, 0, 0, 0.7)"
+      ha-color-overlay-backdrop: "rgba(0, 0, 0, 0.5)"
+      
+      # ------------------------------------------------------------------------
+      # BUBBLE CARD - Dark Mode
+      # ------------------------------------------------------------------------
+      
+      bubble-main-background-color: "#1C1B1F"
+      bubble-secondary-background-color: "#2B2930"
+      bubble-card-background-color: "#2B2930"
+      bubble-backdrop-background-color: "rgba(0, 0, 0, 0.7)"
+      bubble-accent-color: "#FFB74D"
+      bubble-icon-color: "#CAC4D0"
+      bubble-name-color: "#E6E1E5"
+      bubble-state-color: "#CAC4D0"
+      bubble-shadow: "0px 2px 6px rgba(0, 0, 0, 0.5), 0px 1px 4px rgba(0, 0, 0, 0.3)"
+      bubble-shadow-active: "none"
+      bubble-shadow-hover: "0px 4px 10px rgba(0, 0, 0, 0.5), 0px 2px 4px rgba(0, 0, 0, 0.3)"
+      bubble-button-background: "#2B2930"
+      bubble-button-background-hover: "#363440"
+      bubble-button-background-active: "#41404B"
+      bubble-pop-up-background: "#2B2930"
+      bubble-media-player-background: "#2B2930"
+      
+      # ------------------------------------------------------------------------
+      # ENERGY DASHBOARD - Dark Mode
+      # ------------------------------------------------------------------------
+      
+      energy-grid-consumption-color: "#FFB74D"
+      energy-grid-return-color: "#10b981"
+      energy-solar-color: "#f59e0b"
+      energy-battery-in-color: "#8b5cf6"
+      energy-battery-out-color: "#06b6d4"
+      energy-non-fossil-color: "#10b981"
+      energy-fossil-color: "#938F99"
+      energy-gas-color: "#F2B8B5"
+      energy-water-color: "#06b6d4"
+      energy-cost-color: "#F2B8B5"
+      energy-savings-color: "#10b981"
+      energy-home-consumption-color: "#f59e0b"
+      energy-device-consumption-color: "#8b5cf6"
+      
+      # ------------------------------------------------------------------------
+      # ADDITIONAL HOME ASSISTANT VARIABLES
+      # ------------------------------------------------------------------------
+      
+      app-header-background-color: "#211F26"
+      app-header-text-color: "#E6E1E5"
+      divider-color: "rgba(255, 255, 255, 0.12)"
+      label-badge-background-color: "#2B2930"
+      label-badge-text-color: "#E6E1E5"
+      label-badge-red: "#F2B8B5"
+      label-badge-blue: "#3b82f6"
+      label-badge-green: "#10b981"
+      label-badge-yellow: "#f59e0b"
+      label-badge-grey: "#938F99"
+      
+      table-row-background-color: "#1C1B1F"
+      table-row-alternative-background-color: "#211F26"
+      
+      paper-listbox-background-color: "#2B2930"
+      paper-item-icon-color: "#CAC4D0"
+      paper-item-icon-active-color: "#FFB74D"
+      
+      mdc-theme-primary: "#FFB74D"
+      mdc-theme-secondary: "#FFA726"
+      mdc-theme-on-primary: "#E65100"
+      mdc-theme-on-secondary: "#E65100"
+      
+      switch-checked-color: "#FFB74D"
+      switch-unchecked-button-color: "#938F99"
+      switch-unchecked-track-color: "#49454F"
+      
+      slider-color: "#FFB74D"
+      slider-secondary-color: "#49454F"
+      slider-track-color: "#41404B"
+      
+      material-secondary-text-color: "#CAC4D0"
+      material-disabled-text-color: "#938F99"

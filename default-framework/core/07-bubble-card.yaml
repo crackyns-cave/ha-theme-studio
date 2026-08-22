@@ -1,0 +1,90 @@
+  # ============================================================================
+  # BUBBLE CARD INTEGRATION
+  # ============================================================================
+  # Custom theme variables for Bubble Card (modern card framework).
+  # Bubble Card uses custom CSS variables for comprehensive theming.
+  # Shared across all theme variants.
+  # ============================================================================
+
+  # ----------------------------------------------------------------------------
+  # BUBBLE CARD BACKGROUND COLORS (Mode-Agnostic Anchors)
+  # ----------------------------------------------------------------------------
+  
+  bubble-main-background-color: &bubble-main-background-color-anchor "bubble-main-background-color"
+  bubble-secondary-background-color: &bubble-secondary-background-color-anchor "bubble-secondary-background-color"
+  bubble-card-background-color: &bubble-card-background-color-anchor "bubble-card-background-color"
+  bubble-backdrop-background-color: &bubble-backdrop-background-color-anchor "bubble-backdrop-background-color"
+  
+  # ----------------------------------------------------------------------------
+  # BUBBLE CARD BORDER & SHAPE
+  # ----------------------------------------------------------------------------
+  
+  bubble-border-radius: *m3-radius-card
+  bubble-button-border-radius: *m3-radius-button
+  bubble-pop-up-border-radius: *m3-radius-dialog
+  bubble-sub-button-border-radius: *m3-radius-sm
+  
+  bubble-border-width: "0px"  # Theme-specific visual systems use shadows or other effects
+  
+  # ----------------------------------------------------------------------------
+  # BUBBLE CARD ACCENT & PRIMARY COLORS (Mode-Agnostic Anchors)
+  # ----------------------------------------------------------------------------
+  
+  bubble-accent-color: &bubble-accent-color-anchor "bubble-accent-color"
+  bubble-icon-color: &bubble-icon-color-anchor "bubble-icon-color"
+  bubble-name-color: &bubble-name-color-anchor "bubble-name-color"
+  bubble-state-color: &bubble-state-color-anchor "bubble-state-color"
+  
+  # ----------------------------------------------------------------------------
+  # BUBBLE CARD SHADOW SYSTEM (Mode-Agnostic Anchors)
+  # ----------------------------------------------------------------------------
+  # Themes may define these differently (neumorphic, standard, etc.)
+  
+  bubble-shadow: &bubble-shadow-anchor "bubble-shadow"
+  bubble-shadow-active: &bubble-shadow-active-anchor "bubble-shadow-active"
+  bubble-shadow-hover: &bubble-shadow-hover-anchor "bubble-shadow-hover"
+  
+  # ----------------------------------------------------------------------------
+  # BUBBLE CARD SPACING
+  # ----------------------------------------------------------------------------
+  
+  bubble-spacing: *m3-spacing-md
+  bubble-button-spacing: *m3-spacing-sm
+  bubble-sub-button-spacing: *m3-spacing-xs
+  
+  # ----------------------------------------------------------------------------
+  # BUBBLE CARD ICON SIZING
+  # ----------------------------------------------------------------------------
+  
+  bubble-icon-size: "24px"
+  bubble-button-icon-size: "20px"
+  bubble-sub-button-icon-size: "18px"
+  
+  # ----------------------------------------------------------------------------
+  # BUBBLE CARD BACKDROP & OVERLAY (Mode-Agnostic Anchors)
+  # ----------------------------------------------------------------------------
+  
+  bubble-backdrop-filter: "none"  # Can be overridden by theme
+  bubble-background-opacity: "1"
+  
+  # ----------------------------------------------------------------------------
+  # BUBBLE CARD BUTTON STATES (Mode-Agnostic Anchors)
+  # ----------------------------------------------------------------------------
+  
+  bubble-button-background: &bubble-button-background-anchor "bubble-button-background"
+  bubble-button-background-hover: &bubble-button-background-hover-anchor "bubble-button-background-hover"
+  bubble-button-background-active: &bubble-button-background-active-anchor "bubble-button-background-active"
+  
+  # ----------------------------------------------------------------------------
+  # BUBBLE CARD POP-UP SPECIFIC (Mode-Agnostic Anchors)
+  # ----------------------------------------------------------------------------
+  
+  bubble-pop-up-background: &bubble-pop-up-background-anchor "bubble-pop-up-background"
+  bubble-pop-up-backdrop-filter: "none"  # Can be overridden by theme
+  
+  # ----------------------------------------------------------------------------
+  # BUBBLE CARD MEDIA PLAYER (Mode-Agnostic Anchors)
+  # ----------------------------------------------------------------------------
+  
+  bubble-media-player-background: &bubble-media-player-background-anchor "bubble-media-player-background"
+  bubble-media-player-border-radius: *m3-radius-xl

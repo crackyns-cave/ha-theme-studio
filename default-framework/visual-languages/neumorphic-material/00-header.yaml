@@ -1,0 +1,41 @@
+# ============================================================================
+# NEUMORPHIC MATERIAL THEME
+# ============================================================================
+# Version: 1.0.0
+# Target: Home Assistant 2026.x
+# Design System: Neumorphic + Material 3
+# Author: Home Assistant Community
+# License: MIT
+# ============================================================================
+#
+# This is a modern, production-quality Home Assistant theme that combines
+# neumorphic design principles with Material 3 design tokens.
+#
+# FEATURES:
+# - Neumorphic depth through dual shadows (no borders)
+# - Material 3 semantic color system
+# - WebAwesome component compatibility
+# - Native dashboard support (Sidebar, Sections, Tiles)
+# - Mushroom Cards integration
+# - Bubble Cards integration
+# - Global card-mod styling
+# - Energy dashboard color system
+# - Room-based color system
+#
+# DESIGN PRINCIPLES:
+# - Neumorphic (soft, subtle depth)
+# - NOT glassmorphic
+# - NOT skeuomorphic
+# - Clean and modern
+# - Material 3 compatible
+# - Depth from dual shadows, not borders
+#
+# ============================================================================
+
+Neumorphic Material:
+  # Framework metadata
+  __version: "1.0.0"
+  __target: "2026.x"
+  
+  # Mode definitions - modern structure
+  modes:

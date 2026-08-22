@@ -1,0 +1,395 @@
+    # ==========================================================================
+    # LIGHT MODE - Complete Color Palette
+    # ==========================================================================
+    # Light, clean neumorphic design with soft depth.
+    # Background: #E8EDF2 | Surface: #E8EDF2
+    # Shadow positive: rgba(163,177,198,.6)
+    # Shadow negative: rgba(255,255,255,.8)
+    # ==========================================================================
+    
+    light:
+      
+      # ------------------------------------------------------------------------
+      # BASE COLORS - Foundation
+      # ------------------------------------------------------------------------
+      
+      # Primary brand color
+      primary-color: "#464feb"
+      accent-color: "#464feb"
+      
+      # Semantic state colors
+      state-icon-color: "#44739e"
+      state-icon-active-color: "#464feb"
+      state-icon-unavailable-color: "#a0a0a0"
+      
+      # Text colors
+      primary-text-color: "#1f2937"
+      secondary-text-color: "#6b7280"
+      text-primary-color: "#ffffff"
+      disabled-text-color: "#9ca3af"
+      
+      # Background and surface
+      primary-background-color: "#E8EDF2"
+      secondary-background-color: "#E8EDF2"
+      lovelace-background: "#E8EDF2"
+      
+      # Cards
+      card-background-color: "#E8EDF2"
+      ha-card-background: "#E8EDF2"
+      
+      # Sidebar
+      sidebar-background-color: "#E8EDF2"
+      sidebar-icon-color: "#6b7280"
+      sidebar-selected-icon-color: "#464feb"
+      sidebar-selected-text-color: "#1f2937"
+      sidebar-text-color: "#6b7280"
+      
+      # ------------------------------------------------------------------------
+      # NEUMORPHIC SHADOWS - Light Mode
+      # ------------------------------------------------------------------------
+      
+      neu-shadow-raised-sm: "2px 2px 4px rgba(163,177,198,.6), -2px -2px 4px rgba(255,255,255,.8)"
+      neu-shadow-raised: "4px 4px 8px rgba(163,177,198,.6), -4px -4px 8px rgba(255,255,255,.8)"
+      neu-shadow-raised-lg: "8px 8px 16px rgba(163,177,198,.6), -8px -8px 16px rgba(255,255,255,.8)"
+      neu-shadow-raised-xl: "12px 12px 24px rgba(163,177,198,.6), -12px -12px 24px rgba(255,255,255,.8)"
+      neu-shadow-float: "6px 6px 12px rgba(163,177,198,.7), -6px -6px 12px rgba(255,255,255,.9), 0px 4px 16px rgba(163,177,198,.3)"
+      neu-shadow-pressed-sm: "inset 2px 2px 4px rgba(163,177,198,.6), inset -2px -2px 4px rgba(255,255,255,.8)"
+      neu-shadow-pressed: "inset 4px 4px 8px rgba(163,177,198,.6), inset -4px -4px 8px rgba(255,255,255,.8)"
+      neu-shadow-pressed-lg: "inset 6px 6px 12px rgba(163,177,198,.6), inset -6px -6px 12px rgba(255,255,255,.8)"
+      neu-shadow-subtle: "1px 1px 2px rgba(163,177,198,.4), -1px -1px 2px rgba(255,255,255,.6)"
+      
+      # Card shadows using neumorphic system
+      card-box-shadow: "4px 4px 8px rgba(163,177,198,.6), -4px -4px 8px rgba(255,255,255,.8)"
+      card-box-shadow-hover: "6px 6px 12px rgba(163,177,198,.7), -6px -6px 12px rgba(255,255,255,.9), 0px 4px 16px rgba(163,177,198,.3)"
+      card-box-shadow-active: "inset 2px 2px 4px rgba(163,177,198,.6), inset -2px -2px 4px rgba(255,255,255,.8)"
+      
+      # Component shadows
+      button-box-shadow: "2px 2px 4px rgba(163,177,198,.6), -2px -2px 4px rgba(255,255,255,.8)"
+      button-box-shadow-hover: "4px 4px 8px rgba(163,177,198,.6), -4px -4px 8px rgba(255,255,255,.8)"
+      button-box-shadow-active: "inset 2px 2px 4px rgba(163,177,198,.6), inset -2px -2px 4px rgba(255,255,255,.8)"
+      
+      dialog-box-shadow: "12px 12px 24px rgba(163,177,198,.6), -12px -12px 24px rgba(255,255,255,.8)"
+      sidebar-shadow: "4px 0px 8px rgba(163,177,198,.5)"
+      app-header-shadow: "0px 2px 4px rgba(163,177,198,.4)"
+      
+      # ------------------------------------------------------------------------
+      # MATERIAL WEB COLORS - Light Mode
+      # ------------------------------------------------------------------------
+      
+      # Primary
+      md-sys-color-primary: "#464feb"
+      md-sys-color-on-primary: "#ffffff"
+      md-sys-color-primary-container: "#dfe0ff"
+      md-sys-color-on-primary-container: "#000764"
+      
+      # Secondary
+      md-sys-color-secondary: "#5d5d72"
+      md-sys-color-on-secondary: "#ffffff"
+      md-sys-color-secondary-container: "#e2e0f9"
+      md-sys-color-on-secondary-container: "#1a1a2c"
+      
+      # Tertiary
+      md-sys-color-tertiary: "#7a5368"
+      md-sys-color-on-tertiary: "#ffffff"
+      md-sys-color-tertiary-container: "#ffd8ea"
+      md-sys-color-on-tertiary-container: "#2e1124"
+      
+      # Error
+      md-sys-color-error: "#ba1a1a"
+      md-sys-color-on-error: "#ffffff"
+      md-sys-color-error-container: "#ffdad6"
+      md-sys-color-on-error-container: "#410002"
+      
+      # Surface
+      md-sys-color-surface: "#E8EDF2"
+      md-sys-color-on-surface: "#1f2937"
+      md-sys-color-on-surface-variant: "#6b7280"
+      md-sys-color-surface-dim: "#d9dfe4"
+      md-sys-color-surface-bright: "#f7fbff"
+      md-sys-color-surface-container-lowest: "#ffffff"
+      md-sys-color-surface-container-low: "#f3f7fc"
+      md-sys-color-surface-container: "#E8EDF2"
+      md-sys-color-surface-container-high: "#dde3e8"
+      md-sys-color-surface-container-highest: "#d2d8dd"
+      
+      # Background
+      md-sys-color-background: "#E8EDF2"
+      md-sys-color-on-background: "#1f2937"
+      
+      # Outline
+      md-sys-color-outline: "#c0c7d0"
+      md-sys-color-outline-variant: "#e0e7f0"
+      
+      # Inverse
+      md-sys-color-inverse-surface: "#2d3741"
+      md-sys-color-inverse-on-surface: "#f0f4f9"
+      md-sys-color-inverse-primary: "#b8c3ff"
+      
+      # Scrim & shadow
+      md-sys-color-scrim: "#000000"
+      md-sys-color-shadow: "#000000"
+      md-sys-color-surface-tint: "#464feb"
+      
+      # ------------------------------------------------------------------------
+      # WEBAWESOME COLORS - Light Mode
+      # ------------------------------------------------------------------------
+      
+      wa-color-surface-default: "#E8EDF2"
+      wa-color-surface-raised: "#f3f7fc"
+      wa-color-surface-lowered: "#d9dfe4"
+      wa-color-surface-overlay: "#ffffff"
+      wa-color-surface-inverse: "#2d3741"
+      
+      wa-color-text-normal: "#1f2937"
+      wa-color-text-quiet: "#6b7280"
+      wa-color-text-loud: "#111827"
+      wa-color-text-inverse: "#ffffff"
+      wa-color-text-disabled: "#9ca3af"
+      wa-color-text-link: "#464feb"
+      
+      wa-color-brand-fill-normal: "#464feb"
+      wa-color-brand-fill-loud: "#3b3ecc"
+      wa-color-brand-fill-quiet: "#dfe0ff"
+      wa-color-brand-fill-inverse: "#b8c3ff"
+      
+      wa-color-brand-text-normal: "#464feb"
+      wa-color-brand-text-loud: "#3b3ecc"
+      wa-color-brand-text-quiet: "#5d5d72"
+      
+      wa-color-brand-border-normal: "#464feb"
+      wa-color-brand-border-loud: "#3b3ecc"
+      wa-color-brand-border-quiet: "#c5c6ff"
+      
+      wa-color-neutral-fill-normal: "#d1d5db"
+      wa-color-neutral-fill-loud: "#9ca3af"
+      wa-color-neutral-fill-quiet: "#f3f4f6"
+      wa-color-neutral-fill-inverse: "#374151"
+      
+      wa-color-neutral-text-normal: "#1f2937"
+      wa-color-neutral-text-loud: "#111827"
+      wa-color-neutral-text-quiet: "#6b7280"
+      
+      wa-color-neutral-border-normal: "#d1d5db"
+      wa-color-neutral-border-loud: "#9ca3af"
+      wa-color-neutral-border-quiet: "#e5e7eb"
+      
+      wa-color-success-fill-normal: "#10b981"
+      wa-color-success-fill-loud: "#059669"
+      wa-color-success-fill-quiet: "#d1fae5"
+      wa-color-success-text-normal: "#047857"
+      wa-color-success-text-loud: "#065f46"
+      wa-color-success-text-quiet: "#10b981"
+      wa-color-success-border-normal: "#10b981"
+      
+      wa-color-warning-fill-normal: "#f59e0b"
+      wa-color-warning-fill-loud: "#d97706"
+      wa-color-warning-fill-quiet: "#fef3c7"
+      wa-color-warning-text-normal: "#d97706"
+      wa-color-warning-text-loud: "#b45309"
+      wa-color-warning-text-quiet: "#f59e0b"
+      wa-color-warning-border-normal: "#f59e0b"
+      
+      wa-color-danger-fill-normal: "#ef4444"
+      wa-color-danger-fill-loud: "#dc2626"
+      wa-color-danger-fill-quiet: "#fee2e2"
+      wa-color-danger-text-normal: "#dc2626"
+      wa-color-danger-text-loud: "#b91c1c"
+      wa-color-danger-text-quiet: "#ef4444"
+      wa-color-danger-border-normal: "#ef4444"
+      
+      wa-color-info-fill-normal: "#3b82f6"
+      wa-color-info-fill-loud: "#2563eb"
+      wa-color-info-fill-quiet: "#dbeafe"
+      wa-color-info-text-normal: "#2563eb"
+      wa-color-info-text-loud: "#1d4ed8"
+      wa-color-info-text-quiet: "#3b82f6"
+      wa-color-info-border-normal: "#3b82f6"
+      
+      wa-color-focus-ring: "#464feb"
+      wa-color-overlay: "rgba(0, 0, 0, 0.5)"
+      
+      # ------------------------------------------------------------------------
+      # HOME ASSISTANT SEMANTIC COLORS - Light Mode
+      # ------------------------------------------------------------------------
+      
+      ha-color-text-primary: "#1f2937"
+      ha-color-text-secondary: "#6b7280"
+      ha-color-text-tertiary: "#9ca3af"
+      ha-color-text-disabled: "#d1d5db"
+      ha-color-text-inverse: "#ffffff"
+      
+      ha-color-form-background: "#ffffff"
+      ha-color-form-background-hover: "#f9fafb"
+      ha-color-form-background-focus: "#ffffff"
+      ha-color-form-background-disabled: "#f3f4f6"
+      ha-color-form-text: "#1f2937"
+      ha-color-form-text-disabled: "#9ca3af"
+      ha-color-form-placeholder: "#9ca3af"
+      ha-color-form-border: "#d1d5db"
+      ha-color-form-border-hover: "#9ca3af"
+      ha-color-form-border-focus: "#464feb"
+      ha-color-form-border-error: "#ef4444"
+      
+      ha-color-border-neutral-quiet: "#e5e7eb"
+      ha-color-border-neutral-normal: "#d1d5db"
+      ha-color-border-neutral-loud: "#9ca3af"
+      ha-color-border-primary-quiet: "#c5c6ff"
+      ha-color-border-primary-normal: "#464feb"
+      ha-color-border-primary-loud: "#3b3ecc"
+      
+      ha-color-fill-primary-loud-resting: "#464feb"
+      ha-color-fill-primary-loud-hover: "#3b3ecc"
+      ha-color-fill-primary-loud-active: "#3133a8"
+      ha-color-fill-primary-loud-disabled: "#d1d5db"
+      
+      ha-color-fill-primary-normal-resting: "#5d5fff"
+      ha-color-fill-primary-normal-hover: "#464feb"
+      ha-color-fill-primary-normal-active: "#3b3ecc"
+      ha-color-fill-primary-normal-disabled: "#e5e7eb"
+      
+      ha-color-fill-primary-quiet-resting: "#dfe0ff"
+      ha-color-fill-primary-quiet-hover: "#c5c6ff"
+      ha-color-fill-primary-quiet-active: "#ababff"
+      
+      ha-color-fill-neutral-loud-resting: "#6b7280"
+      ha-color-fill-neutral-loud-hover: "#4b5563"
+      ha-color-fill-neutral-loud-active: "#374151"
+      
+      ha-color-fill-neutral-normal-resting: "#9ca3af"
+      ha-color-fill-neutral-normal-hover: "#6b7280"
+      ha-color-fill-neutral-normal-active: "#4b5563"
+      
+      ha-color-fill-neutral-quiet-resting: "#f3f4f6"
+      ha-color-fill-neutral-quiet-hover: "#e5e7eb"
+      ha-color-fill-neutral-quiet-active: "#d1d5db"
+      
+      ha-color-on-primary-quiet: "#464feb"
+      ha-color-on-primary-normal: "#ffffff"
+      ha-color-on-primary-loud: "#ffffff"
+      
+      ha-color-on-neutral-quiet: "#1f2937"
+      ha-color-on-neutral-normal: "#ffffff"
+      ha-color-on-neutral-loud: "#ffffff"
+      
+      ha-color-on-error-quiet: "#dc2626"
+      ha-color-on-error-normal: "#ffffff"
+      ha-color-on-error-loud: "#ffffff"
+      
+      ha-color-on-success-quiet: "#047857"
+      ha-color-on-success-normal: "#ffffff"
+      ha-color-on-success-loud: "#ffffff"
+      
+      ha-color-on-warning-quiet: "#d97706"
+      ha-color-on-warning-normal: "#1f2937"
+      ha-color-on-warning-loud: "#1f2937"
+      
+      ha-color-success: "#10b981"
+      ha-color-success-hover: "#059669"
+      ha-color-success-active: "#047857"
+      
+      ha-color-warning: "#f59e0b"
+      ha-color-warning-hover: "#d97706"
+      ha-color-warning-active: "#b45309"
+      
+      ha-color-error: "#ef4444"
+      ha-color-error-hover: "#dc2626"
+      ha-color-error-active: "#b91c1c"
+      
+      ha-color-info: "#3b82f6"
+      ha-color-info-hover: "#2563eb"
+      ha-color-info-active: "#1d4ed8"
+      
+      ha-color-surface-default: "#E8EDF2"
+      ha-color-surface-raised: "#f3f7fc"
+      ha-color-surface-lowered: "#d9dfe4"
+      ha-color-surface-overlay: "#ffffff"
+      
+      ha-color-background-primary: "#E8EDF2"
+      ha-color-background-secondary: "#f3f7fc"
+      
+      ha-color-divider-quiet: "#f3f4f6"
+      ha-color-divider-normal: "#e5e7eb"
+      ha-color-divider-loud: "#d1d5db"
+      
+      ha-color-focus-ring: "#464feb"
+      ha-color-focus-background: "rgba(70, 79, 235, 0.1)"
+      
+      ha-color-overlay-scrim: "rgba(0, 0, 0, 0.5)"
+      ha-color-overlay-backdrop: "rgba(0, 0, 0, 0.3)"
+      
+      # ------------------------------------------------------------------------
+      # BUBBLE CARD - Light Mode
+      # ------------------------------------------------------------------------
+      
+      bubble-main-background-color: "#E8EDF2"
+      bubble-secondary-background-color: "#f3f7fc"
+      bubble-card-background-color: "#E8EDF2"
+      bubble-backdrop-background-color: "rgba(0, 0, 0, 0.5)"
+      bubble-accent-color: "#464feb"
+      bubble-icon-color: "#6b7280"
+      bubble-name-color: "#1f2937"
+      bubble-state-color: "#6b7280"
+      bubble-shadow: "4px 4px 8px rgba(163,177,198,.6), -4px -4px 8px rgba(255,255,255,.8)"
+      bubble-shadow-active: "inset 2px 2px 4px rgba(163,177,198,.6), inset -2px -2px 4px rgba(255,255,255,.8)"
+      bubble-shadow-hover: "6px 6px 12px rgba(163,177,198,.7), -6px -6px 12px rgba(255,255,255,.9)"
+      bubble-button-background: "#E8EDF2"
+      bubble-button-background-hover: "#dde3e8"
+      bubble-button-background-active: "#d2d8dd"
+      bubble-pop-up-background: "#E8EDF2"
+      bubble-media-player-background: "#E8EDF2"
+      
+      # ------------------------------------------------------------------------
+      # ENERGY DASHBOARD - Light Mode
+      # ------------------------------------------------------------------------
+      
+      energy-grid-consumption-color: "#464feb"
+      energy-grid-return-color: "#10b981"
+      energy-solar-color: "#f59e0b"
+      energy-battery-in-color: "#8b5cf6"
+      energy-battery-out-color: "#06b6d4"
+      energy-non-fossil-color: "#10b981"
+      energy-fossil-color: "#6b7280"
+      energy-gas-color: "#ef4444"
+      energy-water-color: "#06b6d4"
+      energy-cost-color: "#dc2626"
+      energy-savings-color: "#10b981"
+      energy-home-consumption-color: "#f59e0b"
+      energy-device-consumption-color: "#8b5cf6"
+      
+      # ------------------------------------------------------------------------
+      # ADDITIONAL HOME ASSISTANT VARIABLES
+      # ------------------------------------------------------------------------
+      
+      app-header-background-color: "#E8EDF2"
+      app-header-text-color: "#1f2937"
+      divider-color: "rgba(0, 0, 0, 0.12)"
+      label-badge-background-color: "#ffffff"
+      label-badge-text-color: "#1f2937"
+      label-badge-red: "#ef4444"
+      label-badge-blue: "#3b82f6"
+      label-badge-green: "#10b981"
+      label-badge-yellow: "#f59e0b"
+      label-badge-grey: "#6b7280"
+      
+      table-row-background-color: "#E8EDF2"
+      table-row-alternative-background-color: "#f3f7fc"
+      
+      paper-listbox-background-color: "#ffffff"
+      paper-item-icon-color: "#6b7280"
+      paper-item-icon-active-color: "#464feb"
+      
+      mdc-theme-primary: "#464feb"
+      mdc-theme-secondary: "#5d5d72"
+      mdc-theme-on-primary: "#ffffff"
+      mdc-theme-on-secondary: "#ffffff"
+      
+      switch-checked-color: "#464feb"
+      switch-unchecked-button-color: "#9ca3af"
+      switch-unchecked-track-color: "#d1d5db"
+      
+      slider-color: "#464feb"
+      slider-secondary-color: "#d1d5db"
+      slider-track-color: "#e5e7eb"
+      
+      material-secondary-text-color: "#6b7280"
+      material-disabled-text-color: "#9ca3af"

@@ -1,0 +1,92 @@
+  # ============================================================================
+  # MUSHROOM CARDS INTEGRATION
+  # ============================================================================
+  # Custom theme variables for Mushroom Cards (popular card collection).
+  # Mushroom cards use custom CSS variables for styling and theming.
+  # Shared across all theme variants.
+  # ============================================================================
+
+  # ----------------------------------------------------------------------------
+  # MUSHROOM CONTROL STYLING
+  # ----------------------------------------------------------------------------
+  
+  mush-control-border-radius: *m3-radius-button
+  mush-control-height: "42px"
+  mush-control-spacing: *m3-spacing-sm
+  
+  # ----------------------------------------------------------------------------
+  # MUSHROOM ICON STYLING
+  # ----------------------------------------------------------------------------
+  
+  mush-icon-border-radius: *m3-radius-pill
+  mush-icon-size: "42px"
+  
+  # ----------------------------------------------------------------------------
+  # MUSHROOM SPACING & SIZING
+  # ----------------------------------------------------------------------------
+  
+  mush-spacing-xs: *m3-spacing-xs
+  mush-spacing-sm: *m3-spacing-sm
+  mush-spacing-md: *m3-spacing-md
+  mush-spacing-lg: *m3-spacing-lg
+  
+  # ----------------------------------------------------------------------------
+  # MUSHROOM TYPOGRAPHY
+  # ----------------------------------------------------------------------------
+  
+  mush-card-primary-font-size: *m3-font-size-lg
+  mush-card-secondary-font-size: *m3-font-size-md
+  mush-card-primary-font-weight: *m3-font-weight-medium
+  mush-card-secondary-font-weight: *m3-font-weight-regular
+  mush-card-primary-line-height: *m3-line-height-normal
+  mush-card-secondary-line-height: *m3-line-height-normal
+  
+  # ----------------------------------------------------------------------------
+  # MUSHROOM STATE COLORS (RGB values for transparency support)
+  # ----------------------------------------------------------------------------
+  # RGB format required by Mushroom for alpha channel manipulation
+  
+  mush-rgb-red: &mush-rgb-red-anchor "244, 67, 54"
+  mush-rgb-pink: &mush-rgb-pink-anchor "233, 30, 99"
+  mush-rgb-purple: &mush-rgb-purple-anchor "156, 39, 176"
+  mush-rgb-deep-purple: &mush-rgb-deep-purple-anchor "103, 58, 183"
+  mush-rgb-indigo: &mush-rgb-indigo-anchor "63, 81, 181"
+  mush-rgb-blue: &mush-rgb-blue-anchor "33, 150, 243"
+  mush-rgb-light-blue: &mush-rgb-light-blue-anchor "3, 169, 244"
+  mush-rgb-cyan: &mush-rgb-cyan-anchor "0, 188, 212"
+  mush-rgb-teal: &mush-rgb-teal-anchor "0, 150, 136"
+  mush-rgb-green: &mush-rgb-green-anchor "76, 175, 80"
+  mush-rgb-light-green: &mush-rgb-light-green-anchor "139, 195, 74"
+  mush-rgb-lime: &mush-rgb-lime-anchor "205, 220, 57"
+  mush-rgb-yellow: &mush-rgb-yellow-anchor "255, 235, 59"
+  mush-rgb-amber: &mush-rgb-amber-anchor "255, 193, 7"
+  mush-rgb-orange: &mush-rgb-orange-anchor "255, 152, 0"
+  mush-rgb-deep-orange: &mush-rgb-deep-orange-anchor "255, 87, 34"
+  mush-rgb-brown: &mush-rgb-brown-anchor "121, 85, 72"
+  mush-rgb-grey: &mush-rgb-grey-anchor "158, 158, 158"
+  mush-rgb-blue-grey: &mush-rgb-blue-grey-anchor "96, 125, 139"
+  mush-rgb-black: &mush-rgb-black-anchor "0, 0, 0"
+  mush-rgb-white: &mush-rgb-white-anchor "255, 255, 255"
+  
+  # Standard state colors (mode-agnostic anchors)
+  mush-rgb-state-fan: *mush-rgb-cyan-anchor
+  mush-rgb-state-light: *mush-rgb-amber-anchor
+  mush-rgb-state-entity: *mush-rgb-blue-anchor
+  mush-rgb-state-media-player: *mush-rgb-indigo-anchor
+  mush-rgb-state-lock: *mush-rgb-deep-orange-anchor
+  mush-rgb-state-humidifier: *mush-rgb-purple-anchor
+  mush-rgb-state-climate: *mush-rgb-green-anchor
+  mush-rgb-state-cover: *mush-rgb-blue-grey-anchor
+  mush-rgb-state-alarm-control-panel: *mush-rgb-red-anchor
+  mush-rgb-state-person: *mush-rgb-pink-anchor
+  mush-rgb-state-vacuum: *mush-rgb-teal-anchor
+  mush-rgb-state-camera: *mush-rgb-deep-purple-anchor
+  mush-rgb-state-switch: *mush-rgb-blue-anchor
+  
+  # ----------------------------------------------------------------------------
+  # MUSHROOM SHAPE TOKENS
+  # ----------------------------------------------------------------------------
+  
+  mush-border-radius: *m3-radius-card
+  mush-chip-border-radius: *m3-radius-chip
+  mush-button-border-radius: *m3-radius-button

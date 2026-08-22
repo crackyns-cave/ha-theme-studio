@@ -1,0 +1,41 @@
+################################################################################
+#
+# LIQUID GLASS THEME
+# Version: 1.0.0
+# Target: Home Assistant 2026.x
+#
+################################################################################
+#
+# DESIGN PHILOSOPHY
+# =================
+# Liquid Glass theme brings fluid, adaptive translucency with layered depth,
+# luminous highlights, and reflective edge treatments. Surfaces appear to flow
+# and refract light like molten glass.
+#
+# VISUAL CHARACTERISTICS
+# ======================
+# - Adaptive Translucency: Context-aware opacity that shifts on interaction
+# - Layered Blur: Multiple blur levels creating dimensional depth
+# - Luminous Highlights: Bright edge treatments simulating light refraction
+# - Reflective Borders: Borders with gradient-like shimmer effects
+# - Liquid Depth: Smooth, flowing shadows (not neumorphic dual shadows)
+# - Fluid Motion: Visual continuity across all interface elements
+#
+# FRAMEWORK INTEGRATION
+# =====================
+# - Shares 8 core component systems with other framework themes
+# - Provides compatibility aliases for neumorphic and Material variables
+# - Dashboard-compatible: switch themes without layout changes
+#
+# BUILD INFORMATION
+# =================
+# Build script: bash build.sh liquid-glass
+# Quick build: bash build-liquid-glass.sh
+# Output: themes/liquid-glass.yaml
+#
+################################################################################
+
+Liquid Glass:
+  modes:
+    light: *light
+    dark: *dark

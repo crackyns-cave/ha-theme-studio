@@ -1,0 +1,166 @@
+  # ============================================================================
+  # CARD-MOD GLOBAL STYLING - NEUMORPHIC MATERIAL
+  # ============================================================================
+  # Production-ready global card styling using card-mod.
+  # Applies neumorphic design to all cards with proper state handling.
+  # NO glassmorphic effects. NO borders. Pure neumorphic depth.
+  # ============================================================================
+
+  card-mod-theme: Neumorphic Material
+  
+  card-mod-card: |
+    ha-card {
+      /* Base neumorphic card styling */
+      border: none !important;
+      border-radius: var(--m3-radius-card) !important;
+      background: var(--card-background-color) !important;
+      transition: 
+        box-shadow var(--m3-duration-medium-2) var(--m3-easing-standard),
+        transform var(--m3-duration-short-4) var(--m3-easing-standard) !important;
+      
+      /* Prevent glassmorphic effects */
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+    }
+    
+    /* Raised state - default for most cards */
+    ha-card:not(.heading-card):not(.bubble-card) {
+      box-shadow: var(--card-box-shadow) !important;
+    }
+    
+    /* Hover state - elevated appearance */
+    ha-card:not(.heading-card):not(.bubble-card):hover {
+      box-shadow: var(--card-box-shadow-hover) !important;
+      transform: translateY(-2px) !important;
+    }
+    
+    /* Active/pressed state */
+    ha-card:not(.heading-card):not(.bubble-card):active {
+      box-shadow: var(--card-box-shadow-active) !important;
+      transform: translateY(0px) !important;
+    }
+    
+    /* Heading cards - minimal or no shadow */
+    ha-card.heading-card {
+      box-shadow: none !important;
+      background: transparent !important;
+    }
+    
+    /* Card content padding */
+    ha-card .card-content {
+      padding: var(--card-padding) !important;
+    }
+    
+    /* Card header styling */
+    ha-card .card-header {
+      font-size: var(--m3-font-size-xl) !important;
+      font-weight: var(--m3-font-weight-medium) !important;
+      line-height: var(--m3-line-height-normal) !important;
+      padding: var(--m3-spacing-md) var(--m3-spacing-md) 0 !important;
+    }
+  
+  card-mod-view: |
+    /* Dashboard view styling */
+    hui-view {
+      background: var(--lovelace-background) !important;
+    }
+    
+    /* Masonry layout gap */
+    hui-masonry-view {
+      gap: var(--dashboard-gap) !important;
+      padding: var(--dashboard-gap) !important;
+    }
+    
+    /* Sections layout gap */
+    hui-sections-view {
+      gap: var(--section-gap) !important;
+      padding: var(--dashboard-gap) !important;
+    }
+  
+  card-mod-root: |
+    /* Global app styling */
+    app-drawer {
+      /* Neumorphic sidebar */
+      box-shadow: var(--sidebar-shadow) !important;
+      background: var(--sidebar-background-color) !important;
+      border: none !important;
+    }
+    
+    /* App header */
+    app-header {
+      background: var(--app-header-background-color) !important;
+      box-shadow: var(--app-header-shadow) !important;
+    }
+    
+    /* Prevent any glassmorphic effects globally */
+    * {
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+    }
+  
+  card-mod-more-info: |
+    /* More info dialog styling */
+    ha-dialog {
+      border-radius: var(--m3-radius-dialog) !important;
+      box-shadow: var(--dialog-box-shadow) !important;
+      background: var(--card-background-color) !important;
+      border: none !important;
+    }
+    
+    /* Dialog backdrop */
+    .mdc-dialog__scrim {
+      background: var(--ha-color-overlay-scrim) !important;
+      backdrop-filter: none !important;
+    }
+  
+  # ----------------------------------------------------------------------------
+  # CARD-MOD TILE CARD SPECIFIC
+  # ----------------------------------------------------------------------------
+  
+  card-mod-tile: |
+    /* Tile card neumorphic styling */
+    .tile {
+      border: none !important;
+      border-radius: var(--m3-radius-md) !important;
+      box-shadow: var(--neu-shadow-raised-sm) !important;
+      transition: box-shadow var(--m3-duration-short-4) var(--m3-easing-standard) !important;
+    }
+    
+    .tile:hover {
+      box-shadow: var(--neu-shadow-raised) !important;
+    }
+    
+    .tile:active {
+      box-shadow: var(--neu-shadow-pressed-sm) !important;
+    }
+  
+  # ----------------------------------------------------------------------------
+  # CARD-MOD BUTTON CARD SPECIFIC
+  # ----------------------------------------------------------------------------
+  
+  card-mod-button: |
+    /* Button neumorphic styling */
+    .mdc-button,
+    ha-button,
+    mwc-button {
+      border: none !important;
+      border-radius: var(--m3-radius-button) !important;
+      box-shadow: var(--button-box-shadow) !important;
+      transition: 
+        box-shadow var(--m3-duration-short-4) var(--m3-easing-standard),
+        transform var(--m3-duration-short-4) var(--m3-easing-standard) !important;
+    }
+    
+    .mdc-button:hover,
+    ha-button:hover,
+    mwc-button:hover {
+      box-shadow: var(--button-box-shadow-hover) !important;
+      transform: translateY(-1px) !important;
+    }
+    
+    .mdc-button:active,
+    ha-button:active,
+    mwc-button:active {
+      box-shadow: var(--button-box-shadow-active) !important;
+      transform: translateY(0px) !important;
+    }

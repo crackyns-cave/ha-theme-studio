@@ -1,0 +1,103 @@
+  # ============================================================================
+  # WEBAWESOME COMPONENT COLOR SYSTEM
+  # ============================================================================
+  # Complete WebAwesome (formerly Font Awesome) design token mappings.
+  # WebAwesome is a modern web component library with semantic color tokens.
+  # Shared across all theme variants.
+  # ============================================================================
+
+  # ----------------------------------------------------------------------------
+  # WEBAWESOME COLOR TOKEN ANCHORS (Mode-Agnostic Definitions)
+  # ----------------------------------------------------------------------------
+  # These anchors will be referenced in light/dark mode specific values
+  
+  # Surface colors
+  wa-color-surface-default: &wa-color-surface-default-anchor "wa-color-surface-default"
+  wa-color-surface-raised: &wa-color-surface-raised-anchor "wa-color-surface-raised"
+  wa-color-surface-lowered: &wa-color-surface-lowered-anchor "wa-color-surface-lowered"
+  wa-color-surface-overlay: &wa-color-surface-overlay-anchor "wa-color-surface-overlay"
+  wa-color-surface-inverse: &wa-color-surface-inverse-anchor "wa-color-surface-inverse"
+  
+  # Text colors
+  wa-color-text-normal: &wa-color-text-normal-anchor "wa-color-text-normal"
+  wa-color-text-quiet: &wa-color-text-quiet-anchor "wa-color-text-quiet"
+  wa-color-text-loud: &wa-color-text-loud-anchor "wa-color-text-loud"
+  wa-color-text-inverse: &wa-color-text-inverse-anchor "wa-color-text-inverse"
+  wa-color-text-disabled: &wa-color-text-disabled-anchor "wa-color-text-disabled"
+  wa-color-text-link: &wa-color-text-link-anchor "wa-color-text-link"
+  
+  # Brand colors
+  wa-color-brand-fill-normal: &wa-color-brand-fill-normal-anchor "wa-color-brand-fill-normal"
+  wa-color-brand-fill-loud: &wa-color-brand-fill-loud-anchor "wa-color-brand-fill-loud"
+  wa-color-brand-fill-quiet: &wa-color-brand-fill-quiet-anchor "wa-color-brand-fill-quiet"
+  wa-color-brand-fill-inverse: &wa-color-brand-fill-inverse-anchor "wa-color-brand-fill-inverse"
+  
+  wa-color-brand-text-normal: &wa-color-brand-text-normal-anchor "wa-color-brand-text-normal"
+  wa-color-brand-text-loud: &wa-color-brand-text-loud-anchor "wa-color-brand-text-loud"
+  wa-color-brand-text-quiet: &wa-color-brand-text-quiet-anchor "wa-color-brand-text-quiet"
+  
+  wa-color-brand-border-normal: &wa-color-brand-border-normal-anchor "wa-color-brand-border-normal"
+  wa-color-brand-border-loud: &wa-color-brand-border-loud-anchor "wa-color-brand-border-loud"
+  wa-color-brand-border-quiet: &wa-color-brand-border-quiet-anchor "wa-color-brand-border-quiet"
+  
+  # Neutral colors
+  wa-color-neutral-fill-normal: &wa-color-neutral-fill-normal-anchor "wa-color-neutral-fill-normal"
+  wa-color-neutral-fill-loud: &wa-color-neutral-fill-loud-anchor "wa-color-neutral-fill-loud"
+  wa-color-neutral-fill-quiet: &wa-color-neutral-fill-quiet-anchor "wa-color-neutral-fill-quiet"
+  wa-color-neutral-fill-inverse: &wa-color-neutral-fill-inverse-anchor "wa-color-neutral-fill-inverse"
+  
+  wa-color-neutral-text-normal: &wa-color-neutral-text-normal-anchor "wa-color-neutral-text-normal"
+  wa-color-neutral-text-loud: &wa-color-neutral-text-loud-anchor "wa-color-neutral-text-loud"
+  wa-color-neutral-text-quiet: &wa-color-neutral-text-quiet-anchor "wa-color-neutral-text-quiet"
+  
+  wa-color-neutral-border-normal: &wa-color-neutral-border-normal-anchor "wa-color-neutral-border-normal"
+  wa-color-neutral-border-loud: &wa-color-neutral-border-loud-anchor "wa-color-neutral-border-loud"
+  wa-color-neutral-border-quiet: &wa-color-neutral-border-quiet-anchor "wa-color-neutral-border-quiet"
+  
+  # Success colors
+  wa-color-success-fill-normal: &wa-color-success-fill-normal-anchor "wa-color-success-fill-normal"
+  wa-color-success-fill-loud: &wa-color-success-fill-loud-anchor "wa-color-success-fill-loud"
+  wa-color-success-fill-quiet: &wa-color-success-fill-quiet-anchor "wa-color-success-fill-quiet"
+  
+  wa-color-success-text-normal: &wa-color-success-text-normal-anchor "wa-color-success-text-normal"
+  wa-color-success-text-loud: &wa-color-success-text-loud-anchor "wa-color-success-text-loud"
+  wa-color-success-text-quiet: &wa-color-success-text-quiet-anchor "wa-color-success-text-quiet"
+  
+  wa-color-success-border-normal: &wa-color-success-border-normal-anchor "wa-color-success-border-normal"
+  
+  # Warning colors
+  wa-color-warning-fill-normal: &wa-color-warning-fill-normal-anchor "wa-color-warning-fill-normal"
+  wa-color-warning-fill-loud: &wa-color-warning-fill-loud-anchor "wa-color-warning-fill-loud"
+  wa-color-warning-fill-quiet: &wa-color-warning-fill-quiet-anchor "wa-color-warning-fill-quiet"
+  
+  wa-color-warning-text-normal: &wa-color-warning-text-normal-anchor "wa-color-warning-text-normal"
+  wa-color-warning-text-loud: &wa-color-warning-text-loud-anchor "wa-color-warning-text-loud"
+  wa-color-warning-text-quiet: &wa-color-warning-text-quiet-anchor "wa-color-warning-text-quiet"
+  
+  wa-color-warning-border-normal: &wa-color-warning-border-normal-anchor "wa-color-warning-border-normal"
+  
+  # Danger/Error colors
+  wa-color-danger-fill-normal: &wa-color-danger-fill-normal-anchor "wa-color-danger-fill-normal"
+  wa-color-danger-fill-loud: &wa-color-danger-fill-loud-anchor "wa-color-danger-fill-loud"
+  wa-color-danger-fill-quiet: &wa-color-danger-fill-quiet-anchor "wa-color-danger-fill-quiet"
+  
+  wa-color-danger-text-normal: &wa-color-danger-text-normal-anchor "wa-color-danger-text-normal"
+  wa-color-danger-text-loud: &wa-color-danger-text-loud-anchor "wa-color-danger-text-loud"
+  wa-color-danger-text-quiet: &wa-color-danger-text-quiet-anchor "wa-color-danger-text-quiet"
+  
+  wa-color-danger-border-normal: &wa-color-danger-border-normal-anchor "wa-color-danger-border-normal"
+  
+  # Info colors
+  wa-color-info-fill-normal: &wa-color-info-fill-normal-anchor "wa-color-info-fill-normal"
+  wa-color-info-fill-loud: &wa-color-info-fill-loud-anchor "wa-color-info-fill-loud"
+  wa-color-info-fill-quiet: &wa-color-info-fill-quiet-anchor "wa-color-info-fill-quiet"
+  
+  wa-color-info-text-normal: &wa-color-info-text-normal-anchor "wa-color-info-text-normal"
+  wa-color-info-text-loud: &wa-color-info-text-loud-anchor "wa-color-info-text-loud"
+  wa-color-info-text-quiet: &wa-color-info-text-quiet-anchor "wa-color-info-text-quiet"
+  
+  wa-color-info-border-normal: &wa-color-info-border-normal-anchor "wa-color-info-border-normal"
+  
+  # Focus and interaction states
+  wa-color-focus-ring: &wa-color-focus-ring-anchor "wa-color-focus-ring"
+  wa-color-overlay: &wa-color-overlay-anchor "wa-color-overlay"

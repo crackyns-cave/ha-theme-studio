@@ -1,0 +1,155 @@
+  # ============================================================================
+  # HOME ASSISTANT SEMANTIC COLOR SYSTEM
+  # ============================================================================
+  # Comprehensive semantic color tokens for Home Assistant UI components.
+  # These tokens follow HA's modern color system with semantic naming.
+  # Shared across all theme variants.
+  # ============================================================================
+
+  # ----------------------------------------------------------------------------
+  # TEXT COLOR TOKENS (Mode-Agnostic Anchors)
+  # ----------------------------------------------------------------------------
+  
+  ha-color-text-primary: &ha-color-text-primary-anchor "ha-color-text-primary"
+  ha-color-text-secondary: &ha-color-text-secondary-anchor "ha-color-text-secondary"
+  ha-color-text-tertiary: &ha-color-text-tertiary-anchor "ha-color-text-tertiary"
+  ha-color-text-disabled: &ha-color-text-disabled-anchor "ha-color-text-disabled"
+  ha-color-text-inverse: &ha-color-text-inverse-anchor "ha-color-text-inverse"
+  
+  # ----------------------------------------------------------------------------
+  # FORM & INPUT COLOR TOKENS
+  # ----------------------------------------------------------------------------
+  
+  ha-color-form-background: &ha-color-form-background-anchor "ha-color-form-background"
+  ha-color-form-background-hover: &ha-color-form-background-hover-anchor "ha-color-form-background-hover"
+  ha-color-form-background-focus: &ha-color-form-background-focus-anchor "ha-color-form-background-focus"
+  ha-color-form-background-disabled: &ha-color-form-background-disabled-anchor "ha-color-form-background-disabled"
+  
+  ha-color-form-text: &ha-color-form-text-anchor "ha-color-form-text"
+  ha-color-form-text-disabled: &ha-color-form-text-disabled-anchor "ha-color-form-text-disabled"
+  ha-color-form-placeholder: &ha-color-form-placeholder-anchor "ha-color-form-placeholder"
+  
+  ha-color-form-border: &ha-color-form-border-anchor "ha-color-form-border"
+  ha-color-form-border-hover: &ha-color-form-border-hover-anchor "ha-color-form-border-hover"
+  ha-color-form-border-focus: &ha-color-form-border-focus-anchor "ha-color-form-border-focus"
+  ha-color-form-border-error: &ha-color-form-border-error-anchor "ha-color-form-border-error"
+  
+  # ----------------------------------------------------------------------------
+  # BORDER COLOR TOKENS
+  # ----------------------------------------------------------------------------
+  
+  ha-color-border-neutral-quiet: &ha-color-border-neutral-quiet-anchor "ha-color-border-neutral-quiet"
+  ha-color-border-neutral-normal: &ha-color-border-neutral-normal-anchor "ha-color-border-neutral-normal"
+  ha-color-border-neutral-loud: &ha-color-border-neutral-loud-anchor "ha-color-border-neutral-loud"
+  
+  ha-color-border-primary-quiet: &ha-color-border-primary-quiet-anchor "ha-color-border-primary-quiet"
+  ha-color-border-primary-normal: &ha-color-border-primary-normal-anchor "ha-color-border-primary-normal"
+  ha-color-border-primary-loud: &ha-color-border-primary-loud-anchor "ha-color-border-primary-loud"
+  
+  # ----------------------------------------------------------------------------
+  # FILL COLOR TOKENS - PRIMARY
+  # ----------------------------------------------------------------------------
+  
+  ha-color-fill-primary-loud-resting: &ha-color-fill-primary-loud-resting-anchor "ha-color-fill-primary-loud-resting"
+  ha-color-fill-primary-loud-hover: &ha-color-fill-primary-loud-hover-anchor "ha-color-fill-primary-loud-hover"
+  ha-color-fill-primary-loud-active: &ha-color-fill-primary-loud-active-anchor "ha-color-fill-primary-loud-active"
+  ha-color-fill-primary-loud-disabled: &ha-color-fill-primary-loud-disabled-anchor "ha-color-fill-primary-loud-disabled"
+  
+  ha-color-fill-primary-normal-resting: &ha-color-fill-primary-normal-resting-anchor "ha-color-fill-primary-normal-resting"
+  ha-color-fill-primary-normal-hover: &ha-color-fill-primary-normal-hover-anchor "ha-color-fill-primary-normal-hover"
+  ha-color-fill-primary-normal-active: &ha-color-fill-primary-normal-active-anchor "ha-color-fill-primary-normal-active"
+  ha-color-fill-primary-normal-disabled: &ha-color-fill-primary-normal-disabled-anchor "ha-color-fill-primary-normal-disabled"
+  
+  ha-color-fill-primary-quiet-resting: &ha-color-fill-primary-quiet-resting-anchor "ha-color-fill-primary-quiet-resting"
+  ha-color-fill-primary-quiet-hover: &ha-color-fill-primary-quiet-hover-anchor "ha-color-fill-primary-quiet-hover"
+  ha-color-fill-primary-quiet-active: &ha-color-fill-primary-quiet-active-anchor "ha-color-fill-primary-quiet-active"
+  
+  # ----------------------------------------------------------------------------
+  # FILL COLOR TOKENS - NEUTRAL
+  # ----------------------------------------------------------------------------
+  
+  ha-color-fill-neutral-loud-resting: &ha-color-fill-neutral-loud-resting-anchor "ha-color-fill-neutral-loud-resting"
+  ha-color-fill-neutral-loud-hover: &ha-color-fill-neutral-loud-hover-anchor "ha-color-fill-neutral-loud-hover"
+  ha-color-fill-neutral-loud-active: &ha-color-fill-neutral-loud-active-anchor "ha-color-fill-neutral-loud-active"
+  
+  ha-color-fill-neutral-normal-resting: &ha-color-fill-neutral-normal-resting-anchor "ha-color-fill-neutral-normal-resting"
+  ha-color-fill-neutral-normal-hover: &ha-color-fill-neutral-normal-hover-anchor "ha-color-fill-neutral-normal-hover"
+  ha-color-fill-neutral-normal-active: &ha-color-fill-neutral-normal-active-anchor "ha-color-fill-neutral-normal-active"
+  
+  ha-color-fill-neutral-quiet-resting: &ha-color-fill-neutral-quiet-resting-anchor "ha-color-fill-neutral-quiet-resting"
+  ha-color-fill-neutral-quiet-hover: &ha-color-fill-neutral-quiet-hover-anchor "ha-color-fill-neutral-quiet-hover"
+  ha-color-fill-neutral-quiet-active: &ha-color-fill-neutral-quiet-active-anchor "ha-color-fill-neutral-quiet-active"
+  
+  # ----------------------------------------------------------------------------
+  # ON-COLOR TOKENS (Text on colored backgrounds)
+  # ----------------------------------------------------------------------------
+  
+  ha-color-on-primary-quiet: &ha-color-on-primary-quiet-anchor "ha-color-on-primary-quiet"
+  ha-color-on-primary-normal: &ha-color-on-primary-normal-anchor "ha-color-on-primary-normal"
+  ha-color-on-primary-loud: &ha-color-on-primary-loud-anchor "ha-color-on-primary-loud"
+  
+  ha-color-on-neutral-quiet: &ha-color-on-neutral-quiet-anchor "ha-color-on-neutral-quiet"
+  ha-color-on-neutral-normal: &ha-color-on-neutral-normal-anchor "ha-color-on-neutral-normal"
+  ha-color-on-neutral-loud: &ha-color-on-neutral-loud-anchor "ha-color-on-neutral-loud"
+  
+  ha-color-on-error-quiet: &ha-color-on-error-quiet-anchor "ha-color-on-error-quiet"
+  ha-color-on-error-normal: &ha-color-on-error-normal-anchor "ha-color-on-error-normal"
+  ha-color-on-error-loud: &ha-color-on-error-loud-anchor "ha-color-on-error-loud"
+  
+  ha-color-on-success-quiet: &ha-color-on-success-quiet-anchor "ha-color-on-success-quiet"
+  ha-color-on-success-normal: &ha-color-on-success-normal-anchor "ha-color-on-success-normal"
+  ha-color-on-success-loud: &ha-color-on-success-loud-anchor "ha-color-on-success-loud"
+  
+  ha-color-on-warning-quiet: &ha-color-on-warning-quiet-anchor "ha-color-on-warning-quiet"
+  ha-color-on-warning-normal: &ha-color-on-warning-normal-anchor "ha-color-on-warning-normal"
+  ha-color-on-warning-loud: &ha-color-on-warning-loud-anchor "ha-color-on-warning-loud"
+  
+  # ----------------------------------------------------------------------------
+  # STATE-SPECIFIC COLOR TOKENS
+  # ----------------------------------------------------------------------------
+  
+  ha-color-success: &ha-color-success-anchor "ha-color-success"
+  ha-color-success-hover: &ha-color-success-hover-anchor "ha-color-success-hover"
+  ha-color-success-active: &ha-color-success-active-anchor "ha-color-success-active"
+  
+  ha-color-warning: &ha-color-warning-anchor "ha-color-warning"
+  ha-color-warning-hover: &ha-color-warning-hover-anchor "ha-color-warning-hover"
+  ha-color-warning-active: &ha-color-warning-active-anchor "ha-color-warning-active"
+  
+  ha-color-error: &ha-color-error-anchor "ha-color-error"
+  ha-color-error-hover: &ha-color-error-hover-anchor "ha-color-error-hover"
+  ha-color-error-active: &ha-color-error-active-anchor "ha-color-error-active"
+  
+  ha-color-info: &ha-color-info-anchor "ha-color-info"
+  ha-color-info-hover: &ha-color-info-hover-anchor "ha-color-info-hover"
+  ha-color-info-active: &ha-color-info-active-anchor "ha-color-info-active"
+  
+  # ----------------------------------------------------------------------------
+  # SURFACE & BACKGROUND TOKENS
+  # ----------------------------------------------------------------------------
+  
+  ha-color-surface-default: &ha-color-surface-default-anchor "ha-color-surface-default"
+  ha-color-surface-raised: &ha-color-surface-raised-anchor "ha-color-surface-raised"
+  ha-color-surface-lowered: &ha-color-surface-lowered-anchor "ha-color-surface-lowered"
+  ha-color-surface-overlay: &ha-color-surface-overlay-anchor "ha-color-surface-overlay"
+  
+  ha-color-background-primary: &ha-color-background-primary-anchor "ha-color-background-primary"
+  ha-color-background-secondary: &ha-color-background-secondary-anchor "ha-color-background-secondary"
+  
+  # ----------------------------------------------------------------------------
+  # DIVIDER & SEPARATOR TOKENS
+  # ----------------------------------------------------------------------------
+  
+  ha-color-divider-quiet: &ha-color-divider-quiet-anchor "ha-color-divider-quiet"
+  ha-color-divider-normal: &ha-color-divider-normal-anchor "ha-color-divider-normal"
+  ha-color-divider-loud: &ha-color-divider-loud-anchor "ha-color-divider-loud"
+  
+  # ----------------------------------------------------------------------------
+  # FOCUS & INTERACTION TOKENS
+  # ----------------------------------------------------------------------------
+  
+  ha-color-focus-ring: &ha-color-focus-ring-anchor "ha-color-focus-ring"
+  ha-color-focus-background: &ha-color-focus-background-anchor "ha-color-focus-background"
+  
+  ha-color-overlay-scrim: &ha-color-overlay-scrim-anchor "ha-color-overlay-scrim"
+  ha-color-overlay-backdrop: &ha-color-overlay-backdrop-anchor "ha-color-overlay-backdrop"

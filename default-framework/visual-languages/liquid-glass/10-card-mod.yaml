@@ -1,0 +1,256 @@
+  # ==========================================================================
+  # CARD-MOD GLOBAL STYLING - Liquid Glass
+  # ==========================================================================
+  # Applies adaptive translucency, layered blur, luminous highlights, and
+  # reflective edges throughout the Home Assistant interface.
+  # ==========================================================================
+  
+  card-mod-theme: Liquid Glass
+  
+  card-mod-root: |
+    
+    /* ====================================================================
+       LIQUID GLASS SURFACE TREATMENT
+       ==================================================================== */
+    
+    /* Cards - Adaptive glass with layered blur */
+    ha-card {
+      background: var(--glass-bg) !important;
+      backdrop-filter: var(--glass-blur-card) !important;
+      -webkit-backdrop-filter: var(--glass-blur-card) !important;
+      border: var(--glass-border-width) solid var(--glass-border-color) !important;
+      border-radius: var(--glass-radius) !important;
+      box-shadow: var(--glass-shadow) !important;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+    
+    /* Luminous highlight overlay on cards */
+    ha-card::before {
+      content: "" !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      height: 50% !important;
+      background: var(--glass-highlight-shine) !important;
+      pointer-events: none !important;
+      opacity: 0.6 !important;
+      transition: opacity 0.3s ease !important;
+    }
+    
+    /* Card hover state - intensify glass */
+    ha-card:hover {
+      background: var(--glass-bg-hover) !important;
+      border-color: var(--glass-border-color-hover) !important;
+      box-shadow: var(--glass-shadow-hover) !important;
+      transform: translateY(-1px) !important;
+    }
+    
+    ha-card:hover::before {
+      opacity: 0.85 !important;
+    }
+    
+    /* Card active state - reduce glass */
+    ha-card:active {
+      background: var(--glass-bg-active) !important;
+      box-shadow: var(--glass-shadow-active) !important;
+      transform: translateY(0) !important;
+    }
+    
+    /* Exclude heading cards from glass treatment */
+    ha-card.type-heading,
+    ha-card[class*="heading"] {
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+    
+    ha-card.type-heading::before {
+      display: none !important;
+    }
+    
+    /* ====================================================================
+       LIQUID GLASS BUTTONS & CONTROLS
+       ==================================================================== */
+    
+    /* Buttons with glass treatment */
+    mwc-button,
+    ha-button,
+    .mdc-button {
+      background: var(--glass-bg-subtle) !important;
+      backdrop-filter: var(--glass-blur-light) !important;
+      -webkit-backdrop-filter: var(--glass-blur-light) !important;
+      border: var(--glass-border-width) solid var(--glass-border-quiet) !important;
+      border-radius: var(--glass-radius) !important;
+      box-shadow: var(--glass-shadow-subtle) !important;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+    
+    mwc-button:hover,
+    ha-button:hover,
+    .mdc-button:hover {
+      background: var(--glass-bg) !important;
+      border-color: var(--glass-border-color) !important;
+      box-shadow: var(--glass-shadow-sm) !important;
+      transform: translateY(-1px) !important;
+    }
+    
+    /* ====================================================================
+       LIQUID GLASS SIDEBAR
+       ==================================================================== */
+    
+    .mdc-drawer,
+    .mdc-drawer__content {
+      background: var(--glass-bg-intense) !important;
+      backdrop-filter: var(--glass-blur-sidebar) !important;
+      -webkit-backdrop-filter: var(--glass-blur-sidebar) !important;
+      border-right: var(--glass-border-width-thick) solid var(--glass-border-luminous) !important;
+      box-shadow: var(--glass-shadow-lg) !important;
+    }
+    
+    /* Sidebar items */
+    .mdc-list-item {
+      border-radius: var(--glass-radius-sm) !important;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+    
+    .mdc-list-item:hover {
+      background: var(--glass-bg-subtle) !important;
+      backdrop-filter: var(--glass-blur-light) !important;
+      -webkit-backdrop-filter: var(--glass-blur-light) !important;
+    }
+    
+    .mdc-list-item--activated {
+      background: var(--glass-bg) !important;
+      backdrop-filter: var(--glass-blur-medium) !important;
+      -webkit-backdrop-filter: var(--glass-blur-medium) !important;
+      border: var(--glass-border-width-thin) solid var(--glass-border-accent) !important;
+    }
+    
+    /* ====================================================================
+       LIQUID GLASS HEADER
+       ==================================================================== */
+    
+    app-header,
+    .header {
+      background: var(--glass-bg-intense) !important;
+      backdrop-filter: var(--glass-blur-header) !important;
+      -webkit-backdrop-filter: var(--glass-blur-header) !important;
+      border-bottom: var(--glass-border-width) solid var(--glass-border-normal) !important;
+      box-shadow: var(--glass-shadow-md) !important;
+    }
+    
+    /* ====================================================================
+       LIQUID GLASS DIALOGS & MODALS
+       ==================================================================== */
+    
+    ha-dialog,
+    .mdc-dialog__surface {
+      background: var(--glass-bg-intense) !important;
+      backdrop-filter: var(--glass-blur-dialog) !important;
+      -webkit-backdrop-filter: var(--glass-blur-dialog) !important;
+      border: var(--glass-border-width-thick) solid var(--glass-border-luminous) !important;
+      border-radius: var(--glass-radius-lg) !important;
+      box-shadow: var(--glass-shadow-xl) !important;
+    }
+    
+    /* Dialog scrim with blur */
+    .mdc-dialog__scrim {
+      background: rgba(0, 0, 0, 0.4) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+    }
+    
+    /* ====================================================================
+       BUBBLE CARD INTEGRATION
+       ==================================================================== */
+    
+    /* Bubble cards inherit liquid glass */
+    bubble-card {
+      background: var(--glass-bg) !important;
+      backdrop-filter: var(--glass-blur-card) !important;
+      -webkit-backdrop-filter: var(--glass-blur-card) !important;
+      border: var(--glass-border-width) solid var(--glass-border-color) !important;
+      border-radius: var(--glass-radius) !important;
+      box-shadow: var(--glass-shadow) !important;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+    
+    bubble-card:hover {
+      background: var(--glass-bg-hover) !important;
+      border-color: var(--glass-border-color-hover) !important;
+      box-shadow: var(--glass-shadow-hover) !important;
+    }
+    
+    /* Bubble pop-up with intense glass */
+    .bubble-pop-up {
+      background: var(--glass-bg-intense) !important;
+      backdrop-filter: var(--glass-blur-dialog) !important;
+      -webkit-backdrop-filter: var(--glass-blur-dialog) !important;
+      border: var(--glass-border-width-thick) solid var(--glass-border-luminous) !important;
+      border-radius: var(--glass-radius-lg) !important;
+      box-shadow: var(--glass-shadow-xl) !important;
+    }
+    
+    /* ====================================================================
+       MUSHROOM CARD INTEGRATION
+       ==================================================================== */
+    
+    /* Mushroom cards with glass treatment */
+    mushroom-card,
+    .mushroom {
+      background: var(--glass-bg) !important;
+      backdrop-filter: var(--glass-blur-card) !important;
+      -webkit-backdrop-filter: var(--glass-blur-card) !important;
+      border: var(--glass-border-width) solid var(--glass-border-color) !important;
+      border-radius: var(--glass-radius) !important;
+    }
+    
+    /* ====================================================================
+       FORM INPUTS WITH GLASS
+       ==================================================================== */
+    
+    ha-textfield,
+    mwc-textfield,
+    .mdc-text-field {
+      background: var(--glass-bg-subtle) !important;
+      backdrop-filter: var(--glass-blur-light) !important;
+      -webkit-backdrop-filter: var(--glass-blur-light) !important;
+      border: var(--glass-border-width-thin) solid var(--glass-border-quiet) !important;
+      border-radius: var(--glass-radius-sm) !important;
+      transition: all 0.2s ease !important;
+    }
+    
+    ha-textfield:hover,
+    mwc-textfield:hover,
+    .mdc-text-field:hover {
+      border-color: var(--glass-border-color) !important;
+      box-shadow: var(--glass-shadow-subtle) !important;
+    }
+    
+    ha-textfield:focus-within,
+    mwc-textfield:focus-within,
+    .mdc-text-field:focus-within {
+      border-color: var(--glass-border-accent) !important;
+      box-shadow: 0 0 0 2px var(--glass-border-accent) !important;
+    }
+    
+    /* ====================================================================
+       LIQUID GLASS ANIMATIONS
+       ==================================================================== */
+    
+    /* Smooth fluid transitions */
+    * {
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+    
+    /* Ripple effects with glass */
+    .mdc-ripple-surface::before,
+    .mdc-ripple-surface::after {
+      background: var(--glass-bg-hover) !important;
+      opacity: 0.15 !important;
+    }
