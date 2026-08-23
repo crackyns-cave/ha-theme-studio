@@ -188,7 +188,7 @@ function applyHomeAssistantTextSemantics(content) {
   const replacements = {
     'ha-color-text-link': primary,
     'ha-color-on-primary-quiet': primary,
-    'ha-color-on-primary-normal': primary,
+    'ha-color-on-primary-normal': contrastText,
     'ha-color-on-primary-loud': contrastText,
     'ha-color-on-neutral-quiet': secondaryText,
     'ha-color-on-neutral-normal': primaryText,

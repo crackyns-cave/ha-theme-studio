@@ -160,6 +160,7 @@
     .mdc-button,
     ha-button,
     mwc-button {
+      color: var(--text-primary-color) !important;
       border: var(--fg-border-width) var(--fg-border-style) var(--fg-button-border-color) !important;
       border-radius: var(--m3-radius-button) !important;
       background: var(--button-background-color) !important;

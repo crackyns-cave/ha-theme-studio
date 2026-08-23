@@ -71,6 +71,7 @@
     .mdc-button,
     ha-button,
     mwc-button {
+      color: var(--text-primary-color) !important;
       border: 2px solid var(--primary-color) !important;
       border-radius: 0 !important;
       box-shadow: none !important;

@@ -91,6 +91,7 @@
     mwc-button,
     ha-button,
     .mdc-button {
+      color: var(--text-primary-color) !important;
       background: var(--glass-bg-subtle) !important;
       backdrop-filter: var(--glass-blur-light) !important;
       -webkit-backdrop-filter: var(--glass-blur-light) !important;

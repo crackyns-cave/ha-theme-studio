@@ -143,6 +143,7 @@
     .mdc-button,
     ha-button,
     mwc-button {
+      color: var(--text-primary-color) !important;
       border: none !important;
       border-radius: var(--m3-radius-button) !important;
       box-shadow: var(--neu-shadow-raised-sm) !important;

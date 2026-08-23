@@ -152,6 +152,7 @@
     .mdc-button,
     ha-button,
     mwc-button {
+      color: var(--text-primary-color) !important;
       border: var(--m3-border-width) var(--m3-border-style) var(--ha-color-border-primary-quiet) !important;
       border-radius: var(--m3-radius-button) !important;
       box-shadow: var(--button-box-shadow) !important;
